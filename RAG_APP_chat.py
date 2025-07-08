@@ -14,6 +14,7 @@ from datetime import datetime
 import plotly.express as px
 import plotly.graph_objects as go
 import time
+from groq import Groq, APITimeoutError, APIStatusError
 
 # Define the maximum number of messages to keep in history for the LLM context.
 # This helps manage token limits. Adjust as needed.
@@ -197,19 +198,21 @@ def debug_collections():
     except Exception as e:
         return {"error": str(e)}
 
-def setup_groq_client():
+@st.cache_resource
+def setup_groq_client(api_key: str):
     """Setup Groq client with API key"""
     api_key = st.session_state.get('groq_api_key', '')
     
-    if not api_key:
-        return None
-    
-    try:
-        client = Groq(api_key=api_key)
-        return client
-    except Exception as e:
-        st.error(f"Error setting up Groq client: {e}")
-        return None
+    if api_key:
+        try:
+            client = Groq(api_key=api_key)
+            # Optional: Add a light API call here to immediately test the key's validity
+            # client.models.list()
+            return client
+        except Exception as e:
+            st.error(f"Error initializing Groq client with the provided key: {e}. Please check your API key.")
+            return None
+    return None
 
 def retrieve_relevant_docs(query: str, device_type: str, model, mac_collection, iphone_collection, n_results: int = 5, min_relevance: float = 0.3, show_debug: bool = False) -> List[Dict]:
     """
@@ -310,6 +313,64 @@ def retrieve_relevant_docs(query: str, device_type: str, model, mac_collection, 
         except Exception as e:
             st.error(f"Error searching iPhone collection: {e}")
     
+    elif device_type.lower() == "both":
+        # Search both collections and combine results
+        all_results = []
+        if mac_collection:
+            try:
+                if show_debug:
+                    st.write("🔍 Searching Mac collection (for 'Both')...")
+                mac_results = mac_collection.query(
+                    query_embeddings=query_embedding.tolist(),
+                    n_results=n_results
+                )
+                for i, (doc, distance, doc_id) in enumerate(zip(
+                    mac_results['documents'][0], 
+                    mac_results['distances'][0],
+                    mac_results['ids'][0]
+                )):
+                    relevance_score = 1 - distance
+                    if relevance_score >= min_relevance:
+                        all_results.append({
+                            'content': doc,
+                            'similarity_score': relevance_score,
+                            'doc_id': doc_id,
+                            'rank': i + 1,
+                            'device_type': 'Mac',
+                            'distance': distance
+                        })
+            except Exception as e:
+                st.error(f"Error searching Mac collection (for 'Both'): {e}")
+
+        if iphone_collection:
+            try:
+                if show_debug:
+                    st.write("🔍 Searching iPhone collection (for 'Both')...")
+                iphone_results = iphone_collection.query(
+                    query_embeddings=query_embedding.tolist(),
+                    n_results=n_results
+                )
+                for i, (doc, distance, doc_id) in enumerate(zip(
+                    iphone_results['documents'][0], 
+                    iphone_results['distances'][0],
+                    iphone_results['ids'][0]
+                )):
+                    relevance_score = 1 - distance
+                    if relevance_score >= min_relevance:
+                        all_results.append({
+                            'content': doc,
+                            'similarity_score': relevance_score,
+                            'doc_id': doc_id,
+                            'rank': i + 1,
+                            'device_type': 'iPhone',
+                            'distance': distance
+                        })
+            except Exception as e:
+                st.error(f"Error searching iPhone collection (for 'Both'): {e}")
+        
+        # Sort combined results by relevance score (descending) and take top N
+        results = sorted(all_results, key=lambda x: x['similarity_score'], reverse=True)[:n_results]
+
     if show_debug:
         st.write(f"🎯 **Final results:** {len(results)} results above threshold {min_relevance}")
     
@@ -317,82 +378,114 @@ def retrieve_relevant_docs(query: str, device_type: str, model, mac_collection, 
 
 def create_repair_prompt(query: str, relevant_docs: List[Dict], device_type: str) -> str:
     """Create structured prompt for the LLM"""
-    
+
     # Build context from retrieved documents
     context_parts = []
     for i, doc in enumerate(relevant_docs, 1):
         context_parts.append(f"Document {i} (Relevance: {doc['similarity_score']:.2f}):\n{doc['content']}\n")
-    
+
     context = "\n".join(context_parts)
-    
+
     # Create structured prompt
     prompt = f"""You are an expert Apple repair technician assistant. Help users with {device_type} repair issues based on the provided repair documentation.
+    Your goal is to provide a structured repair solution in JSON format.
 
-REPAIR QUERY: {query}
+    REPAIR QUERY: {query}
 
-RELEVANT REPAIR DOCUMENTATION:
-{context}
+    RELEVANT REPAIR DOCUMENTATION:
+    {context}
 
-INSTRUCTIONS:
-1. Analyze the user's repair query and the provided documentation
-2. Provide a clear, step-by-step repair solution if available in the documentation
-3. Include important safety warnings and precautions
-4. Mention required tools and parts if specified
-5. If the documentation doesn't contain enough information, clearly state this
-6. Format your response with clear headings and bullet points
-7. Be specific about {device_type} models when relevant
-8. **IMPORTANT:** Your response MUST be a valid JSON object with the following keys. If a section is not applicable, you can leave its value as an empty string or null.
+    INSTRUCTIONS:
+    1. Analyze the user's repair query and the provided documentation.
+    2. Provide a clear, step-by-step repair solution if available in the documentation.
+    3. Include important safety warnings and precautions.
+    4. Mention required tools and parts if specified.
+    5. If the documentation doesn't contain enough information, clearly state this.
+    6. **IMPORTANT:** Your response MUST be a valid JSON object with the following keys. If a section is not applicable, you can leave its value as an empty string or null.
+    7. **CRITICAL:** Ensure all double quotes WITHIN string values are escaped with a backslash (e.g., "14\\\"" for "14\""). Do NOT use single quotes.
 
-RESPONSE JSON FORMAT:
-```json
-{{
-    "title": "Repair Solution for {device_type} - [Summary of issue]",
-    "summary": "[Brief summary of the issue and solution]",
-    "safety_precautions": "[Important safety warnings, e.g., 'Disconnect power before starting.']",
-    "required_tools_parts": "[List tools and parts needed, e.g., 'Phillips head screwdriver, new battery.']",
-    "step_by_step_instructions": [
-        "Step 1: [Detailed first step]",
-        "Step 2: [Detailed second step]",
-        // ... more steps
-    ],
-    "additional_tips": "[Helpful tips and troubleshooting advice]",
-    "professional_help_situations": "[Situations requiring professional repair, e.g., 'If you encounter liquid damage beyond your skill level.']",
-    "notes": "[Any other important notes or disclaimers.]"
-}}"""
+    RESPONSE JSON FORMAT:
+    ```json
+    {{
+        "title": "Repair Solution for {device_type} - [Summary of issue]",
+        "summary": "[Brief summary of the issue and solution]",
+        "safety_precautions": "[Important safety warnings, e.g., 'Disconnect power before starting.']",
+        "required_tools_parts": "[List tools and parts needed, e.g., 'Phillips head screwdriver, new battery.']",
+        "step_by_step_instructions": [
+            "Step 1: [Detailed first step]",
+            "Step 2: [Detailed second step]",
+            // ... more steps
+        ],
+        "additional_tips": "[Helpful tips and troubleshooting advice]",
+        "professional_help_situations": "[Situations requiring professional repair, e.g., 'If you encounter liquid damage beyond your skill level.']",
+        "notes": "[Any other important notes or disclaimers.]"
+    }}"""
 
     return prompt
 
 def get_llm_response(
-    chat_history: List[Dict],  # This will contain the conversation history (user/assistant turns)
+    chat_history: List[Dict],
     client: Groq,
-    model_name: str, # Add model_name as a parameter so it can be passed from rag_pipeline
-    device_type: str = "Apple device" # This param is for the system message within the LLM prompt
-) -> str:
-    """Get response from Groq API using chat history for context."""
+    model_name: str,
+    device_type: str = "Apple device"
+): # Removed -> str type hint as it now returns an iterator
+    """Get response from Groq API using chat history for context, with streaming."""
     try:
-        # The system message should always be the first message for the LLM to understand its role.
+        if device_type.lower() == "mac":
+            specific_device_phrase = "Mac repair technician specializing in Mac computers."
+            focus_device_phrase = "Mac computer repair guidance."
+        elif device_type.lower() == "iphone":
+            specific_device_phrase = "iPhone repair technician specializing in iPhone mobile devices."
+            focus_device_phrase = "iPhone mobile device repair guidance."
+        else:
+            # Fallback for "both" or any other unexpected device_type
+            specific_device_phrase = "Apple repair technician with years of experience fixing Mac and iPhone devices."
+            focus_device_phrase = "Apple device repair guidance."
+
         system_message = {
             "role": "system",
-            "content": f"You are an expert Apple repair technician with years of experience fixing Mac and iPhone devices. You provide clear, safe, and accurate repair guidance. Always prioritize user safety and instruct users to seek professional help for complex or dangerous repairs. Focus solely on {device_type} repair guidance. Decline to answer unrelated questions."
+             "content": (
+                f"You are an expert {specific_device_phrase} You provide clear, safe, and accurate repair guidance. "
+                "Always prioritize user safety and instruct users to seek professional help for complex or dangerous repairs. "
+                f"Focus solely on {focus_device_phrase} Decline to answer unrelated questions."
+                "**IMPORTANT:** If the user's query is inappropriate, off-topic, or asks for assistance outside of Apple device repair (e.g., medical advice, personal opinions, dangerous activities, illegal acts, or anything unrelated to hardware/software repair), you MUST politely decline the request and state that you can only assist with Apple device repair. Do NOT provide any information or engage with inappropriate content."
+            )
         }
         
         # Combine system message with the provided chat history.
         # The 'chat_history' should already include the RAG prompt as the last user message from rag_pipeline.
         messages_for_llm = [system_message] + chat_history
 
-        chat_completion = client.chat.completions.create(
+        stream = client.chat.completions.create(
             messages=messages_for_llm,
-            model=model_name, # Use the passed model_name
-            temperature=st.session_state.get('temperature', 0.3), # Use session state for configurable parameters
+            model=model_name,
+            temperature=st.session_state.get('temperature', 0.3),
             max_tokens=st.session_state.get('max_tokens', 1500),
-            top_p=st.session_state.get('top_p', 1.0), # Assuming you have top_p in session state or add a default
-            stream=False, # For now, keep as False. Streaming can be added later.
+            top_p=st.session_state.get('top_p', 1.0),
+            stream=True,
             stop=None,
+            timeout=st.session_state.get('llm_timeout', 60.0), # Default to 60 seconds
         )
-        return chat_completion.choices[0].message.content
+        return stream # Return the iterator
+    
+    except APITimeoutError:
+        # Handle LLM Timeout
+        st.error("❗ The AI took too long to respond. Please try again or adjust timeout settings in the sidebar.")
+        return (chunk for chunk in []) # Return empty generator to stop further processing in caller
+    except APIStatusError as e:
+        # Handle API Status Errors, including Rate Limits (HTTP 429)
+        if e.status_code == 429:
+            st.error("🚦 Rate limit hit! Too many requests. Please wait a moment before trying again, or consider upgrading your Groq plan if this happens frequently.")
+        else:
+            # Handle other HTTP errors (e.g., 400 Bad Request, 500 Internal Server Error)
+            error_detail = e.response.json().get('detail', 'Unknown API error') if e.response else 'No detailed response'
+            st.error(f"⚠️ Groq API error ({e.status_code}): {error_detail}")
+        return (chunk for chunk in []) # Return empty generator
+    # --- END NEW ---
     except Exception as e:
-        st.error(f"Error getting LLM response: {e}")
-        return "An error occurred while generating the response."
+        # Catch any other unexpected errors
+        st.error(f"An unexpected error occurred while getting the LLM response: {e}")
+        return (chunk for chunk in [])
     
 def detect_device_type(query: str) -> str:
     """Auto-detect device type from query"""
@@ -451,8 +544,16 @@ def process_user_query(
     """
     Processes a user query by running the RAG pipeline and updates the chat history.
     """
-    if not query_text:
-        return
+    if is_inappropriate_query(query_text):
+        st.session_state.messages.append({"role": "user", "content": query_text}) # Add user query to history
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": (
+                "I apologize, but I cannot assist with that request. My purpose is to provide "
+                "guidance solely on Apple device repair. Please ask a question related to device repair."
+            )
+        })
+        return # Stop processing further
 
     if not st.session_state.get('groq_api_key'):
         st.session_state.messages.append({"role": "assistant", "content": "❌ Please enter your Groq API key in the sidebar."})
@@ -473,100 +574,164 @@ def process_user_query(
         if detected_type != "both":
             final_device_type = detected_type.title()
 
-    with st.spinner(f"🔍 Searching repair documentation and generating guidance..."):
-        result = rag_pipeline(
-            query=query_text,
-            device_type=final_device_type,
-            model=model_embedding,
-            mac_collection=mac_collection_db,
-            iphone_collection=iphone_collection_db,
-            groq_client=groq_client_obj,
-            chat_history=st.session_state.messages,
-            n_results=n_results_setting,
-            min_relevance=min_relevance_setting,
-            model_name=model_name_setting,
-            show_debug=show_debug_setting
-        )
+    # --- MODIFICATION START: Streaming Display ---
+    with st.chat_message("assistant"):
+        message_placeholder = st.empty()
+        full_response_content = ""
+        parsing_error_message = ""
+        parsed_data = None
+        parsing_successful = False
 
-    st.session_state.search_history.insert(0, {
-        'query': query_text,
-        'device_type': final_device_type,
-        'results_count': result['num_docs_used'],
-        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        'model_used': model_name_setting
-    })
-    st.session_state.search_history = st.session_state.search_history[:10]
+        with st.spinner(f"🔍 Searching repair documentation and generating guidance..."):
+            # Step 1: Retrieve relevant documents (this part is not streamed)
+            relevant_docs = retrieve_relevant_docs(
+                query_text, final_device_type, model_embedding,
+                mac_collection_db, iphone_collection_db,
+                n_results_setting, min_relevance_setting, show_debug_setting
+            )
 
-    # --- Start of Modified UI Rendering ---
-    if result.get('error'):
-        # If there's an error from RAG (e.g., no docs or parsing error)
-        st.session_state.messages.append({"role": "assistant", "content": f"An error occurred: {result['error']}"})
-        if not result['parsed_response']: # If parsing failed, show raw LLM response if available
-            st.session_state.messages.append({"role": "assistant", "content": f"**Raw AI Response (Parsing Failed):**\n```\n{result['response']}\n```"})
-    elif result['parsed_response'] and result['parsing_successful']:
-        # If successfully parsed as JSON
-        parsed_data = result['parsed_response']
-        formatted_response_parts = []
+            if not relevant_docs:
+                full_response_content = f"No relevant documentation found for your {final_device_type} repair query. Please try different keywords or lower the relevance threshold."
+                message_placeholder.markdown(full_response_content)
+            else:
+                # Step 2: Create RAG-enhanced prompt
+                rag_prompt_content = create_repair_prompt(query_text, relevant_docs, final_device_type)
+                temp_chat_history_for_llm = list(st.session_state.messages[:-1]) + [{"role": "user", "content": rag_prompt_content}]
 
-        # Render structured JSON output with Markdown
-        if parsed_data.get("title"):
-            formatted_response_parts.append(f"## {parsed_data['title']}")
-        if parsed_data.get("summary"):
-            formatted_response_parts.append(f"### 📋 Summary\n{parsed_data['summary']}")
-        if parsed_data.get("safety_precautions"):
-            formatted_response_parts.append(f"### ⚠️ Safety Precautions\n{parsed_data['safety_precautions']}")
-        if parsed_data.get("required_tools_parts"):
-            formatted_response_parts.append(f"### 🛠️ Required Tools & Parts\n{parsed_data['required_tools_parts']}")
-        if parsed_data.get("step_by_step_instructions"):
-            formatted_response_parts.append("### 📝 Step-by-Step Instructions")
-            for i, step in enumerate(parsed_data["step_by_step_instructions"], 1):
-                formatted_response_parts.append(f"{i}. {step}")
-        if parsed_data.get("additional_tips"):
-            formatted_response_parts.append(f"### 💡 Additional Tips\n{parsed_data['additional_tips']}")
-        if parsed_data.get("professional_help_situations"):
-            formatted_response_parts.append(f"### ⚡ When to Seek Professional Help\n{parsed_data['professional_help_situations']}")
-        if parsed_data.get("notes"):
-            formatted_response_parts.append(f"### ℹ️ Notes\n{parsed_data['notes']}")
+                # Step 3: Get LLM response (streamed)
+                llm_response_generator = get_llm_response(
+                    chat_history=temp_chat_history_for_llm,
+                    client=groq_client_obj,
+                    device_type=final_device_type,
+                    model_name=model_name_setting
+                )
 
-        assistant_response_content = "\n\n".join(formatted_response_parts)
+                # Iterate over streamed chunks and display
+                for chunk in llm_response_generator:
+                    if chunk.choices and chunk.choices[0].delta.content:
+                        full_response_content += chunk.choices[0].delta.content
+                        message_placeholder.markdown(full_response_content + "▌") # Add a blinking cursor effect
+                message_placeholder.markdown(full_response_content) # Remove cursor after completion
 
-        # Append source documents if available
-        if result['retrieved_docs']:
-            assistant_response_content += "\n\n**📚 Source Documents Used:**\n"
-            for i, doc in enumerate(result['retrieved_docs']):
-                assistant_response_content += f"- Doc {i+1} ({doc['device_type']} - {doc['similarity_score']:.1%}): {doc['content'][:150]}...\n"
+        # After streaming, attempt JSON parsing on the full response
+        try:
+            json_start = full_response_content.find('```json')
+            json_end = full_response_content.rfind('```')
 
-        st.session_state.messages.append({"role": "assistant", "content": assistant_response_content})
+            if json_start != -1 and json_end != -1 and json_end > json_start:
+                json_string = full_response_content[json_start + len('```json'):json_end].strip()
+                parsed_data = json.loads(json_string)
+                parsing_successful = True
+            else:
+                # If no json markdown block, try to parse the whole response
+                parsed_data = json.loads(full_response_content)
+                parsing_successful = True
+        except json.JSONDecodeError as e:
+            parsing_error_message = f"JSON parsing failed: {e}. Raw response:\n{full_response_content}"
+            parsing_successful = False
+        except Exception as e:
+            parsing_error_message = f"An unexpected error occurred during parsing: {e}. Raw response:\n{full_response_content}"
+            parsing_successful = False
+
+        # Now, render the final content based on parsing success
+        final_display_content = ""
+        if parsing_successful and parsed_data:
+            formatted_response_parts = []
+            if parsed_data.get("title"):
+                formatted_response_parts.append(f"## {parsed_data['title']}")
+            if parsed_data.get("summary"):
+                formatted_response_parts.append(f"### 📋 Summary\n{parsed_data['summary']}")
+            if parsed_data.get("safety_precautions"):
+                formatted_response_parts.append(f"### ⚠️ Safety Precautions\n{parsed_data['safety_precautions']}")
+            if parsed_data.get("required_tools_parts"):
+                formatted_response_parts.append(f"### 🛠️ Required Tools & Parts\n{parsed_data['required_tools_parts']}")
+            if parsed_data.get("step_by_step_instructions"):
+                formatted_response_parts.append("### 📝 Step-by-Step Instructions")
+                for i, step in enumerate(parsed_data["step_by_step_instructions"], 1):
+                    formatted_response_parts.append(f"{i}. {step}")
+            if parsed_data.get("additional_tips"):
+                formatted_response_parts.append(f"### 💡 Additional Tips\n{parsed_data['additional_tips']}")
+            if parsed_data.get("professional_help_situations"):
+                formatted_response_parts.append(f"### ⚡ When to Seek Professional Help\n{parsed_data['professional_help_situations']}")
+            if parsed_data.get("notes"):
+                formatted_response_parts.append(f"### ℹ️ Notes\n{parsed_data['notes']}")
+
+            final_display_content = "\n\n".join(formatted_response_parts)
+
+            if relevant_docs:
+                final_display_content += "\n\n**📚 Source Documents Used:**\n"
+                for i, doc in enumerate(relevant_docs):
+                    doc_content = doc['content']
+                    doc_name = "Untitled Document" # Default name
+
+                    # Attempt to extract the first non-empty line as the document name
+                    lines = doc_content.strip().split('\n')
+                    if lines:
+                        first_line = lines[0].strip()
+                        # If it looks like a markdown heading, clean it
+                        if first_line.startswith('#'):
+                            doc_name = first_line.lstrip('# ').strip()
+                        elif first_line: # If it's just a regular first line
+                            doc_name = first_line
+                        else: # If first line is empty, try the second
+                            if len(lines) > 1:
+                                second_line = lines[1].strip()
+                                if second_line.startswith('#'):
+                                    doc_name = second_line.lstrip('# ').strip()
+                                elif second_line:
+                                    doc_name = second_line
+                    
+                    # Ensure name is not too long for display
+                    if len(doc_name) > 100: # Limit length to keep display clean
+                        doc_name = doc_name[:97] + "..."
+
+                    final_display_content += f"- Doc {i+1} ({doc['device_type']} - {doc['similarity_score']:.1%}): **{doc_name}**\n"
+        else:
+            # Fallback for non-JSON or parsing errors
+            final_display_content = (
+                "No relevant documentation found or AI response was not structured as expected. Try:\n"
+                "• Using different keywords\n"
+                f"• Lowering the minimum relevance threshold (currently {min_relevance_setting:.1%})\n"
+                "• Including specific device models\n\n"
+                "**Try these test queries:**\n"
+                "`• battery replacement`\n`• screen repair`\n`• water damage`\n`• charging port`"
+            )
+            if parsing_error_message:
+                final_display_content += f"\n\n**Parsing Error:** {parsing_error_message}"
+            if full_response_content and not parsing_successful:
+                final_display_content += f"\n\n**Raw AI Response (Fallback):**\n```\n{full_response_content}\n```"
+
+        message_placeholder.markdown(final_display_content) # Update the placeholder with the final content
+
+        # Update session state messages for history
+        st.session_state.messages.append({"role": "assistant", "content": final_display_content})
+
+        # Update search history
+        st.session_state.search_history.insert(0, {
+            'query': query_text,
+            'device_type': final_device_type,
+            'results_count': len(relevant_docs), # Use len(relevant_docs) as num_docs_used
+            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'model_used': model_name_setting,
+            'parsing_successful': parsing_successful
+        })
+        st.session_state.search_history = st.session_state.search_history[:10]
 
         if show_debug_setting:
             debug_info_content = {
-                'query': result['query'],
-                'device_type': result['device_type'],
-                'num_docs_retrieved': result['num_docs_used'],
+                'query': query_text,
+                'device_type': final_device_type,
+                'num_docs_retrieved': len(relevant_docs),
                 'model_used': model_name_setting,
-                'prompt_length': len(result['prompt']),
+                'prompt_length': len(rag_prompt_content),
                 'min_relevance_threshold': min_relevance_setting,
-                'parsing_successful': result['parsing_successful']
+                'parsing_successful': parsing_successful
             }
-            if result.get('error'):
-                debug_info_content['parsing_error'] = result['error']
+            if parsing_error_message:
+                debug_info_content['parsing_error'] = parsing_error_message
             st.session_state.messages.append({"role": "assistant", "content": f"```json\n{json.dumps(debug_info_content, indent=2)}\n```"})
 
-    else:
-        # Fallback for non-JSON or other issues (e.g., no relevant docs returned by RAG)
-        no_docs_message = (
-            "No relevant documentation found or AI response was not structured as expected. Try:\n"
-            "• Using different keywords\n"
-            f"• Lowering the minimum relevance threshold (currently {min_relevance_setting:.1%})\n"
-            "• Including specific device models\n\n"
-            "**Try these test queries:**\n"
-            "`• battery replacement`\n`• screen repair`\n`• water damage`\n`• charging port`"
-        )
-        st.session_state.messages.append({"role": "assistant", "content": no_docs_message})
-        # If there was a raw LLM response but not parseable, include it
-        if result['response'] and not result['parsing_successful']:
-             st.session_state.messages.append({"role": "assistant", "content": f"**Raw AI Response (Fallback):**\n```\n{result['response']}\n```"})
-    # --- End of Modified UI Rendering ---
+    # --- END MODIFICATION ---
 
 def rag_pipeline(
     query: str,
@@ -581,21 +746,21 @@ def rag_pipeline(
     model_name: str = "llama-3.1-8b-instant",
     show_debug: bool = False
 ) -> Dict:
-    """Complete RAG Pipeline with JSON parsing for structured output."""
+    """Complete RAG Pipeline that returns the streamed LLM response and relevant docs."""
 
     # Step 1: Retrieve relevant documents
     relevant_docs = retrieve_relevant_docs(query, device_type, model, mac_collection, iphone_collection, n_results, min_relevance, show_debug)
 
     if not relevant_docs:
+        # Return a special indicator for no relevant documents
         return {
             'query': query,
             'device_type': device_type,
             'retrieved_docs': [],
             'prompt': '',
-            'response': f"No relevant documentation found for your {device_type} repair query. Please try different keywords or lower the relevance threshold.",
+            'llm_response_generator': None, # Indicate no LLM call made
             'num_docs_used': 0,
-            'error': 'No relevant documents found',
-            'parsed_response': None # Add this for consistency
+            'error': 'No relevant documents found'
         }
 
     # Step 2: Create RAG-enhanced prompt with context from retrieved documents for the *current* turn
@@ -603,54 +768,40 @@ def rag_pipeline(
 
     temp_chat_history_for_llm = list(chat_history[:-1]) + [{"role": "user", "content": rag_prompt_content}]
 
-    # Step 3: Get LLM response using the full chat history
-    llm_response_raw = get_llm_response( # Renamed to avoid confusion with parsed_response
+    # Step 3: Get LLM response (this returns the generator directly)
+    llm_response_generator = get_llm_response(
         chat_history=temp_chat_history_for_llm,
         client=groq_client,
         device_type=device_type,
         model_name=model_name
     )
 
-    parsed_response_content = None
-    response_display_content = llm_response_raw # Default to raw if parsing fails
-    parsing_successful = False
-    parsing_error = None
-
-    # Step 4: Attempt to parse LLM response as JSON
-    try:
-        # Extract content within the ```json ... ``` block if it exists
-        json_start = llm_response_raw.find('```json')
-        json_end = llm_response_raw.rfind('```')
-
-        if json_start != -1 and json_end != -1 and json_end > json_start:
-            json_string = llm_response_raw[json_start + len('```json'):json_end].strip()
-            parsed_response_content = json.loads(json_string)
-            response_display_content = parsed_response_content # Set to parsed content for display
-            parsing_successful = True
-        else:
-            # If no json markdown block, try to parse the whole response
-            parsed_response_content = json.loads(llm_response_raw)
-            response_display_content = parsed_response_content
-            parsing_successful = True
-    except json.JSONDecodeError as e:
-        parsing_error = f"JSON parsing failed: {e}. Raw response:\n{llm_response_raw}"
-        # Fallback: keep response_display_content as raw_llm_response if parsing fails
-    except Exception as e:
-        parsing_error = f"An unexpected error occurred during parsing: {e}. Raw response:\n{llm_response_raw}"
-
-    # Return complete pipeline result
+    # Return the generator and other relevant info. Parsing happens in process_user_query.
     return {
         'query': query,
         'device_type': device_type,
         'retrieved_docs': relevant_docs,
         'prompt': rag_prompt_content,
-        'response': response_display_content, # This will be either parsed JSON or raw text
+        'llm_response_generator': llm_response_generator, # Pass the generator
         'num_docs_used': len(relevant_docs),
-        'error': parsing_error, # Store parsing error
-        'parsed_response': parsed_response_content, # Store the parsed object or None
-        'parsing_successful': parsing_successful # Indicate if parsing was successful
+        'error': None # No error at this stage, potential errors handled during streaming/parsing
     }
 
+def is_inappropriate_query(query: str) -> bool:
+    """
+    Checks if a query contains inappropriate content based on a keyword list.
+    A more advanced implementation would use a small classifier.
+    """
+    inappropriate_keywords = [
+        "violence", "harm", "kill", "drug", "sex", "porn", "hate", "racist",
+        "illegal", "weapon", "bomb", "exploit", "abuse", "cyberattack",
+        "self-harm", "suicide", "threat", "harass", "discriminate", "malware"
+    ]
+    query_lower = query.lower()
+    for keyword in inappropriate_keywords:
+        if keyword in query_lower:
+            return True
+    return False
 
 def main():
     # Initialize session state variables if they don't exist
@@ -659,9 +810,9 @@ def main():
     if 'search_history' not in st.session_state:
         st.session_state.search_history = []
     if 'groq_api_key' not in st.session_state:
-        st.session_state.groq_api_key = ''
+        st.session_state.groq_api_key = os.getenv("GROQ_API_KEY", "")
     if 'device_type' not in st.session_state:
-        st.session_state.device_type = 'Both'
+        st.session_state.device_type = 'Both' # Changed default to 'Both'
     if 'auto_detect_device' not in st.session_state:
         st.session_state.auto_detect_device = False
     if 'n_results' not in st.session_state:
@@ -678,6 +829,8 @@ def main():
         st.session_state.top_p = 1.0
     if 'show_debug_info' not in st.session_state:
         st.session_state.show_debug_info = False
+    if 'llm_timeout' not in st.session_state:
+        st.session_state.llm_timeout = 60.0 
     # Add this line to initialize chat_input_key:
     if 'chat_input_key' not in st.session_state:
         st.session_state.chat_input_key = 0
@@ -696,7 +849,7 @@ def main():
     # Header
     st.markdown("""
     <div class="main-header">
-        <h1>🔧 AI Repair Assistant with RAG</h1>
+        <h1>Apple Repair Assistant</h1>
         <p>Get expert repair guidance powered by AI and comprehensive repair documentation</p>
     </div>
     """, unsafe_allow_html=True)
@@ -708,7 +861,7 @@ def main():
     stats = get_collection_stats()
     
     # --- Ensure Groq client is initialized HERE, ONCE ---
-    groq_client = setup_groq_client()
+    groq_client = setup_groq_client(st.session_state.groq_api_key)
 
     # Check if client initialized successfully
     if groq_client is None:
@@ -741,21 +894,21 @@ def main():
     
     # Sidebar for configuration
     with st.sidebar:
-        st.header("⚙️ Configuration")
-        
-        # Groq API Key
-        st.subheader("🔑 Groq API Key")
-        api_key = st.text_input(
-            "Enter your Groq API key:",
+        st.header("🔑 API Configuration")
+        # This text_input updates st.session_state.groq_api_key
+        st.session_state.groq_api_key = st.text_input(
+            "Groq API Key",
+            value=st.session_state.groq_api_key,
             type="password",
-            help="Get your API key from https://console.groq.com/keys"
+            help="Get your API key from console.groq.com. It's stored securely in your browser session."
         )
-        
-        if api_key:
-            st.session_state['groq_api_key'] = api_key
-            st.success("✅ API key configured")
+
+        # Your existing feedback for API key input
+        if st.session_state.groq_api_key:
+            st.success("✅ Groq API Key provided!") # This green message will appear
         else:
-            st.warning("⚠️ Please enter your Groq API key to use the AI assistant")
+            st.warning("⚠️ Please enter your Groq API key to use the AI assistant.")
+        groq_client = setup_groq_client(st.session_state.groq_api_key)
         
         # Model selection
         st.subheader("🤖 Model Settings")
@@ -763,10 +916,7 @@ def main():
             "Groq Model:",
             [
                 "llama-3.1-8b-instant",    # Fast + high quality
-                "mixtral-8x7b-32768",      # Fast + high quality
                 "llama3-70b-8192",         # Very strong general model
-                "gemma-7b-it",             # Lightweight option
-                "llama2-70b-4096"          # Legacy LLaMA model
             ],
             index=0,
             help="Different models offer varying speed/quality tradeoffs"
@@ -775,9 +925,11 @@ def main():
         # Advanced search options
         st.subheader("🎛️ Search Options")
         
+        # Modified device_type selectbox
         device_type = st.selectbox(
             "Device Type:",
-            ["Mac", "iPhone"],
+            ["Both", "Mac", "iPhone"], # Added "Both" option
+            index=0, # Set default to "Both"
             help="Choose the device you need help with"
         )
         
@@ -846,63 +998,73 @@ def main():
               show_debug_setting=show_debug # From sidebar
           )
           st.session_state.chat_input_key += 1 # Increment for next input
-          st.rerun() # Rerun to update the chat display with new messages and clear input
+          st.rerun()
 
-        # Quick examples (UPDATE THESE CALLS AS WELL)
+        # Quick examples (Conditional rendering based on device_type)
         col1, col2 = st.columns(2)
-        with col1:
-            st.markdown("**Mac Examples:**")
-            if st.button("🔋 Battery replacement steps", key="mac_battery_btn"):
-                process_user_query(
-                    "MacBook Pro battery replacement", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
-                    min_relevance, model_name, show_debug
-                )
-                st.session_state.chat_input_key += 1 # Increment for next input
-                st.rerun()
-            if st.button("🖥️ Screen flickering problems", key="mac_screen_btn"):
-                process_user_query(
-                    "Mac screen flickering fix", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
-                    min_relevance, model_name, show_debug
-                )
-                st.session_state.chat_input_key += 1 # Increment for next input
-                st.rerun()
-            if st.button("⌨️ Keyboard not responding", key="mac_keyboard_btn"):
-                process_user_query(
-                    "MacBook keyboard not working", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
-                    min_relevance, model_name, show_debug
-                )
-                st.session_state.chat_input_key += 1 # Increment for next input
-                st.rerun()
+
+        # Show Mac examples if device_type is 'Mac' or 'Both'
+        if device_type == "Mac" or device_type == "Both":
+            with col1:
+                st.markdown("**Mac Examples:**")
+                if st.button("🔋 Battery replacement steps", key="mac_battery_btn"):
+                    process_user_query(
+                        "MacBook Pro battery replacement", device_type, auto_detect, model,
+                        mac_collection, iphone_collection, groq_client, n_results,
+                        min_relevance, model_name, show_debug
+                    )
+                    st.session_state.chat_input_key += 1 # Increment for next input
+                    st.rerun()
+
+                if st.button("🖥️ Screen flickering problems", key="mac_screen_btn"):
+                    process_user_query(
+                        "Mac screen replacement", device_type, auto_detect, model,
+                        mac_collection, iphone_collection, groq_client, n_results,
+                        min_relevance, model_name, show_debug
+                    )
+                    st.session_state.chat_input_key += 1 # Increment for next input
+                    st.rerun()
+                    
+                if st.button("⌨️ Keyboard not responding", key="mac_keyboard_btn"):
+                    process_user_query(
+                        "MacBook keyboard replacement", device_type, auto_detect, model,
+                        mac_collection, iphone_collection, groq_client, n_results,
+                        min_relevance, model_name, show_debug
+                    )
+                    st.session_state.chat_input_key += 1 # Increment for next input
+                    st.rerun()
         
-        with col2:
-            st.markdown("**iPhone Examples:**")
-            if st.button("📱 Cracked screen repair", key="iphone_screen_btn"):
-                process_user_query(
-                    "iPhone screen replacement", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
-                    min_relevance, model_name, show_debug
-                )
-                st.session_state.chat_input_key += 1 # Increment for next input
-                st.rerun()
-            if st.button("🔋 Battery draining fast", key="iphone_battery_btn"):
-                process_user_query(
-                    "iPhone battery drain issues", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
-                    min_relevance, model_name, show_debug
-                )
-                st.session_state.chat_input_key += 1 # Increment for next input
-                st.rerun()
-            if st.button("📷 Camera not working", key="iphone_camera_btn"):
-                process_user_query(
-                    "iPhone camera problems", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
-                    min_relevance, model_name, show_debug
-                )
-                st.session_state.chat_input_key += 1 # Increment for next input
-                st.rerun()
+        # Show iPhone examples if device_type is 'iPhone' or 'Both'
+        if device_type == "iPhone" or device_type == "Both":
+            with col2:
+                st.markdown("**iPhone Examples:**")
+                if st.button("📱 Cracked screen repair", key="iphone_screen_btn"):
+                    process_user_query(
+                        "iPhone screen replacement", device_type, auto_detect, model,
+                        mac_collection, iphone_collection, groq_client, n_results,
+                        min_relevance, model_name, show_debug
+                    )
+                    st.session_state.chat_input_key += 1 # Increment for next input
+                    st.rerun()
+                    
+                if st.button("🔋 Battery draining fast", key="iphone_battery_btn"):
+                    process_user_query(
+                        "iPhone battery replacement", device_type, auto_detect, model,
+                        mac_collection, iphone_collection, groq_client, n_results,
+                        min_relevance, model_name, show_debug
+                    )
+                    st.session_state.chat_input_key += 1 # Increment for next input
+                    st.rerun()
+                    
+                if st.button("📷 Camera not working", key="iphone_camera_btn"):
+                    process_user_query(
+                        "iPhone camera problems", device_type, auto_detect, model,
+                        mac_collection, iphone_collection, groq_client, n_results,
+                        min_relevance, model_name, show_debug
+                    )
+                    st.session_state.chat_input_key += 1 # Increment for next input
+                    st.rerun()
+                
 
     with tab2:
         st.subheader("📊 Database Analytics")
@@ -1282,7 +1444,7 @@ def main():
                 
                 # Test API connection
                 if st.button("🧪 Test API Connection"):
-                    groq_client = setup_groq_client()
+                    groq_client = setup_groq_client(st.session_state.groq_api_key) # Pass API key
                     if groq_client:
                         try:
                             with st.spinner("Testing connection..."):
@@ -1329,10 +1491,7 @@ def main():
             st.info("""
             **Groq Models Available:**
             - llama-3.1-8b-instant (Recommended)
-            - mixtral-8x7b-32768  
             - llama3-70b-8192
-            - gemma-7b-it
-            - llama2-70b-4096
             
             **Rate Limits:**
             - Free tier: 30 requests/min
@@ -1354,15 +1513,10 @@ def main():
                 "Default AI Model:",
                 [
                     "llama-3.1-8b-instant",
-                    "mixtral-8x7b-32768", 
-                    "llama3-70b-8192",
-                    "gemma-7b-it",
-                    "llama2-70b-4096"
+                    "llama3-70b-8192"
                 ],
                 index=0 if current_model == 'llama-3.1-8b-instant' else 
-                      1 if current_model == 'mixtral-8x7b-32768' else
-                      2 if current_model == 'llama3-70b-8192' else
-                      3 if current_model == 'gemma-7b-it' else 4,
+                      1 if current_model == 'llama3-70b-8192' else 2,
                 help="Choose the default model for AI responses"
             )
             
@@ -1398,10 +1552,7 @@ def main():
             
             model_info = {
                 "llama-3.1-8b-instant": {"speed": "⚡⚡⚡", "quality": "⭐⭐⭐⭐", "use_case": "General purpose, fast"},
-                "mixtral-8x7b-32768": {"speed": "⚡⚡⚡", "quality": "⭐⭐⭐⭐⭐", "use_case": "High quality, long context"},
-                "llama3-70b-8192": {"speed": "⚡⚡", "quality": "⭐⭐⭐⭐⭐", "use_case": "Best quality, slower"},
-                "gemma-7b-it": {"speed": "⚡⚡⚡", "quality": "⭐⭐⭐", "use_case": "Lightweight, efficient"},
-                "llama2-70b-4096": {"speed": "⚡⚡", "quality": "⭐⭐⭐⭐", "use_case": "Legacy model"}
+                "llama3-70b-8192": {"speed": "⚡⚡", "quality": "⭐⭐⭐⭐⭐", "use_case": "Best quality, slower"}
             }
             
             for model, info in model_info.items():
@@ -1540,7 +1691,7 @@ def main():
                         for collection in ['mac_repairs', 'iphone_repairs']:
                             if f"{collection}_count" in debug_info:
                                 count = debug_info[f"{collection}_count"]
-                                st.write(f"� {collection}: {count:,} documents")
+                                st.write(f" {collection}: {count:,} documents")
                             else:
                                 st.warning(f"⚠️ {collection}: Not found")
         
@@ -1802,9 +1953,9 @@ def main():
         if not model:
             st.warning("Sentence Transformer model failed to load. Check dependencies.")
         
-        st.write(f"**Groq Client Initialized:** {'Yes' if setup_groq_client() else 'No'}")
-        if not setup_groq_client():
-            st.warning("Groq client not initialized. Ensure API key is provided.")
+        st.write(f"**Groq Client Initialized:** {'Yes' if groq_client else 'No'}")
+        if not groq_client: 
+            st.warning("Groq client could not be initialized. Please ensure your Groq API key is provided and valid in the 'Settings' tab.")
         
         st.markdown("### 🚀 Session State (Raw)")
         with st.expander("View full Streamlit Session State"):
