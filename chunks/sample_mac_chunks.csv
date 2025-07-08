@@ -1,0 +1,2120 @@
+chunk_id,text,wiki_id,chunk_length,repair_type,contains_warning
+"iMac_Intel_21.5""_EMC_3068_Hard_Drive_Replacement_7","## Step 3
+Lift the display up from the frame and remove it from the iMac.
+It may be necessary to slowly lift from one side to peel against the remaining adhesive.
+Be very careful handling the display—it's big, heavy, and made of glass.
+After the adhesive is cut, it cannot be used to re-seal the display in place. Follow [https://www.ifixit.com/Guide/iMac+Intel+21.5-Inch+EMC+3068+Adhesive+Strips+Replacement/103321|this guide|new_window=true] to replace the adhesive strips that secure the display to the rear enclosure.
+
+
+## Step 1
+Remove the following T10 Torx screws securing the hard drive brackets to the iMac:
+Two 21 mm screws
+One 9 mm screw
+One 27 mm screw
+
+
+## Step 2
+Remove the left and right hard drive brackets from the iMac.
+
+
+## Step 1
+Lift the hard drive from the edge nearest the logic board and pull it slightly out of its recess.
+The hard drive is still attached by its SATA cable; do not attempt to fully remove it from the iMac yet.","iMac_Intel_21.5""_EMC_3068_Hard_Drive_Replacement",248,case,True
+"MacBook_Air_13""_Mid_2013_Logic_Board_Replacement_6","## Step 6
+Use the tip of a spudger to flip up the retaining flap on the keyboard backlight ribbon cable ZIF socket.
+Be sure you are prying up on the hinged retaining flap, '''not''' the socket itself.
+Use your spudger to gently pull the keyboard backlight ribbon cable out of its socket.
+
+
+## Step 7
+Use the flat end of a spudger to pry the right speaker cable connector up and out of its socket on the logic board.
+It is recommended to pry up from beneath the cables.
+
+
+## Step 8
+Remove the six 6.3 mm T5 Torx screws securing the logic board to the upper case.
+On some models these may be 4.1 mm T5 Torx screws.
+
+
+## Step 9
+Remove the inner two 4.9 mm T8 Torx screws securing the antenna cable retainer and left clutch hinge to the upper case.
+
+
+## Step 10
+Push the antenna cable retainer away slightly and remove the 3 mm T5 Torx screw securing the end of the heat sink to the upper case.
+
+
+## Step 11
+Slide the flat end of a spudger under the right speaker from the end nearest the hinge to the front edge of the Air to loosen the adhesive.
+Remove the right speaker from the upper case.","MacBook_Air_13""_Mid_2013_Logic_Board_Replacement",274,case,False
+"MacBook_Pro_13""_Function_Keys_Late_2016_Battery_Replacement_4","## Step 4
+Repeat the previous step on the opposite side, sliding your opening pick under the lower case and up the side to pop the second clip free.
+
+
+## Step 5
+Insert your opening pick once again under the front edge of the lower case, near one of the two centermost screw holes.
+Give the pick a firm twist to pop free the third clip securing the lower case to the chassis.
+Repeat this procedure near the other of the two centermost screw holes, popping the fourth clip free.
+
+
+## Step 6
+Pull the lower case firmly towards the front of the MacBook (away from the hinge area) to separate the last of the clips securing the lower case.
+It may help to pull first at one corner, then the other.
+This may require a lot of force.
+
+
+## Step 7
+Remove the lower case.
+
+
+## Step 1
+Carefully peel up the large piece of tape covering the battery connector, on the edge of the logic board nearest the battery.
+Remove the tape.
+
+
+## Step 2
+Gently peel back the small piece of tape covering the battery board data cable connector.
+The tape is integrated into the ribbon cable and will not detach completely. Simply peel it back enough to access the connector.
+
+
+## Step 3
+Use the tip of a spudger to flip up the small black locking tab securing the cable in its connector.","MacBook_Pro_13""_Function_Keys_Late_2016_Battery_Replacement",274,case,True
+"MacBook_Pro_16""_2021_Fan_Assembly_Replacement_13","## Unfasten the fans
+Use a Torx driver to remove the following screws securing the fans to the frame:
+Four 3.3 mm T3 screws
+Four 3 mm T5 screws
+
+
+## Remove the fans
+Remove the fans.
+***To reassemble your device, follow these instructions in reverse order.***
+
+Compare your new replacement part to the original part—you may need to transfer remaining components or remove adhesive backings from the new part before you install it.
+
+Repair didn’t go as planned? Try some [[Troubleshooting Problems After a Repair|basic troubleshooting]], or ask our [link|https://www.ifixit.com/Answers/Device/MacBook%20Pro%2016%22%202021|MacBook Pro 16"" 2021 Answers community] for help.","MacBook_Pro_16""_2021_Fan_Assembly_Replacement",178,case,False
+"iMac_Intel_20""_EMC_2105_and_2118_Logic_Board_Replacement_9","## Step 13
+Remove the following seven screws securing the logic board to the rear case:
+Three coarse-thread T10 Torx.
+Three fine-thread T10 Torx.
+One long coarse-thread T10 Torx.
+
+
+## Step 14
+Carefully rotate the top edge of the logic board out of the rear case and lift the board up out of the iMac, minding the RAM arms and any cables that may get caught.
+Be especially careful with the hard drive thermal sensor cable that is routed underneath the heat sink framework.
+Only handle the logic board by its edges.
+To reassemble your device, follow these instructions in reverse order.","iMac_Intel_20""_EMC_2105_and_2118_Logic_Board_Replacement",133,case,True
+"MacBook_Pro_13""_Retina_Display_Early_2013_Trackpad_Replacement_9","## Step 12
+Lift the battery as a whole up out of the upper case, and remove the battery.
+Before installing a new battery, remove all the old adhesive from the MacBook Pro's case.
+With a little luck, you can slowly pull out each strip of adhesive with your fingers.
+Otherwise, soak each section of adhesive with a bit of adhesive remover for 2-3 minutes, and then scrape it out with an opening pick or one of the other tools in your kit. This can take quite a bit of work, so be patient.
+Mop up any remaining adhesive remover and give your MacBook Pro a few minutes to air dry.
+The replacement battery included in your iFixit kit comes with adhesive pre-installed. Test the battery's fit and alignment carefully before peeling off the film covering the adhesive, and then press each cell firmly into place. If any additional films/liners are present that weren't on your original battery, remove them now.","MacBook_Pro_13""_Retina_Display_Early_2013_Trackpad_Replacement",209,case,True
+"iMac_Intel_21.5""_Retina_4K_Display_(2017)_Logic_Board_Replacement_5","## Step 16
+Slide the plastic card toward the center, again stopping just before the iSight camera.
+
+
+## Step 17
+Wedge the plastic card back into the top left corner.
+
+
+## Step 18
+With both plastic cards inserted as shown near the corners, gently twist the cards sideways to increase the gap between display and case.
+If there are any sections that seem to stick and won't separate, stop twisting and use one of the cards to cut the remaining adhesive.
+Begin to lift the top of the display up from the frame.
+Only lift the display a few inches—the display data and power cables are still connected to the logic board.
+
+
+## Step 1
+Lift the display up enough to have easy access to the connector, but not so much that you stretch the cables and stress their connections (about 8"").
+Hold the display with one hand while using your other hand to unplug the display power cable.
+
+
+## Step 2
+Continuing to support the display with one hand, flip up the metal retaining bracket on the display data cable.
+Carefully pull the display data cable from its socket on the logic board.
+Be sure to pull the display data cable connector straight out of its socket, keeping it parallel to the motherboard, to avoid damaging it.","iMac_Intel_21.5""_Retina_4K_Display_(2017)_Logic_Board_Replacement",255,case,True
+"MacBook_Pro_15""_Touch_Bar_2018_Trackpad_Replacement_3","## Step 4
+Repeat the previous step on the other side, using an opening pick to to release the second clip.
+
+
+## Step 5
+Lift the front edge of the lower case (the side opposite the display hinge) enough to slide your fingertips underneath and get a good grip on it.
+Two additional hidden clips near the middle of the cover should pop free at this point, if they haven't already.
+Don't lift more than an inch or so, and don't try to remove the lower case yet.
+
+
+## Step 6
+Pull firmly to slide the lower case towards the front edge of the MacBook (away from the hinge area) to separate the last of the clips securing the lower case.
+Pull first at one corner, then the other.
+Pull to the side—not up.
+This may require a lot of force.","MacBook_Pro_15""_Touch_Bar_2018_Trackpad_Replacement",173,case,False
+"iMac_Intel_20""_EMC_2266_Hard_Drive_Replacement_3","## Step 3
+Disconnect the microphone cable connector, removing tape as necessary.
+For the front bezel to sit properly, be sure to tuck the microphone cable and connector into the void next to the camera board.
+
+
+## Step 1
+Pull the LCD temperature sensor connector straight up off its socket on the logic board.
+(located at the top of the logic board on the 24"")
+
+
+## Step 2
+Remove the two T6 Torx screws securing the display data cable to the logic board.
+Use the attached black tab to pull the display data cable connector straight away from the logic board.
+
+
+## Step 3
+Remove the eight T8 Torx screws securing the display panel to the rear case.
+Lift the display panel from its left edge and rotate it toward the right edge of the iMac.
+
+
+## Step 4
+With the display panel still lifted, disconnect the four inverter cables.
+During reinstallation, place the four inverter cable connectors in voids between components attached to the rear panel so the display panel will sit flush on the edges of the rear case.
+(combined into one plug in on the 24"")
+Be sure to keep track of the cables, as they do not have proprietary sockets. Mismatched cables can cause screen issues.","iMac_Intel_20""_EMC_2266_Hard_Drive_Replacement",261,case,True
+"MacBook_Air_13""_Retina_Display_2019_Lower_Case_Replacement_0","# MacBook Air 13"" Retina Display 2019 Lower Case Replacement
+Use this guide to replace the lower case on your 2019 MacBook Air, or to remove it for further repair.
+
+
+###Tools Required:
+
+ - P5 Pentalobe Screwdriver Retina MacBook Pro and Air
+
+
+###Parts Required:
+
+ - MacBook Air 13"" (Late 2018-Early 2020) Lower Case
+
+ - MacBook Air 13"" (Late 2018-Late 2020) Lower Case Screw Set","MacBook_Air_13""_Retina_Display_2019_Lower_Case_Replacement",98,case,False
+"Installing_MacBook_Pro_13""_Unibody_Early_2011_Dual_Hard_Drive_1","## Step 2
+Use your fingers to pry the lower case away from the body of the MacBook near the vent.
+Remove the lower case.
+
+
+## Step 1
+Use the edge of a spudger to pry the battery connector upwards from its socket on the logic board.
+It is useful to pry upward on both short sides of the connector to ""walk"" it out of its socket. Be careful with the corners of the connectors, they can be easily broken off.
+
+
+## Step 2
+Bend the battery cable slightly away from its socket on the logic board so it does not accidentally connect itself while you work.
+
+
+## Step 1
+Use the flat end of a spudger to pry the AirPort/Bluetooth ribbon cable connector up from its socket on the logic board.
+
+
+## Step 2
+Carefully pull the camera cable out of its socket on the logic board.
+Though not recommended by iFixit staff, some users opt to omit this step completely. For information on this, see the step comments.
+Pull the cable parallel to the face of the logic board. Pulling it upward may damage the logic board or the cable itself.","Installing_MacBook_Pro_13""_Unibody_Early_2011_Dual_Hard_Drive",229,case,True
+"PowerBook_G4_Aluminum_15""_1.67_GHz_LCD_Replacement_3","## Step 6
+Insert a spudger just to the right of the hinge opening on the top edge of the display between the front display bezel and the plastic strip attached to the rear bezel.
+Pry the rear bezel away from the front bezel along the top right half of the display.
+To release the clips in the far left and right corners of the display, it may be necessary to run a spudger parallel to the face of the display along the top edge of the front display bezel and force it into the corners to pop the rear bezel off.
+
+
+## Step 7
+Now that the top edge is released, use a spudger to completely release the clips along the left edge of the display.
+
+
+## Step 8
+Use a spudger to release the clips along the right edge of the display.
+
+
+## Step 9
+Close the display.
+The rear bezel is still attached to the display by the antenna cables.
+Rotate the top edge of the rear display bezel slightly away from the rest of the display, and then lift the lower edge of the rear bezel away from the clutch cover.
+
+
+## Step 10
+Disconnect both antenna cables from the rear display bezel.
+Rear display bezel remains.","PowerBook_G4_Aluminum_15""_1.67_GHz_LCD_Replacement",253,screen,True
+"iMac_Intel_21.5""_EMC_2889_Adhesive_Strips_Replacement_0","# iMac Intel 21.5"" EMC 2889 Adhesive Strips Replacement
+Removing the display requires cutting through the adhesive around the perimeter of the screen. After the adhesive is cut, it cannot be used to re-seal the display in place, so you'll need to apply a new set of adhesive strips.
+
+
+###Tools Required:
+
+ - iMac Intel 21.5"" Cardboard Service Wedge
+
+ - Painter's Tape
+
+ - Microfiber Cleaning Cloths
+
+ - iMac Service Wedge
+
+ - Isopropyl Alcohol
+
+ - Spudger
+
+ - Tweezers
+
+
+###Parts Required:
+
+ - iMac Intel 21.5"" (2012-2019) Adhesive Strips","iMac_Intel_21.5""_EMC_2889_Adhesive_Strips_Replacement",139,screen,False
+"iMac_Intel_27""_EMC_2546_CPU_Replacement_2","## Step 3
+Use the tool like a pizza cutter—roll it along through the gap, and it will cut the foam adhesive through the center.
+Be sure to always push with the handle behind the cutting wheel. If you pull, the wheel might get pulled out of the handle.
+Run the tool up along the left side of the display.
+
+
+## Step 4
+Continue wheeling the tool up around the top left corner.
+
+
+## Step 5
+Cut the adhesive along the top left of the display.
+
+
+## Step 6
+Continue along the top of the display.
+You may want to run the tool back and forth through what you've already cut a few times, to ensure you get as much of the adhesive separated as possible.
+
+
+## Step 7
+Push the tool around the top right corner of the display.
+
+
+## Step 8
+Wheel the tool down along the right side of the display.
+
+
+## Step 9
+Finish pushing the opening tool to the bottom of the right side of the display.
+At this point, you'll want to run the tool back around the entire display, to ensure you cut as much adhesive as possible.","iMac_Intel_27""_EMC_2546_CPU_Replacement",231,screen,False
+iMac_G4_17_800_MHz_EMC_1936_LCD_Replacement_2,"## Step 7
+The third, and final, cable you will need to unplug is the TMDS connector. This is located under a rectangular strip of black tape that has a gray and black cord coming out of one end.
+Peel back the black tape, starting at the end with the cords protruding out.
+Under the black tape, you will see the gray and black cords going into a connection that looks like it is wrapped in aluminum foil. Grasp that connection and pull carefully in the downward direction toward the bottom of the display.
+
+
+## Step 8
+Now that you have unplugged all of the cables, you can lay the front panel of the display face down on a soft surface.
+Next, you will unscrew the four 5 mm T-10 screws located at the corners of the display.
+
+
+## Step 9
+Once the four screws are removed, the display is ready to be removed and the inverter is accessible.
+To reassemble your device, follow these instructions in reverse order.",iMac_G4_17_800_MHz_EMC_1936_LCD_Replacement,208,screen,True
+"MacBook_Pro_15""_Touch_Bar_Late_2016_Screen_Replacement_7","## Step 8
+Use a T5 Torx driver to remove the four 3.3 mm screws securing the display board.
+Before reinstalling these screws:
+Make sure the display board flex cable lies on top of the board, not trapped underneath.
+
+
+## Step 9
+Use a P2 Pentalobe driver to remove the sixteen 1.5 mm screws securing the antenna assembly.
+
+
+## Step 10
+Use an opening pick to pry up the antenna assembly and separate it from the MacBook Pro.
+Watch out for the delicate ribbon cables in the middle section. Avoid sliding the pick from side to side so as not to damage the cables.
+
+
+## Step 11
+Carefully remove the antenna assembly, while simultaneously feeding the antenna cable bundle out from underneath the heat sink.
+During reassembly, gently pinch the cable bundle together and guide it under the heat pipe into the correct position on the board. If needed, use your tools to help guide it through, but don't force it.
+
+
+## Step 12
+Use a T3 Torx driver to remove the four 3.9 mm screws securing the display cable cover springs.
+
+
+## Step 13
+Use a T8 Torx driver to remove two 4.9 mm screws from each hinge (four screws total).
+Each hinge has a third screw, which you should leave in place for now.","MacBook_Pro_15""_Touch_Bar_Late_2016_Screen_Replacement",278,screen,True
+"MacBook_Pro_13""_Touch_Bar_2017_Screen_Replacement_7","## Step 8
+Remove the 2.8 mm T5 Torx screw securing the three antenna coax cables to the main board.
+
+
+## Step 9
+Use an opening pick to lever out the antenna cable assembly in the areas shown.
+Don't slide the opening pick from side to side, because there are two display cables that can be damaged.
+
+
+## Step 10
+Carefully remove the antenna assembly, while simultaneously feeding the antenna cable bundle out from underneath the heat pipe.
+
+
+## Step 11
+Remove the antenna cable assembly.
+During reassembly, gently pinch the cable bundle together and guide it under the heat pipe into the correct position on the board. If needed, use your tools to help guide it through, but don't force it.
+
+
+## Unscrew the display cable assembly
+Remove the four 3.9 mm T3 Torx screws securing the two display cable cover springs.
+
+
+## Remove the display cable assembly
+Grab the left side of the display cable assembly and pull it towards the bottom end of the MacBook and away from the  cover spring.
+Use a pair of [product|IF145-020|tweezers] to pull the cover spring of the display cable out of its recess.
+Repeat this step with the right cover spring of the display cable assembly.","MacBook_Pro_13""_Touch_Bar_2017_Screen_Replacement",262,screen,True
+"iMac_Intel_27""_EMC_2390_Display_Replacement_0","# iMac Intel 27"" EMC 2390 Display Replacement
+A 27"" iMac is a great thing. A 27"" iMac with a broken display is a great broken thing. Don't let a broken LCD get in the way of your iMac being awesome. Use this guide to help you replace the display in the 2010 27"" iMac.
+
+
+###Tools Required:
+
+ - Heavy-Duty Suction Cups (Pair)
+
+ - TR10 Torx Security Screwdriver
+
+
+###Parts Required:
+
+ - iMac Intel 27"" (EMC 2390) LCD Assembly","iMac_Intel_27""_EMC_2390_Display_Replacement",119,screen,False
+"How_to_Turn_iMac_Intel_27""_EMC_2390_Into_a_Nice_2K_HDMI/VGA_External_Display_1","## Check for Your Display Model
+Check on the back of your display the brand and model of it
+It will probably be an LG display
+Mine was model LM270WQ1 (SD)(C2)
+Search for a LCD driver board compatible with your display","How_to_Turn_iMac_Intel_27""_EMC_2390_Into_a_Nice_2K_HDMI/VGA_External_Display",56,screen,False
+"iMac_Intel_27""_EMC_2429_Graphics_Card,_CPU,_Hard_Drive,_Ram_Upgrade_1","## Step 1
+First Start by unplugging all cables from your iMac and setting up a workstation.
+You will need a large workstation to hold the iMac and it's parts.
+
+
+## Step 2
+Stick a [product|IF145-023|heavy-duty suction] cup near each of the two top corners of the glass panel.
+To attach the suction cups, first position the suction cup with the movable handle parallel to the face of the glass panel (as indicated in the second picture).
+While lightly holding the suction cup against the glass, raise the movable handle until it is parallel with the other handle (as indicated by the third picture).
+If your suction cups refuse to stick, try cleaning both the glass panel and the suction cup with a damp soft, lint-free cloth. (Dampen with distilled water, and if needed, an equal ratio of distilled water and white vinegar for best results.)
+Do not use the suction cups to carry the display glass because if one of them fails to stick, you could drop the screen and break it.
+The original iMac box makes a good place to store the glass panel. Otherwise, a padded horizontal surface, like a towel on a desk, will do nicely.
+To reassemble your device, follow these instructions in reverse order.","iMac_Intel_27""_EMC_2429_Graphics_Card,_CPU,_Hard_Drive,_Ram_Upgrade",284,screen,False
+"iMac_Intel_27""_EMC_2546_Logic_Board_Replacement_2","## Step 3
+Use the tool like a pizza cutter—roll it along through the gap, and it will cut the foam adhesive through the center.
+Be sure to always push with the handle behind the cutting wheel. If you pull, the wheel might get pulled out of the handle.
+Run the tool up along the left side of the display.
+
+
+## Step 4
+Continue wheeling the tool up around the top left corner.
+
+
+## Step 5
+Cut the adhesive along the top left of the display.
+
+
+## Step 6
+Continue along the top of the display.
+You may want to run the tool back and forth through what you've already cut a few times, to ensure you get as much of the adhesive separated as possible.
+
+
+## Step 7
+Push the tool around the top right corner of the display.
+
+
+## Step 8
+Wheel the tool down along the right side of the display.
+
+
+## Step 9
+Finish pushing the opening tool to the bottom of the right side of the display.
+At this point, you'll want to run the tool back around the entire display, to ensure you cut as much adhesive as possible.","iMac_Intel_27""_EMC_2546_Logic_Board_Replacement",231,screen,False
+MacBook_Unibody_Model_A1342_LCD_Replacement_3,"## Step 2
+Peel the piece of tape covering the display data cable connector away from the edge closest to the LCD.
+
+
+## Step 3
+Use the tip of a spudger to flip up the thin steel retaining clip securing the display data cable to its socket on the LCD.
+While holding the display data cable by the retaining clip, pull the LCD straight up and away from its socket.
+Lift the LCD out of the display assembly and set it aside.
+To reassemble your device, follow these instructions in reverse order.",MacBook_Unibody_Model_A1342_LCD_Replacement,107,screen,False
+"MacBook_Pro_15""_Touch_Bar_2019_Battery_Replacement_7","## Step 6
+Use a T5 Torx driver to remove the 3.7 mm pancake screw securing the battery power connector.
+
+
+## Step 7
+Use a spudger to lift the battery power connector, disconnecting the battery.
+Lift the connector high enough to keep it separated from its socket while you work. If it accidentally makes contact, it could damage your MacBook Pro.
+
+
+## Step 1
+Use a T3 Torx driver to remove the two 1.9 mm screws securing the cover bracket for the keyboard and trackpad cable connectors.
+Remove the bracket.
+
+
+## Step 2
+Use a spudger to disconnect the trackpad cable by prying its connector straight up from the logic board.
+
+
+## Step 3
+Apply mild heat to the trackpad ribbon cable to soften the adhesive securing it to the battery.
+You can use an iOpener, hair dryer, or heat gun, but be careful not to overheat the battery. The cable should be warm, but not too hot to touch.
+
+
+## Step 4
+Carefully peel the trackpad cable up off the battery, and push it out of the way.
+Don't crease or tear the cable. If you have trouble, don't force it—apply more heat and try again.","MacBook_Pro_15""_Touch_Bar_2019_Battery_Replacement",265,logic_board,True
+"MacBook_Pro_14""_Late_2023_(M3_Pro_and_M3_Max)_Antenna_Bar_Replacement_3","## Disconnect the battery board
+Peel back any tape covering the battery board data cable connector on the logic board.
+
+
+## Step 2
+Use a spudger to gently pry up the locking flap on the [guide|25629|ZIF connector|stepid=64969|new_window=true] for the battery board data cable.
+
+
+## Step 3
+Disconnect the battery board data cable by sliding it out from its socket on the logic board.
+
+
+## Unfasten the trackpad cable bracket
+Use a 3IP Torx Plus driver to remove the two 2.1 mm‑long  screws securing the trackpad cable bracket to the logic board.
+
+
+## Remove the trackpad cable bracket
+Use [product|IF145-020|tweezers], or your fingers, to remove the trackpad cable bracket.","MacBook_Pro_14""_Late_2023_(M3_Pro_and_M3_Max)_Antenna_Bar_Replacement",176,logic_board,True
+"MacBook_Pro_16""_2023_Antenna_Bar_Replacement_8","## Unfasten the antenna cables
+Use your 3IP Torx Plus driver to remove the three 2.1 mm screws securing the antenna cable cover and bracket.
+Remove the antenna cable cover.
+
+
+## Disconnect the antenna bar
+Use the point of your spudger to pry up and disconnect the three antenna cables from the logic board.
+Pry only on the metal heads of the connectors. Avoid prying on the cables themselves.
+To reconnect [link|https://www.ifixit.com/Guide/Recognizing+&+Disconnecting+Cable+Connectors/25629#s64972|new_window=true|antenna cables] like these, hold each one in place over its socket and press down with the flat end of your spudger. The connector will snap into place.","MacBook_Pro_16""_2023_Antenna_Bar_Replacement",176,logic_board,True
+iPhone_13_Screen_Replacement_8,"## Screen information
+There are delicate cables along the left edge of your iPhone. ***Don't insert your pick here***, as you may damage the cables.
+
+
+## Separate the left adhesive
+Insert a second opening pick in the bottom left corner of the iPhone.
+Twist both picks simultaneously until the left edge clips release.
+Apply the twisting force gradually.
+If you're having trouble separating the adhesive, reheat the left edge.
+
+
+## Open the iPhone
+If you haven't removed your suction handle, remove it now.
+Rotate your iPhone so the right edge faces you.
+Open the iPhone by swinging the display up from the right side, like the front cover of a book.
+Don't try to fully separate the display yet, as several fragile ribbon cables still connect it to the iPhone's logic board.
+Lean the display against something to keep it propped up while you're working on the phone.
+During reassembly, lay the display in position, align the clips along the top edge, and carefully press the top edge into place before snapping the rest of the display down. If it doesn't click easily into place, check the condition of the clips around the perimeter of the display and make sure they aren't bent.",iPhone_13_Screen_Replacement,260,logic_board,True
+"iMac_Intel_21.5""_EMC_2638_Hard_Drive_Replacement_7","## Step 1
+Remove the following screws securing the hard drive bracket to the rear enclosure:
+Two 21 mm T10 Torx screws from the left-hand hard drive bracket.
+One 9 mm T10 Torx screw.
+One 27 mm T10 Torx screw.
+
+
+## Step 2
+Remove the left and right hard drive brackets from the iMac.
+
+
+## Step 1
+Lift the hard drive from the edge nearest the logic board and pull it slightly out of its recess.
+The hard drive is attached by a single SATA power/data cable—do '''not''' attempt to fully remove it from the iMac yet.
+
+
+## Step 2
+Use a spudger to disconnect the single SATA power and data combo cable by gently prying its large plastic connector away from the hard drive.
+
+
+## Step 3
+Remove the hard drive assembly from the iMac.
+
+
+## Step 1
+Peel the rubber hard drive bumpers up off the top and bottom edges of the hard drive.
+To reassemble your device, follow these instructions in reverse order.","iMac_Intel_21.5""_EMC_2638_Hard_Drive_Replacement",219,logic_board,True
+"iMac_27""_Late_2009_Intel_Processor_Replacement_(EMC_2374)_1","## Slow performance
+Geekbench 3 32-bit test. Geekbench 3 allows you to browse results from others with similar computers, so it was easy to see that something was wrong with my mine.
+
+
+## Ask for help
+Naturally I asked on the iFixit forums and elsewhere about what might be wrong. Though helpful, the forums spun off in  irrelevant directions, mostly talking about hard drive install issues. Geekbench 3 dosen't benchmark hard drives so...
+
+
+## Open your iMac
+There's loads of videos and iFixit repair guides to show you how to get in to your iMac so I'm not going to go over that ground.
+Be super careful with that ridiculously flimsy ribbon cable on the top left
+
+
+## Unscrew the motherboard
+To remove the mother board undo the Torx T10 screws shown in the yellow circles. (There's one behind a cable bottom right)
+Hopefully I've circled them all. (undo any screw on the mother board that has a white circle printed on the board.)
+Oh, you'll also have to yank out the infra-red sensor behind the Apple logo. Just pull up. It's spring loaded in there...","iMac_27""_Late_2009_Intel_Processor_Replacement_(EMC_2374)",259,logic_board,True
+"iMac_Intel_27""_2012-2019_Adhesive_Strips_Replacement_9","## Test your repair
+''At this point it's a good idea to test your repair, in order to make sure your iMac works properly before you seal it back up. Follow the next three steps to temporarily reconnect the display cables and boot up your iMac prior to pulling the protective film off the adhesive strips.''
+If you've already verified that your iMac is working correctly and are ready to seal it up, skip to [https://www.ifixit.com/Guide/Adhesive+staging+doc/136011#s270508|step 22].
+Gently insert the display data connector into its socket on the logic board. Be sure to press it straight into the socket, and insert it completely.
+Flip the display data connector lock down onto the socket.
+Insert the display power connector into its socket on the logic board.
+
+
+## Step 21
+Set the display back on the iMac's rear enclosure.
+At this time, plug in your iMac, power it on, and test your repair before sealing up the computer. Be sure to check for full functionality of any hardware you removed or disconnected.
+When you are finished, shut the iMac down and '''unplug the power cord''' before you continue.","iMac_Intel_27""_2012-2019_Adhesive_Strips_Replacement",268,logic_board,True
+"MacBook_Air_15""_2024_Logic_Board_Replacement_9","## Unfasten the antenna bar
+Use a 4IP Torx Plus screwdriver to remove the two 5.5 mm‑long screws securing the antenna bar.
+
+
+## Remove the antenna bar
+Remove the antenna bar.
+
+
+## Remove the foam pad
+A foam pad hides two screws securing the display and camera cables cover. It's secured with light adhesive.
+Use tweezers or your fingers to remove the foam pad from the cover.
+During reassembly, use the leftover adhesive to secure the pad. If the pad doesn't stick, use [product|IF317-072-6|double-sided tape|new_window=true] to secure it.
+
+
+## Unfasten the cables cover
+Use a 3IP Torx Plus screwdriver to remove the four 1.5 mm‑long screws securing the display and camera cables cover.
+Remove the cover.
+
+
+## Disconnect the display and camera
+Use a spudger to pry up and disconnect the display and camera cable press connectors.
+
+
+## Reassembly information
+During reassembly, use the flat end of a spudger to gently push the display and camera cables under the logic board.","MacBook_Air_15""_2024_Logic_Board_Replacement",254,logic_board,True
+"MacBook_Air_15""_2023_Screen_Replacement_9","## Unfasten the antenna bar
+Use a 4IP Torx Plus screwdriver to remove the two 5.5 mm‑long screws securing the antenna bar.
+
+
+## Remove the antenna bar
+Remove the antenna bar.
+
+
+## Remove the foam pad
+A foam pad hides two screws securing the display and camera cables cover. It's secured with light adhesive.
+Use tweezers or your fingers to remove the foam pad from the cover.
+During reassembly, use the leftover adhesive to secure the pad. If the pad doesn't stick, use [product|IF317-072-6|double-sided tape|new_window=true] to secure it.
+
+
+## Unfasten the cables cover
+Use a 3IP Torx Plus screwdriver to remove the four 1.5 mm‑long screws securing the display and camera cables cover.
+Remove the cover.
+
+
+## Disconnect the display and camera
+Use a spudger to pry up and disconnect the display and camera cable press connectors.
+
+
+## Reassembly information
+During reassembly, use the flat end of a spudger to gently push the display and camera cables under the logic board.","MacBook_Air_15""_2023_Screen_Replacement",254,logic_board,True
+"MacBook_Air_13""_Early_2014_Heat_Sink_Replacement_5","## Step 3
+Remove the four 2.5 mm T5 Torx screws securing the heat sink to the logic board.
+
+
+## Step 4
+If the heat sink seems to be stuck to the logic board after removing all five screws, use a spudger to carefully separate the heat sink from the faces of the CPU and GPU.
+Remove the heat sink from the logic board.
+When reinstalling the heat sink, be sure to apply a new layer of [product|IF179-010|thermal paste]. If you have never applied thermal paste before, we have a [guide|744|guide] that makes it easy.
+
+
+## Step 5
+When reassembling your device, attach the gasket to the heat sink as shown.
+The tail of the gasket should fit into the notch in the heat sink, it should not end up underneath the heat sink tab that will rest on the logic board.
+Be sure the small post molded into the rubber gasket mates with the hole cut into the upper right corner of the logic board.
+To reassemble your device, follow these instructions in reverse order.","MacBook_Air_13""_Early_2014_Heat_Sink_Replacement",235,logic_board,True
+"MacBook_Pro_13""_Function_Keys_2017_Antenna_Cable_Assembly_Replacement_4","## Step 3
+Use the tip of a spudger to flip up the small black locking tab securing the cable in its connector.
+
+
+## Step 4
+Disconnect the battery board data cable by sliding it out from its socket.
+Slide parallel to the logic board, in the direction of the cable.
+
+
+## Step 5
+Fold the battery board data cable back and out of the way.
+If you're replacing your battery, you may need to completely remove and transfer this cable to your new battery. Disconnect both ends and carefully remove the cable. During installation, be careful not to install it upside-down or backwards—note the orientation in the photos.
+
+
+## Step 6
+Use a T5 Torx driver to remove the 3.7 mm pancake screw securing the battery power connector.
+
+
+## Step 7
+Use a spudger to gently lift the battery power connector, disconnecting the battery.
+Lift the connector high enough so that it stays separated from its socket. If it accidentally makes contact during the course of your repair, it could damage your MacBook Pro.
+
+
+## Remove the hinge covers
+Remove the four 1.9 mm T3 Torx screws securing the plastic covers on top of the display hinges.
+Remove both plastic hinge covers.","MacBook_Pro_13""_Function_Keys_2017_Antenna_Cable_Assembly_Replacement",258,logic_board,True
+Mac_Pro_First_Generation_Power_Supply_Unit_Replacement_2,"## Disconnecting the Power Supply
+Locate the four marked cables
+Push down on the clip that is above each cable connector while firmly grasping each connector and pull each one back to remove each clip.
+To reassemble your device, follow these instructions in reverse order.",Mac_Pro_First_Generation_Power_Supply_Unit_Replacement,55,battery,True
+"MacBook_Pro_15""_Touch_Bar_2019_Battery_Replacement_1","- Suction Handle
+
+ - iFixit Opening Picks (Set of 6)
+
+ - Spudger
+
+ - Tweezers
+
+ - T5 Torx Screwdriver
+
+ - T3 Torx Screwdriver
+
+ - iOpener
+
+ - TR8 Torx Security Screwdriver
+
+ - iFixit Adhesive Remover
+
+ - Safety Glasses
+
+ - Nitrile Gloves 100 Box
+
+ - P2 Pentalobe Screwdriver iPhone
+
+
+###Parts Required:
+
+ - MacBook Pro 15"" Retina (Mid 2018-2019) Battery","MacBook_Pro_15""_Touch_Bar_2019_Battery_Replacement",103,battery,True
+How_to_Repair_an_Apple_AC_Adapter_Broken_Cable_0,"# How to Repair an Apple AC Adapter Broken Cable
+Sometimes the cable starts peeling just at that place where it meets the AC Adapter. I've met too many people that throw away their chargers because of this. It takes time and patience but repair is possible!
+
+
+###Tools Required:
+
+ - Wire Stripper
+
+ - Zip Ties
+
+ - Zip Ties
+
+ - Utility Knife
+
+ - Soldering Iron
+
+ - Lead-Free Solder
+
+ - Electrical Tape in 6 Assorted Colors
+
+ - 6-in-1 Screwdriver
+
+ - Crazy Glue
+
+ - Glue Gun
+
+ - Insulated Cover Tube
+
+
+###Parts Required:
+
+ - None
+
+
+## Step 1
+Nasty cut.
+
+
+## Step 2
+Unplug your AC power cord.
+
+
+## Step 3
+Look at the line that goes though the charger. This is all glued with some super adhesive that prevents you from just taking it apart.
+You will have to cut through that plastic, go all the way around following that small space with your knife.
+This will take a while, you have to cut the plastic from all the 4 sides. You will notice when you have cut through most of it.
+Be careful with the side shown in the last picture. There are a couple of components that might be cut in the process.",How_to_Repair_an_Apple_AC_Adapter_Broken_Cable,250,battery,True
+"iMac_Intel_21.5""_Retina_4K_Display_Replacement_2","## Step 2
+Starting on the left of the display, near the power button, insert the iMac Opening Tool into the gap between the glass panel and the rear enclosure.
+The hub on the iMac Opening Tool will keep you from pushing the wheel in too far. If using a different tool, insert no more than 3/8"" into the display. Otherwise, you risk severing antenna cables and causing serious damage.
+
+
+## Step 3
+Use the tool like a pizza cutter—roll it along through the gap, and it will cut the foam adhesive through the center.
+Be sure to always push with the handle behind the cutting wheel. If you pull, the wheel might get pulled out of the handle.
+Run the tool up along the left side of the display.
+
+
+## Step 4
+Continue running the tool up around the top left corner.
+
+
+## Step 5
+Cut the adhesive along the top left of the display.
+
+
+## Step 6
+Continue along the top of the display.
+You may want to run the tool back and forth through what you've already cut a few times, to ensure you get as much of the adhesive separated as possible.
+
+
+## Step 7
+Push the tool around the top right corner of the display.
+
+
+## Step 8
+Wheel the tool down along the right side of the display.","iMac_Intel_21.5""_Retina_4K_Display_Replacement",268,battery,False
+"iMac_Intel_21.5""_EMC_2544_RAM_Replacement_9","## Step 2
+Remove the left and right hard drive brackets from the iMac.
+
+
+## Step 1
+The next few steps bring your hands close to the exposed face of the power supply. '''Do not''' touch the face of the power supply to avoid a high voltage shock from the many large capacitors attached to the board.
+Use the tip of a spudger to push each side of the power button cable connector and gently ""walk"" it out of its socket.
+
+
+## Step 2
+Gently push upward on each side of the power supply control cable connector with the tip of a spudger to gently ""walk"" it out of its socket.
+
+
+## Step 3
+Remove the two 7.2 mm T10 screws securing the power supply to the rear enclosure.
+
+
+## Step 4
+When working on the power supply, '''be very careful''' not to touch the capacitor leads or any exposed solder joints on the back of the power supply. Only handle the board by the edges.
+Tilt the power supply forward.
+
+
+## Step 5
+Pull the power supply slightly up and out from the rear enclosure.
+Rotate the power supply counterclockwise, lifting the right side up about an inch higher than the left.","iMac_Intel_21.5""_EMC_2544_RAM_Replacement",257,battery,True
+"MacBook_Pro_15""_Core_Duo_Model_A1150_Hard_Drive_Replacement_0","# MacBook Pro 15"" Core Duo Model A1150 Hard Drive Replacement
+[video|http://www.youtube.com/watch?v=K_qQrL2SGrI&feature=relmfu]
+
+You can install hard drives up to 9.5mm thick.
+
+
+###Tools Required:
+
+ - Phillips #00 Screwdriver
+
+ - Spudger
+
+ - T6 Torx Screwdriver
+
+
+###Parts Required:
+
+ - MacBook and MacBook Pro (Non-Retina) SSD Upgrade Kit
+
+ - 250 GB SSD
+
+ - 500 GB SSD
+
+ - Crucial MX500 1 TB SSD
+
+ - 500 GB SSD Hybrid 2.5"" Hard Drive
+
+ - 500 GB 5400 RPM 2.5"" Hard Drive
+
+ - 1 TB 5400 RPM 2.5"" Hard Drive
+
+ - MacBook Pro 15"" (Model A1150) Hard Drive Bracket
+
+ - Universal Drive Adapter
+
+
+## Step 1
+Use your fingers to push both battery release tabs away from the battery, and lift the battery out of the computer.
+
+
+## Step 1
+Remove the three identical Phillips screws from the memory door.
+Make sure to record which sets of screws came from where. This will help when re-assembling.
+
+
+## Step 2
+Lift the memory door up enough to get a grip on it, and slide it toward you, pulling it away from the casing.","MacBook_Pro_15""_Core_Duo_Model_A1150_Hard_Drive_Replacement",282,battery,False
+Retina_MacBook_2017_Battery_Replacement_1,"***Note***: The solvent used to dissolve the battery adhesive can damage and/or discolor certain plastics. Take care where you apply the solvent.
+
+
+###Tools Required:
+
+ - Phillips #00 Screwdriver
+
+ - P5 Pentalobe Screwdriver Retina MacBook Pro and Air
+
+ - Spudger
+
+ - Tweezers
+
+ - Battery Blocker
+
+ - T5 Torx Screwdriver
+
+ - Plastic Cards
+
+ - iFixit Adhesive Remover
+
+ - Scissors
+
+
+###Parts Required:
+
+ - MacBook 12"" Retina (Early 2016-2017) Battery
+
+ - Tesa 61395 Double-Sided Tape",Retina_MacBook_2017_Battery_Replacement,129,battery,False
+Power_Macintosh_G3_Minitower_Battery_Replacement_0,"# Power Macintosh G3 Minitower Battery Replacement
+
+
+
+###Tools Required:
+
+ - Phillips #1 Screwdriver
+
+
+###Parts Required:
+
+ - None
+
+
+## Side Access Panel
+Press the green release button on top of the side access panel.
+Pull off the side access panel to get inside the computer.
+When putting the side access panel back on, make sure that the bottom of the panel lines up with the rail on the bottom, and that the chassis is locked with the green latches.
+
+
+## Opening the Chassis
+Lay the computer on its side, ensuring that where the side access panel was is facing up.
+
+
+## Step 2
+Unlock the top chassis by moving the two green locking latches upward and outward.
+Using the handle, gently swing the top chassis up and out until it rests firmly on the work surface.
+
+
+## I/O Card
+Remove the screw at the back of the computer holding the I/O card in place.
+
+
+## Step 2
+Remove the two screws inside the computer securing the I/O card to the metal chassis.
+Gently lift up the I/O card to remove it from the computer.",Power_Macintosh_G3_Minitower_Battery_Replacement,227,battery,False
+"iMac_Intel_21.5""_EMC_2805_Display_Replacement_2","## Step 2
+Starting on the left of the display, near the power button, insert the iMac Opening Tool into the gap between the glass panel and the rear enclosure.
+The hub on the iMac Opening Tool will keep you from pushing the wheel in too far. If using a different tool, insert no more than 3/8"" into the display. Otherwise, you risk severing antenna cables and causing serious damage.
+
+
+## Step 3
+Use the tool like a pizza cutter—roll it along through the gap, and it will cut the foam adhesive through the center.
+Be sure to always push with the handle behind the cutting wheel. If you pull, the wheel might get pulled out of the handle.
+Run the tool up along the left side of the display.
+
+
+## Step 4
+Continue running the tool up around the top left corner.
+
+
+## Step 5
+Cut the adhesive along the top left of the display.
+
+
+## Step 6
+Continue along the top of the display.
+You may want to run the tool back and forth through what you've already cut a few times, to ensure you get as much of the adhesive separated as possible.
+
+
+## Step 7
+Push the tool around the top right corner of the display.
+
+
+## Step 8
+Wheel the tool down along the right side of the display.","iMac_Intel_21.5""_EMC_2805_Display_Replacement",268,battery,False
+"iMac_Intel_21.5""_EMC_2889_Blade_SSD_Replacement_1","## Step 1
+With the hinge free to move, the iMac will be unbalanced and hard to work on. Repairs are fast and easy with an [product|IF145-224|iMac service wedge|new_window=true], but can be completed without one.
+If you are using the [https://www.ifixit.com/Store/Tools/iMac-Intel-21-5-Inch-Cardboard-Service-Wedge/IF145-470?o=1|iFixit cardboard service wedge], follow [https://www.ifixit.com/Guide/How+to+Assemble+the+iMac+Cardboard+Service+Wedge/136068|these assembly directions] to put it together.
+'''Before beginning any work on your iMac:''' Unplug the computer and press and hold the power button for ten seconds to discharge the power supply's capacitors.
+'''Be very careful''' not to touch the capacitor leads or any exposed solder joints on the back of the power supply. Only handle the board by the edges.","iMac_Intel_21.5""_EMC_2889_Blade_SSD_Replacement",247,battery,True
+How_to_repair_a_frayed_Apple_AC_Adapter_Wire_0,"# How to repair a frayed Apple AC Adapter Wire
+Over time, the wire coating of an Apple MagSafe Power Adapter may deteriorate leaving the wires exposed and possibly subject to electrical shorts. By covering the exposed wires with heat shrink you can protect the power adapter and yourself while continuing to use it to charge your computer.
+
+
+###Tools Required:
+
+ - Heat Gun
+
+ - Scissors
+
+
+###Parts Required:
+
+ - Moisture-Seal Heat-Shrink Tubing
+
+ - Vinyl electrical tape
+
+
+## Step 1
+Locate the damaged or exposed area on the adaptor wire.
+Move the cable organizer clip away from the damaged or exposed area.
+
+
+## Step 2
+Measure the approximate length of heat shrink needed to throughly cover all nearby damage with a single piece of heat shrink.
+The length of the heat shrink should be longer than the actual length of the damaged or exposed wire.
+Use 3/8""(10mm) diameter heat shrink. This size diameter is large enough to slide over the charging interface and small enough to secure itself on the wire when heated.
+Cut the heat shrink to the appropriate length using scissors.
+
+
+## Step 3
+Slide the heat shrink over the wire until it covers all of the damaged or exposed area.",How_to_repair_a_frayed_Apple_AC_Adapter_Wire,247,battery,True
+"iMac_Intel_20""_EMC_2105_and_2118_Power_On_Button_Replacement_1","## Step 5
+This is he back of the button that will now just push out.  Picture #2 is with the button removed.
+
+
+## Step 6
+Test the button to see if it works.
+After replacing the button, use something (like a low temperature soldering iron) that will melt the tops of the white plastic pegs to secure the button in place.
+To reassemble your device, follow these instructions in reverse order.","iMac_Intel_20""_EMC_2105_and_2118_Power_On_Button_Replacement",90,unknown,False
+"iMac_Intel_20""_EMC_2133_and_2210_RAM_Replacement_1","## Step 1
+Use the tip of a spudger to pull the black plastic RAM tabs out of the memory bay.
+Pull the black plastic RAM tab away from your iMac to eject the RAM chip.
+
+
+## Step 2
+Grab the RAM chip by its edges and pull it straight out of its slot.
+If two RAM chips are installed, repeat this process for the other chip.
+To reassemble your device, follow these instructions in reverse order.","iMac_Intel_20""_EMC_2133_and_2210_RAM_Replacement",95,unknown,False
+"iMac_27""_2017_Blade_SSD_Replacement_1","## Install the service wedge
+With the hinge free to move, the iMac will be unbalanced and hard to work on. Repairs can be completed with the iMac laying down, but are faster and easier with an [https://www.ifixit.com/Store/Tools/iMac-Intel-27-Inch-Cardboard-Service-Wedge/IF145-471?o=1|iMac service wedge|new_window=true].
+If you are using the [https://www.ifixit.com/Store/Tools/iMac-Intel-27-Inch-Cardboard-Service-Wedge/IF145-471?o=1| iFixit cardboard service wedge], follow [https://www.ifixit.com/Guide/How+to+Assemble+the+iMac+Cardboard+Service+Wedge/136068|these assembly directions] to put it together.","iMac_27""_2017_Blade_SSD_Replacement",206,unknown,False
+"PowerBook_G4_Aluminum_17""_1-1.67_GHz_Hard_Drive_Replacement_4","## Step 1
+Your hard drive should look approximately like this.
+
+
+## Step 2
+Remove the two silver Phillips screws from either side of the hard drive (four screws total).
+
+
+## Step 3
+Disconnect the hard drive cable from the hard drive by applying even pressure on both sides while maintaining a firm grip on the drive itself.
+This is a bit tricky. Try holding the drive against your body while pushing the cable away from you, or rocking the cable gently from side to side while applying even pressure, or both. If you bend the pins, do your best to straighten them, using the hard drive cable as a guide.
+With the label up and the pins facing away from you, the bracket that has a longer short section goes on the left side.
+If you are installing a new hard drive, we have an [guide|751|OS X install guide] to get you up and running.
+To reassemble your device, follow these instructions in reverse order.","PowerBook_G4_Aluminum_17""_1-1.67_GHz_Hard_Drive_Replacement",202,unknown,True
+"Installing_iMac_Intel_20""_EMC_2266_Dual_Drive_0","# Installing iMac Intel 20"" EMC 2266 Dual Drive
+There are many benefits to adding a second drive to your iMac such as improved speeds, greater storage space, and less heartache when installing new software. Use this guide to install one using our optical bay drive enclosure.
+
+
+###Tools Required:
+
+ - Heavy-Duty Suction Cups (Pair)
+
+ - Phillips #00 Screwdriver
+
+ - Phillips #1 Screwdriver
+
+ - Spudger
+
+ - TR10 Torx Security Screwdriver
+
+ - T6 Torx Screwdriver
+
+ - TR8 Torx Security Screwdriver
+
+
+###Parts Required:
+
+ - iMac & Mac mini Dual Drive Enclosure
+
+
+## Step 1
+Lay your iMac front side down on a table with the lower edge facing yourself.
+Loosen the single Phillips screw in the center of the access door.
+This screw is captive in the access door.
+Remove the access door from your iMac.","Installing_iMac_Intel_20""_EMC_2266_Dual_Drive",186,unknown,False
+"MacBook_Air_15""_2023_Logic_Board_Replacement_2","## Release the snapping clips
+During the next two steps you'll feel and hear [link|https://guide-images.cdn.ifixit.com/igi/xDYPyPXVaTIFOWry.full|new_window=true|six snapping clips] release. If a clip doesn't release, insert your opening pick farther and try again.
+Slide the pick to the bottom right corner to release the first clip.
+Slide the pick around the corner and up the right edge to release the next two clips.
+
+
+## Step 4
+Insert the opening pick in the original gap created with the suction handle.
+Slide the opening pick to the bottom left corner and up the left edge to release the three remaining snapping clips.","MacBook_Air_15""_2023_Logic_Board_Replacement",156,unknown,False
+Recognizing_&_Disconnecting_Cable_Connectors_12,"Although more rare, some larger pop-style connectors might have a built-in pull-tab for easy disconnection. Lift straight up to disconnect these.
+To reconnect, align the connector carefully over its socket and press down with your fingertip—first on one of the ''short'' sides, then the other—until it clicks into place. Don't try to force the connector into place. If you're having trouble, reposition it and try again.
+***Don't press down on the middle of wider connectors*** until they're fully seated. If misaligned, the connector or the pins underneath can bend or break, causing permanent damage.",Recognizing_&_Disconnecting_Cable_Connectors,149,unknown,True
+Apple_Lisa_800K_Floppy_Drive_Installation_0,"# Apple Lisa 800K Floppy Drive Installation
+
+
+
+###Tools Required:
+
+ - None
+
+
+###Parts Required:
+
+ - Apple Lisa 800K Floppy ROM
+
+ - Apple Lisa 800K Floppy Drive
+
+ - Apple Lisa 800K Floppy Drive Bracket
+
+
+## Remove Card Cage
+Follow the [https://www.ifixit.com/Guide/Apple+Lisa+Disassembly/117991|Apple Lisa Disassembly Guide ] to remove the Lisa's real panel.
+Remove the Lisa's Card Cage.
+
+
+## Remove the I/O Board
+Remove the Lisa's I/O Board. The I/O Board's clips are marked in red.
+Release both clips holding the I/O Board.
+Pull the I/O Board up to remove it.
+
+
+## Remove Floppy ROM
+Locate the chip labeled U2A at location 2A.
+Remove the ROM chip with a chip removing tool of your choice.
+
+
+## Installing the 800K ROM
+Insert the 800K ROM in the empty socket from step 3.
+
+
+## Reassembly
+Reinstall the I/O Board.
+Reinstall the Card Cage.
+Reinstall the Lisa's rear panel.",Apple_Lisa_800K_Floppy_Drive_Installation,241,unknown,False
+"iMac_Intel_27""_EMC_2639_Hard_Drive_Replacement_1","- TR8 Torx Security Screwdriver
+
+
+###Parts Required:
+
+ - iMac Intel 27"" (Late 2012-2019) SSD Upgrade Kit
+
+ - OWC In-line Digital Thermal Sensor for 3rd party SATA HDD or SSD Upgrade for 27"" iMacs 2012 and later models
+
+ - iMac Intel 27"" (2012-2019) Adhesive Strips
+
+ - iMac Intel 21.5"" and 27"" (Late 2012-Early 2019) SSD Temperature Sensor
+
+ - iFixit 2.5"" to 3.5"" SSD/HDD Adapter","iMac_Intel_27""_EMC_2639_Hard_Drive_Replacement",119,unknown,False
+Recognizing_&_Disconnecting_Cable_Connectors_17,"## Large Sliding Connectors
+Large sliding connectors work the same as smaller sliding connectors, usually sliding into the side of a socket. Typically, these connectors have multiple cables attached and are commonly used for laptop batteries.
+Most of the time, these connectors will have a lip or a tab along the top that can be used to push the connector out of its socket.
+If there's no clear spot to use a tool, check out [guide|25629|bundled cable connectors|stepid=64977|new_window=true].
+To disconnect, use the wide end of a spudger to push on the connector tab to slide it out of its socket.
+It may take a lot of force to disconnect the cable. Go slowly, and ***don't pull on the cables***.
+To reconnect the cable, align the connector and use a spudger to [guide|168674|push against the tab|stepid=356120|new_window=true] to fully seat the connector back into the socket.",Recognizing_&_Disconnecting_Cable_Connectors,231,unknown,True
+"iMac_Intel_20""_EMC_2266_RAM_Replacement_0","# iMac Intel 20"" EMC 2266 RAM Replacement
+Use this guide to replace or upgrade your RAM chips.
+
+
+###Tools Required:
+
+ - Phillips #1 Screwdriver
+
+ - Spudger
+
+
+###Parts Required:
+
+ - iMac Intel 20"" EMC 2266 (Early 2009) Memory Maxxer RAM Upgrade Kit
+
+ - PC3-8500 2 GB RAM Chip
+
+ - PC3-8500 1 GB RAM Chip
+
+ - PC3-8500 4 GB RAM Chip
+
+
+## Step 1
+Lay your iMac front side down on a table with the lower edge facing yourself.
+Loosen the single Phillips screw in the center of the access door.
+This screw is captive in the access door.
+Remove the access door from your iMac.
+
+
+## Step 1
+Use the sharp end of a spudger to pull the black plastic RAM tabs out of the memory bay.
+Pull the black plastic RAM tab away from your iMac to eject the RAM chip.
+
+
+## Step 2
+Grab the RAM chip by its edges and pull it straight out of its slot.
+If two RAM chips are installed, repeat this process for the other chip.
+To reassemble your device, follow these instructions in reverse order.","iMac_Intel_20""_EMC_2266_RAM_Replacement",245,unknown,True
+MacBook_Air_2022_(M2)_Right_Speaker_Replacement_4,"## Remove the display cable cover foam
+Peel up and remove the foam pad from the lower display cable cover to reveal a hidden screw.
+
+
+## Unfasten the cable covers
+Use a T3 Torx driver to remove the seven 1.5 mm screws securing the three metal covers.
+
+
+## Remove the cable covers
+Use [product|IF145-020|tweezers] or your fingers to remove the three metal covers:
+Two speaker cable covers
+The display cable cover
+
+
+## Disconnect the speaker cables
+The right speaker will be on your ***left-hand side*** when working on the MacBook, as it's laying upside down.
+Use the pointed end of a spudger to pry up and disconnect the right speaker press connector.",MacBook_Air_2022_(M2)_Right_Speaker_Replacement,161,speaker,True
+"MacBook_Pro_15""_Touch_Bar_2017_Battery_Replacement_11","## Step 15
+Disconnect the Touch Bar display cable by prying its connector straight up from the logic board.
+
+
+## Step 16
+Use a T3 Torx driver to remove the four 1.3 mm screws securing the Thunderbolt flex cable covers:
+Two screws on the left
+Two more on the right
+
+
+## Step 17
+Disconnect the left-side Thunderbolt flex cable by prying it straight up from the logic board.
+Pry from the inside edge, nearest the fan.
+Gently push the flex cable connector off to the side so it doesn't interfere with logic board removal.
+
+
+## Step 18
+Repeat to disconnect the Thunderbolt flex cable connector on the opposite side.
+Carefully push the flex cable connector aside so there's clearance for the logic board to come out without snagging.
+
+
+## Step 19
+Disconnect the two speaker connectors by sliding the flat end of your spudger underneath each cable near its connector.
+Gently twist or pry up to disconnect both speakers.
+
+
+## Step 20
+Peel up any tape covering the microphone cable connector socket.
+
+
+## Step 21
+Open the locking flap on the microphone cable's ZIF connector by prying it straight up from the logic board.","MacBook_Pro_15""_Touch_Bar_2017_Battery_Replacement",251,speaker,True
+"iMac_Intel_21.5""_EMC_3068_Logic_Board_Replacement_11","## Step 2
+Use a spudger to disconnect the single SATA power and data combo cable by gently prying its large plastic connector away from the hard drive.
+
+
+## Step 3
+Remove the hard drive assembly from the iMac.
+
+
+## Step 1
+Remove the 7.3 mm T8 Torx screw securing the hard drive tray to the rear enclosure.
+
+
+## Step 2
+Remove the hard drive tray.
+
+
+## Step 1
+Gently pull the left speaker cable straight out of its socket on the logic board.
+
+
+## Step 2
+De-route the left speaker cable by pulling it straight up out of the retaining clip in the back of the rear enclosure.
+
+
+## Step 3
+Similarly to the previous step, de-route the SATA and power cables by pulling the braid straight up out of the retaining clip.
+
+
+## Step 4
+Peel up the piece of tape connecting the left speaker connector to the SATA power and data cables.
+
+
+## Step 5
+Flip up the metal retaining bracket on the FaceTime camera cable connector.
+Pull the FaceTime camera cable straight out of its socket on the logic board.
+This is a delicate connector that can be easily damaged.","iMac_Intel_21.5""_EMC_3068_Logic_Board_Replacement",236,speaker,True
+"MacBook_Pro_15""_Unibody_Early_2011_Heat_Sink_Replacement_4","## Step 7
+Use the flat end of a spudger to lift the subwoofer/right speaker connector out of its socket on the logic board.
+Pry up from beneath the wires.
+
+
+## Step 8
+Remove the two 1.5 mm ( 1.2 mm ) Phillips screws securing the keyboard/trackpad cable cover to the logic board.
+Lift the cover off the logic board and set it aside.
+
+
+## Step 9
+Use the flat end of a spudger to pry the trackpad connector up and out of its socket on the logic board.
+
+
+## Step 10
+Use your fingernail to flip up the retaining flap on the keyboard ribbon cable ZIF socket.
+Be sure you are prying up on the hinged retaining flap, '''not''' the socket itself.
+Use the tip of a spudger to pull the keyboard ribbon cable out of its socket.
+
+
+## Step 11
+Use the flat end of a spudger to lift the battery indicator connector up and out of its socket on the logic board.","MacBook_Pro_15""_Unibody_Early_2011_Heat_Sink_Replacement",214,speaker,False
+"iMac_Intel_21.5""_EMC_2544_CPU_Replacement_11","## Step 10
+Remove the power supply from the iMac.
+
+
+## Step 1
+Gently pull the fan cable connector straight away from its socket on the logic board.
+
+
+## Step 2
+Remove the three 12.3 mm T10 shoulder screws securing the fan to the rear enclosure.
+
+
+## Step 3
+Remove the fan from the iMac.
+
+
+## Step 1
+Lift the hard drive from the edge nearest the logic board and pull it slightly out of its recess.
+The hard drive is attached by two cables, do not attempt to fully remove it from the iMac.
+
+
+## Step 2
+Disconnect the SATA power cable.
+
+
+## Step 3
+Unplug the SATA data cable from the hard drive.
+
+
+## Step 4
+Remove the hard drive from the iMac.
+
+
+## Step 1
+Remove the single 7.2 mm T10 screw securing the hard drive tray to the rear enclosure.
+
+
+## Step 2
+Remove the hard drive tray from the rear enclosure.
+
+
+## Step 1
+Push on each side of the left speaker cable connector with the tip of a spudger and gently ""walk"" it out of its socket.","iMac_Intel_21.5""_EMC_2544_CPU_Replacement",230,speaker,True
+"iBook_G3_14""_Hard_Drive_Replacement_7","## Step 3
+Peel back the black tape to free the microphone cable from the hard drive.
+
+
+## Step 4
+Lift the hard drive out of the computer and turn the hard drive over. Use the transparent orange loop to disconnect the hard drive ribbon cable from the hard drive.
+This is a bit tricky. Try rocking the cable gently from side to side while applying even pressure. If you bend the pins, do your best to straighten them, using the hard drive cable as a guide.
+
+
+## Step 1
+Remove the metal brackets from either side of the hard drive (if they're still there).
+With the pins facing away from you, and the label facing up, the bracket with a tab in the middle and a metal slot on it goes on the left side of the drive; the other bracket, of course, goes on the right.
+
+
+## Step 2
+Remove two T8 Torx screws from either side of the hard drive (four screws total).
+To reassemble your device, follow these instructions in reverse order.","iBook_G3_14""_Hard_Drive_Replacement",214,speaker,True
+"iMac_Intel_27""_Retina_5K_Display_2020_Logic_Board_Replacement_10","## Step 4
+Depress the tab on the DC power cable connector, then pull it straight out of its socket on the back of the logic board.
+If the cable is too difficult to disconnect, you can remove the power supply board and motherboard together.
+
+
+## Step 5
+'''Be very careful''' not to touch the capacitor leads or any exposed solder joints on the back of the power supply. Only handle the board by the edges.
+Flip the top of the power supply towards you, like opening a mailbox, to reveal the AC inlet cable connector.
+Disconnect the AC inlet cable connector.
+
+
+## Remove the right speaker
+Remove two 9.8 mm T8 screws.
+
+
+## Step 2
+Gently rock the right speaker slightly to the right, to allow access to its cable's connection on the logic board.
+
+
+## Step 3
+Use a spudger to loosen the right speaker cable's connector from its socket on the logic board.
+Pull the connector to the right to remove it from its socket.
+
+
+## Step 4
+Lift the speaker straight up and remove it from the iMac.
+
+
+## Remove the fan
+Use the tip of a spudger to disconnect the fan cable's connector from its socket on the logic board.","iMac_Intel_27""_Retina_5K_Display_2020_Logic_Board_Replacement",264,speaker,True
+"iMac_Intel_21.5""_EMC_2638_Logic_Board_Replacement_8","## Step 4
+Lift the right speaker straight up and remove it from the iMac.
+The speaker is tightly wedged into the rear enclosure, therefore it may be helpful to tilt the speaker side to side while pulling upward.
+
+
+## Step 1
+Remove the following screws securing the hard drive bracket to the rear enclosure:
+Two 21 mm T10 Torx screws from the left-hand hard drive bracket.
+One 9 mm T10 Torx screw.
+One 27 mm T10 Torx screw.
+
+
+## Step 2
+Remove the left and right hard drive brackets from the iMac.
+
+
+## Step 1
+The next few steps bring your hands close to the exposed face of the power supply. '''Do not''' touch the face of the power supply or any of the exposed solder. Touching it risks a high voltage shock from the many large capacitors attached to the board.
+Use the tip of a spudger to push each side of the power button cable connector and gently ''walk'' it out of its socket.
+
+
+## Step 2
+Use the tip of a spudger to push each side of the power supply control cable connector and gently ''walk'' it out of its socket.","iMac_Intel_21.5""_EMC_2638_Logic_Board_Replacement",249,speaker,False
+"MacBook_Pro_15""_Retina_Display_Mid_2014_MagSafe_DC-In_Board_Replacement_8","## Step 2
+Peel back the tape covering the top of the keyboard ribbon cable connector.
+Use the flat end of a spudger to flip up the retaining flap on the keyboard ribbon cable [link|https://www.ifixit.com/Guide/Recognizing+&+Disconnecting+Cable+Connectors/25629|new_window=true| ZIF socket].
+Be sure you are prying up on the hinged retaining flap, '''not''' the socket itself.
+Use the flat end of a spudger to push the keyboard ribbon cable out of its socket.
+
+
+## Step 3
+Use the flat end of a spudger to pry the trackpad ribbon cable connector up out of its socket.
+
+
+## Step 4
+Use the flat end of a spudger to pry the keyboard backlight connector up from its socket on the logic board.
+
+
+## Step 5
+Use the tip of a spudger or your fingernail to flip up the retaining flap on the microphone ribbon cable ZIF socket.
+Be sure you are prying up on the hinged retaining flap, '''not''' the socket itself.
+Pull the microphone ribbon cable out of its socket.","MacBook_Pro_15""_Retina_Display_Mid_2014_MagSafe_DC-In_Board_Replacement",251,speaker,True
+"MacBook_Pro_13""_Unibody_Mid_2009_LCD_Replacement_1","## Step 1
+Use the flat end of a spudger to pry the subwoofer/right speaker cable connector up off its socket on the logic board.
+Be very careful to pry under the connector as shown, and not under the socket itself. Otherwise you may accidentally separate the socket from the logic board.","MacBook_Pro_13""_Unibody_Mid_2009_LCD_Replacement",66,speaker,True
+"iMac_Intel_20""_EMC_2133_and_2210_Video_Card_Replacement_4","## Step 5
+With the display panel still lifted, disconnect the four inverter cables.
+During reinstallation, place the four inverter cable connectors in voids between components attached to the rear panel so the display panel will sit flush.
+During reassembly, the order of the inverter cables is interchangeable within each socket.
+If you are replacing a hard drive and have an extra set of hands, it is possible to reach in and remove the drive without disconnecting anything but the LCD temp and display connector in the previous step with the LCD in its propped position.
+
+
+## Step 1
+Disconnect the left speaker cable connector from the audio board by pulling it straight away from its socket.
+Pull the connector parallel to the face of the logic board.
+
+
+## Step 2
+De-route the left speaker cable from the channel in the CPU fan. Continue completely de-routing the cable through the undersides of the IR board and heat sink.
+
+
+## Step 3
+Disconnect the ambient temperature sensor cable by pulling its connector straight up off the logic board.
+
+
+## Step 4
+If necessary, de-route the ambient temperature sensor cable from under the power button cables.","iMac_Intel_20""_EMC_2133_and_2210_Video_Card_Replacement",246,speaker,True
+Apple_Cinema_Display_M8149_LCD_Control_Board_Replacement_0,"# Apple Cinema Display M8149 LCD Control Board Replacement
+This guide will provide the steps for replacing the control board in an Apple Cinema Display M8149 LCD and switch on the main circuit board. Old Apple products can often wear down over time, making this a necessary fix for many users.
+
+Warning: Due to the age of this device, it is advised that you be very careful with the internal and stray parts.
+
+
+###Tools Required:
+
+ - 4 mm Hex Key
+
+ - Phillips #2 Screwdriver
+
+
+###Parts Required:
+
+ - None
+
+
+## Step 1
+Before starting, make sure the display is unplugged.
+Place the Cinema Display so that it is lying on its face and the feet are pointed away from you.
+Remove the three screws (9.52 x 4.43mm) that connect the back foot to the hinge using the Hex Key.
+Remove the back foot from the hinge mount by grabbing the foot and pulling upwards.
+
+
+## Step 2
+Remove the eighteen  (5.25 x 4.43 mm) screws around the edge of the backplate using the Hex key.
+Disconnect the small white connector leading to the display's Power button.
+Gently lift the backplate off of the display. Completely remove the backplate and set it aside.",Apple_Cinema_Display_M8149_LCD_Control_Board_Replacement,267,keyboard,True
+"PowerBook_G4_Aluminum_12""_1-1.5_GHz_Keyboard_Replacement_0","# PowerBook G4 Aluminum 12"" 1-1.5 GHz Keyboard Replacement
+This guide shows the hidden screws you must remove when replacing the keyboard.
+
+
+###Tools Required:
+
+ - Coin
+
+ - Phillips #00 Screwdriver
+
+
+###Parts Required:
+
+ - G4 Aluminum 12"" Keyboard
+
+
+## Step 1
+Use a coin to turn the battery locking screw 90 degrees to the right.
+Lift the battery out of the computer.
+
+
+## Step 1
+Remove the four Phillips screws from the memory door.
+Slide the memory door away from the memory compartment.
+
+
+## Step 2
+Remove the long black Phillips screw next to the memory card.
+Remove the small EMI finger beneath the black screw.
+
+
+## Step 1
+On the keyboard, remove the F1, F2, F11, and F12 keys.
+This is scary - take a deep breath before continuing. Place your index finger under the upper left corner of the key and lift up until you hear a click. Then, transfer your finger to the left edge of the key and lift up to pull the key off.
+You're freeing the two tabs on the left of the key from the two small holes in the plastic scissors mechanism.
+When replacing the keys in the keyboard, place the key directly over the slot where it will go and press down until you hear the key click into place.","PowerBook_G4_Aluminum_12""_1-1.5_GHz_Keyboard_Replacement",271,keyboard,False
+MacBook_Air_&_MacBook_Pro_(Newer_than_2019)_Sticky_Key_Fix_1,"## Step 1
+Unplug and shut down your laptop.
+
+
+## Step 2
+Dip a cotton swab into high-concentration isopropyl alcohol and clean the surface/surroundings of the keycap.
+
+
+## Step 3
+Use a toothpick to gently remove crumbs or debris stuck in the gap between the keyboard metal and keycaps.
+
+
+## Step 4
+Gently use the toothpick to pry up sticky key(s) from the bottom of the keycaps.
+
+
+## Step 5
+Remove the 2 plastic key carrier parts using tweezers.
+Use tweezers to grab one side of the tip (circled in orange) of the carrier parts and pull it out. Do the same thing on the other side of the tip.
+
+
+## Step 6
+Use cotton swabs with damp with high-concentration isopropyl alcohol to clean the part underneath the key carriers.
+
+
+## Step 7
+Put dish soap and warm water in a cup and soak the 2 key carriers in the cup for 10 min.
+Stirring may help.
+
+
+## Step 8
+Let the carrier parts dry on a tissue paper.
+Use The ''Super Lube LightWeight Synthetic Oil'' to lube the 2 carriers before assembling them, especially the parts that contact with other parts.",MacBook_Air_&_MacBook_Pro_(Newer_than_2019)_Sticky_Key_Fix,261,keyboard,False
+PowerBook_3400_M3553_Keyboard_Replacement_0,"# PowerBook 3400 M3553 Keyboard Replacement
+Use this guide to remove and replace the keyboard on your PowerBook 3400 M3553.
+
+Keyboard mishaps can be frustrating, halt productivity, and decrease the usefulness of your device. Whether the keys stop working, there is external damage, or any other issue, removing the keyboard is the first step to repairing your device. Once removed, the keyboard can be cleaned or replaced depending on the extent of the damage.
+
+Before attempting any repairs to your PowerBook, make sure that the device is turned off, disconnected to any power source, and your data is properly backed up.
+
+
+###Tools Required:
+
+ - Spudger
+
+ - TR8 Torx Security Screwdriver
+
+
+###Parts Required:
+
+ - None
+
+
+## Step 1
+Close the screen and turn the PowerBook over, orienting the computer upside down, using the label to guide you.
+
+
+## Step 2
+Hold the button on the front left side and slide the battery out.
+
+
+## Step 1
+With a Torx T8 screwdriver, remove the three Torx 24mm screws along the center of the back panel.",PowerBook_3400_M3553_Keyboard_Replacement,233,keyboard,True
+"MacBook_Pro_13""_Retina_Display_Late_2013_Trackpad_Replacement_1","- Plastic Cards
+
+ - T5 Torx Screwdriver
+
+ - Tweezers
+
+ - iFixit Opening Tool
+
+
+###Parts Required:
+
+ - MacBook Pro 13"" Retina (Late 2013-Mid 2014) Battery
+
+ - MacBook Pro 13"" Retina (Late 2013-Mid 2014) Trackpad
+
+ - MacBook Pro 13"" Retina (Late 2013-Mid 2014) Trackpad Cable","MacBook_Pro_13""_Retina_Display_Late_2013_Trackpad_Replacement",80,keyboard,False
+"MacBook_Pro_13""_Retina_Display_Early_2015_Trackpad_Replacement_1","- iOpener
+
+ - P5 Pentalobe Screwdriver Retina MacBook Pro and Air
+
+ - Plastic Cards
+
+ - Spudger
+
+ - T5 Torx Screwdriver
+
+ - T3 Torx Screwdriver
+
+
+###Parts Required:
+
+ - MacBook Pro 13"" Retina (Early 2015) Trackpad
+
+ - MacBook Pro 13"" Retina (Early 2015) Trackpad Cable","MacBook_Pro_13""_Retina_Display_Early_2015_Trackpad_Replacement",80,keyboard,False
+Creating_Key_Switch_Foam_Pads_for_Apple_Lisa_Keyboard_2,"## Cleaning the Pad Edges
+After punching the desired amount of pads, remove the punched pads from the foam strip. Use scissors to cut any rough edges from the created pads.
+
+
+## Inserting Pad
+Stick the new foam pad onto the underside of the key mechanism so the sticky side is adhered to the key mechanism and the plastic side of the metal film is oriented toward the circuit board (when Keyboard is reassembled.) Photo credit: deskthority.net
+
+
+## Reassemble Keyboard
+Reassemble keyboard. Verify all the foam pads function. If they don’t verify that they are wrinkle free and are perfectly sized.
+To reassemble your device, follow these instructions in reverse order.",Creating_Key_Switch_Foam_Pads_for_Apple_Lisa_Keyboard,146,keyboard,True
+"MacBook_Air_15""_2024_Trackpad_Replacement_8","## Step 3
+Remove the trackpad from the display.
+Reassembly note:
+Before installing your new trackpad, make sure all four washers are in place.
+
+
+## Transfer the trackpad cable
+Before installing your trackpad, make sure it has a cable installed. If your new trackpad doesn't come with a cable, follow the next three steps to remove and transfer the old cable.
+Use the tip of a spudger or a clean fingernail to flip up the hinged locking flap on the trackpad cable ZIF connector.
+During reassembly:
+Secure the cable by flipping the locking flap down.
+If your trackpad cable comes with adhesive, remove the plastic liner and press the cable into place on the trackpad.
+If the cable doesn't have adhesive, use a strip of [product|IF317-072-6|double-sided tape|new_window=true] to secure it to the trackpad.","MacBook_Air_15""_2024_Trackpad_Replacement",200,keyboard,False
+"MacBook_Air_13""_Late_2020_Trackpad_Replacement_5","## Remove the trackpad cable
+If your replacement trackpad comes with a trackpad cable preinstalled, this step isn't necessary.
+Use the flat end of a spudger to lift the small locking flap on the trackpad's ZIF connector.
+Slide the trackpad cable straight out of the ZIF connector.
+Compare your new replacement part to the original part—you may need to transfer remaining components or remove adhesive backings from the new part before installing.
+
+***To reassemble your device, follow the above steps in reverse order.***
+
+***Once you've completed your repair, your laptop may not power back on until connected to power.***
+
+Take your e-waste to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].
+
+Repair didn’t go as planned? Check out our [link|https://www.ifixit.com/Answers/Device/MacBook%20Air%2013%22%20Late%202020|Answers community] for troubleshooting help.","MacBook_Air_13""_Late_2020_Trackpad_Replacement",236,keyboard,False
+"MacBook_Pro_15""_Retina_Display_Mid_2015_Battery_Replacement_12","## Step 2
+Use the tip of a spudger to flip up the black locking tab on the trackpad ribbon cable ZIF connector.
+
+
+## Step 3
+Insert an opening pick between the trackpad ribbon cable and the battery.
+Carefully slide your pick underneath the length of the ribbon cable to separate the adhesive securing it to the battery.
+The ribbon cable is easily damaged. If necessary, use a little heat from an iOpener or hair dryer to soften the adhesive so you can remove it with less force.
+
+
+## Step 4
+Remove the trackpad ribbon cable.
+
+
+## Step 5
+Remove the two 3.2 mm T5 Torx screws securing the battery board.
+
+
+## Step 6
+The liquid adhesive remover provided in your kit can affect the antireflective coating on your MacBook Pro's display.
+To protect your display, place a sheet of aluminum foil between the display and keyboard and leave it there while you work.
+
+
+## Step 7
+With the front edge of the MacBook Pro facing you, lift the right side and prop it up at a slight angle, using a sturdy foam block or book.
+In the following steps, you'll apply liquid adhesive remover to the right (outer) edge of the battery. Keeping this side of the MacBook Pro elevated will help the adhesive remover flow underneath the battery.","MacBook_Pro_15""_Retina_Display_Mid_2015_Battery_Replacement",280,keyboard,True
+How_to_reattach_a_Spacebar_Key_to_the_Magic_Keyboard_1,"## Inspect for Damage
+Locate the small metal hooks that hold the bracket arms and hook inward to grip the bracket arms.
+If the metal bracket holders are bent your key may be harder or impossible to replace.
+These should come up straight out of the keyboard and not look bent. If you've tried repeatedly to replace the key, you may want some pliers or to gently use a fingernail to straighten these out.
+
+
+## Remove Lower Stabilizer Bracket
+Remove the lower metal bracket by prying it off carefully with your fingernail.
+Don't worry too much about breaking anything. They snap out and back in fairly safely.
+
+
+## Step 5
+Position the bottom of the key in the opening with the top tilted up and away from the keyboard.
+You may want to take the top bracket off the key and put it into its spot in the hole first. I've done this with it on and off.
+Apply pressure starting from the bottom and slide your fingers up toward the top of the key.
+You should hear and feel the two lower connections to the scissors. The top bracket should naturally be in the correct space.
+You should be able to tap the key and feel normal action from the top part of it. No matter where you tap it on the top half.
+Do not apply excess pressure. Previous Mac Keyboards you just pushed down hard and it worked. Apply only enough to seat the key.",How_to_reattach_a_Spacebar_Key_to_the_Magic_Keyboard,283,keyboard,True
+How_to_Clone_an_Existing_Drive_6,"## Step 8
+At this point, your new hard drive should be a clone of your existing drive and ready to install.
+However, we recommend testing the cloned drive before physically swapping the drives. This can be done by attempting to boot from the new cloned drive through the USB enclosure.
+Keep the enclosure connected to the computer and restart the computer. Hold down the '''""option""''' key as it reboots until a boot option menu shows up.
+
+
+## Step 9
+Select your new hard drive from the boot option menu.
+Wait for the computer to boot up to verify if it works properly.
+Your new hard drive is now ready to be installed in your computer.
+Remove your new hard drive from the external enclosure and install it in your computer. Installation instructions are available for a variety of [[Topic:Mac|Macs]].",How_to_Clone_an_Existing_Drive,178,port,False
+"Installing_MacBook_Pro_15""_Unibody_Early_2011_Dual_Hard_Drive_4","## Step 5
+Attach the optical drive bracket to the new enclosure with two Phillips #0 screws.
+Reconnect any cables you have removed from the original optical drive onto the optical bay enclosure.
+
+
+## Step 6
+Don't ditch that drive! You can still use your optical drive externally with the help of our [product|IF107-120|SATA Optical Drive USB Cable].
+Align the cable's SATA connector with the drive's port and plug in securely.
+Plug the USB connector into your laptop and your optical drive is ready for use.
+To reassemble your device, follow these instructions in reverse order.","Installing_MacBook_Pro_15""_Unibody_Early_2011_Dual_Hard_Drive",132,port,False
+"iMac_Intel_21.5""_EMC_2638_RAM_Replacement_11","## Step 1
+Push on each side of the left speaker cable connector with the tip of a spudger and gently ''walk'' it out of its socket.
+
+
+## Step 2
+If necessary, use a pair of [product|IF145-020|tweezers] to gently peel the tape securing the left speaker cable to the SATA data/power cable.
+This tape only needs to be removed if you are removing the left speaker.
+
+
+## Step 3
+De-route the left speaker cable by pulling it straight up out of the retaining clip in the back of the rear enclosure.
+In a similar fashion, lift the combo SATA data/power cable up out of the retaining clip.
+
+
+## Step 4
+Use the flat edge of a spudger to flip up the metal retaining bracket on the iSight camera cable connector.
+Pull the iSight camera cable straight out of its socket on the logic board.
+Do '''not''' use excessive force. This is a delicate connector that can be easily damaged.
+
+
+## Step 5
+Use the flat edge of a spudger to disconnect each of the four antenna connectors from the AirPort/Bluetooth card.
+Note the original positions for each connector when reconnecting the cables.","iMac_Intel_21.5""_EMC_2638_RAM_Replacement",259,port,True
+"MacBook_Air_11""_Early_2014_Upper_Case_Replacement_4","## Step 7
+Use the tip of a spudger to pry under the speaker cable connector, lifting it straight up from its socket.
+De-route the  cable from its notch in the logic board.
+
+
+## Step 8
+Use the tip of a spudger or your fingernail to flip up the retaining flap on the trackpad ribbon cable ZIF socket.
+Be sure you are prying up on the hinged retaining flap, '''not''' the socket itself.
+Pull the trackpad ribbon cable straight out of its socket toward the front edge of the Air.
+
+
+## Step 9
+Use the tip of a spudger to flip up the retaining flap on the keyboard backlight ribbon cable ZIF socket.
+Be sure you are prying up on the hinged retaining flap, '''not''' the socket itself.
+Pull the keyboard backlight ribbon cable out of its socket.
+
+
+## Step 10
+Remove the single 2.9 mm T5 Torx screw securing the AirPort/Bluetooth card to the logic board.
+
+
+## Step 11
+Slightly lift the free end of the AirPort/Bluetooth board and pull it out of its socket on the logic board.
+To avoid damaging its socket on the logic board, do '''not''' excessively lift the free end of the AirPort/Bluetooth card.","MacBook_Air_11""_Early_2014_Upper_Case_Replacement",273,port,False
+iBook_G3_Clamshell_Optical_Drive_Replacement_1,"## Step 2
+If your computer does not have an airport card, you can skip the next two steps.
+Grasp the clear plastic tab on the airport card and pull up and toward the display.
+
+
+## Step 3
+Hold the airport card in one hand and use your other hand to remove the antenna cable.
+
+
+## Step 1
+Remove the two Phillips screws that secure the RAM shield.
+
+
+## Step 2
+Grasp the wire metal bracket on top of the RAM shield and pull upward to remove the shield.
+
+
+## Step 3
+Pull up the keyboard connector cable by its clear plastic loop.
+
+
+## Step 1
+Use a straightened paperclip to manually eject the CD-ROM tray.
+
+
+## Step 2
+Turn the computer over so that the bottom is facing up.
+Remove the following Torx screws:
+Four short T8 Torx near the battery compartment.
+Two long T8 Torx near the hinges.
+
+
+## Step 3
+Pull the CD-ROM drive tray partly out.
+Remove the silver Phillips screw from the plastic casing.
+
+
+## Step 4
+Turn the computer over.
+Remove the three Phillips screws.",iBook_G3_Clamshell_Optical_Drive_Replacement,224,port,False
+PowerBook_3400_M3553_Track_Pad_Replacement_0,"# PowerBook 3400 M3553 Track Pad Replacement
+Your track pad is one of the most important parts of your PowerBook's user interface. If the track pad is damaged you will need to use an external mouse or replace the track pad. This is one of the hardest parts to get to in the computer. Before attempting, make sure you will be able to keep the removed parts organized to aid in reassembly.
+
+
+###Tools Required:
+
+ - TR8 Torx Security Screwdriver
+
+
+###Parts Required:
+
+ - None
+
+
+## Step 1
+Close the screen and turn the PowerBook over, orienting the computer upside down, using the label to guide you.
+
+
+## Step 2
+Hold the button on the front left side and slide the battery out.
+
+
+## Step 1
+With a Torx T8 screwdriver, remove the three Torx 24mm screws along the center of the back panel.
+
+
+## Step 2
+Turn the computer over and open the display. You should see that the keyboard is loose.
+Before attempting to remove the keyboard, note that a ribbon cable connects  the keyboard to the logic board. Improper removal may damage your keyboard.
+Slightly lift the front of the keyboard up, and slide the keyboard towards yourself.
+Carefully lift the top half of the keyboard and pull it towards yourself.",PowerBook_3400_M3553_Track_Pad_Replacement,268,port,True
+"MacBook_Pro_13""_Two_Thunderbolt_Ports_2020_Battery_Replacement_15","[https://www.ifixit.com/Wiki/Battery_Calibration|Calibrate] your newly installed battery: charge it to 100%, and keep charging it for at least 2 more hours. Unplug and use it normally to drain the battery. When you see the low battery warning, save your work, and keep your laptop on until it goes to sleep due to low battery. Wait at least 5 hours, then charge your laptop uninterrupted to 100%.
+If you notice any unusual behavior or problems after installing your new battery, you may need to [https://support.apple.com/en-gb/HT201295|reset your MacBook Pro's SMC|new_window=true].
+Compare your new replacement part to the original part—you may need to transfer remaining components or remove adhesive backings from the new part before installing.","MacBook_Pro_13""_Two_Thunderbolt_Ports_2020_Battery_Replacement",195,port,True
+"MacBook_Pro_13""_Touch_Bar_2018_USB-C/Thunderbolt_ports_Replacement_6","## Touch Bar cable 1
+Use a T3 Torx driver to remove the two screws.
+Remove the metal shield carefully.
+Carefully unplug the connector.
+
+
+## Right speaker cable
+Carefully peel back the black tape to reveal the ZIF connector.
+Unlatch the ZIF connector by flicking the arm on the connector upwards and carefully remove the cable from the connector by sliding it out.
+Repeat this process with the newly revealed connector.
+
+
+## ZIF connector
+Carefully peel back the black tape to reveal the ZIF connector.
+Unlatch the ZIF connector by flicking the arm on the connector upwards and carefully remove the cable from the connector by sliding it out.
+
+
+## Unplug Right Thunderbolt ports
+Use a T3 Torx driver to remove the two screws.
+Once the screw have been removed carefully remove the metal shield.
+Under the metal shield there is a connector, carefully unplug it.
+
+
+## Touch bar bracket / Flex
+Use a T4 Torx driver to remove the  screw.
+T4 Torx screw.
+Remove the metal shield carefully.
+Carefully unplug the connector.
+The two screws that are outlined in yellow are not relevant to this step and are marked on the board itself. For this step, yellow corresponds to the yellow rectangle in the image.","MacBook_Pro_13""_Touch_Bar_2018_USB-C/Thunderbolt_ports_Replacement",262,port,True
+"MacBook_Pro_15""_Retina_Display_Mid_2012_Battery_Replacement_3","## Step 2
+Use the tip of a spudger to push the camera cable's plug toward the fan and out of its socket on the logic board.
+The plug in the photo has six connections, but some models have twelve connections. The process of removing the plug from its socket is the same for both.
+If the camera cable's plug won't come easily out of its socket on the logic board, fold back the rubber cover over the fan to gain access to the cable, then gently pull on the cable while using the spudger to gently push the plug out of its socket.
+Be sure to push parallel to the board, first on one side, then the other, to slowly ""walk"" the plug out of its socket. Do not pry up, or you will damage the socket.
+
+
+## Step 3
+Insert the flat end of a spudger underneath the rubber heat sink cover on the right fan.
+Slide the spudger underneath the length of the cover, releasing the adhesive.
+Lift the cover and flip it back so that you can access the cables underneath.
+
+
+## Step 4
+Use your fingers to pull the AirPort/Camera cables up off the fan.
+The cables are adhered to the fan, so peel them up carefully to avoid damaging them.
+Carefully de-route the cables from the plastic cable guide.","MacBook_Pro_15""_Retina_Display_Mid_2012_Battery_Replacement",273,port,True
+"Installing_iMac_Intel_21.5""_EMC_2428_Dual_Drive_Kit_6","## Step 3
+Disconnect the microphone, left speaker, and right speaker cables by pulling their connectors toward the right side of the iMac.
+
+
+## Step 4
+Use the flat end of a spudger to pry all three AirPort antenna connectors up from their sockets on the AirPort board.
+During reinstallation, connect the cable with no stripes to the socket marked CH0, the cable with one stripe to CH1, and the cable with two stripes to CH2.
+
+
+## Step 5
+Pull the hard drive fan connector toward the top edge of the iMac to disconnect it from its socket on the logic board.
+
+
+## Step 6
+Use your thumbnails on both sides of the Bluetooth/ambient light sensor/camera/left temperature connector to push it toward the top edge of the iMac and out of its socket on the logic board.
+
+
+## Step 7
+Use your thumbnails to push the right temperature sensor connector toward the top edge of the iMac and out of its socket.
+
+
+## Step 8
+Pull the CPU fan/ambient temperature sensor connector toward the bottom left edge of the iMac and out of its socket on the logic board.
+
+
+## Step 9
+Pull the power button connector toward the bottom left corner of the iMac to disconnect it from its socket on the logic board.","Installing_iMac_Intel_21.5""_EMC_2428_Dual_Drive_Kit",271,port,True
+"PowerBook_G4_Aluminum_17""_1-1.67_GHz_Airport_Extreme_Replacement_0","# PowerBook G4 Aluminum 17"" 1-1.67 GHz Airport Extreme Replacement
+Install an Airport Extreme 802.11g card internally.
+
+
+###Tools Required:
+
+ - 4mm Nut Driver
+
+ - Phillips #00 Screwdriver
+
+ - Spudger
+
+ - TR8 Torx Security Screwdriver
+
+
+###Parts Required:
+
+ - G4 Aluminum 17"" 1/1.33/1.5 GHz Airport Extreme Card
+
+ - G4 Aluminum 17"" 1.67 GHz (LR) Airport Extreme Card
+
+
+## Step 1
+Orient the computer so that the side with the line of screws on it is away from you.
+Use your thumbs to push both battery release tabs away so that the edge of the battery lifts up.
+Lift the battery out of the computer.
+
+
+## Step 1
+Remove the three identical Phillips screws from the memory door.
+
+
+## Step 2
+Lift the memory door up enough so that you can get a grip on it, and slide it toward you, pulling it away from the casing.
+
+
+## Step 3
+Release the tabs on each side of the RAM chip at the same time.  These tabs lock the chip in place and releasing them will cause the chip to ""pop"" up.
+Pull the chip directly out from its connectors. If there is a second RAM chip installed, pop it out in the same manner.","PowerBook_G4_Aluminum_17""_1-1.67_GHz_Airport_Extreme_Replacement",274,port,False
+"MacBook_Pro_17""_Models_A1151_A1212_A1229_and_A1261_LCD_Replacement_5","## Step 7
+Slightly lift the lower edge of the display and pull it away from the rear display bezel.
+The rear display bezel remains.
+
+
+## Step 1
+Remove the strip of tape covering the backlight leads.
+Carefully lift the inverter out of the clutch cover enough to reach the backlight connector.
+
+
+## Step 2
+Disconnect the backlight cable from the inverter board.
+
+
+## Step 3
+Remove the several strips of tape securing the ribbon cables to the LCD.
+
+
+## Step 4
+Use the flat end of a spudger to carefully peel the three antenna strips off the lower edge of the LCD.
+Work carefully, as these strips may tear in the process.
+
+
+## Step 5
+Use the tip of a spudger or your fingernail to flip up the ZIF retaining flap on the camera cable socket at the edge of the camera board near the top center of the front display bezel.
+Be sure you are prying up on the retaining flap, '''not''' the socket itself.
+Pull the camera cable out of its socket.
+Peel the camera cable off the foam tape along the top edge of the display.
+
+
+## Step 6
+Pull the display data cable toward the bottom edge of the display to disconnect it from the LCD.","MacBook_Pro_17""_Models_A1151_A1212_A1229_and_A1261_LCD_Replacement",262,camera,True
+Apple_iSight_Webcam_Camera_Replacement_1,"## Step 3
+Using [product|IF145-020|tweezers], remove the netting that surrounds the black casing.
+
+
+## Step 4
+Pry open the top of the black casing and pull it off.
+There is slot on each side just below the power cord connector.
+
+
+## Step 5
+Gently pull out the ribbon cables at the base of the circuit board. The camera module and lens cap are connected to the board via two busses.
+Make sure that all pins are loose before pulling them out or you could risk bending the pins or breaking the connector.
+
+
+## Step 6
+Remove the three PH000 3.55mm screws that connect the end cap that holds the privacy shutter to the rest of the camera enclosure. Once the screw are removed, you can pull them apart.
+
+
+## Step 7
+Unscrew the three PH000 3.55mm screws from the connecting plate and the camera enclosure. Pull apart when all screws are removed.
+
+
+## Step 8
+Unscrew the three PH000 3.55mm screws securing the Camera module circuit board and lens enclosure.
+
+
+## Step 9
+Pull the pin tab from the base of the circuit board to separate the camera module and the lens enclosure.
+To reassemble your device, follow these instructions in reverse order.",Apple_iSight_Webcam_Camera_Replacement,269,camera,False
+"MacBook_Pro_15""_Unibody_2.53_GHz_Mid_2009_LCD_Replacement_10","## Step 8
+Now that the top, left, and right edges of the glass are free from the display, slowly lift the top edge of the glass panel and gently rotate it out of the display.
+If necessary, use the flat end of a spudger to free the bottom edge of the glass display panel from the display assembly.
+Before reassembling, be sure to clean both the inside of the glass display panel and the LCD as any dust or fingerprints trapped inside will be annoyingly visible when the machine is on.
+
+
+## Step 9
+Insert the edge of a plastic opening tool between the display glass and the camera bracket, and run it around the camera bracket to separate it from the display glass.
+Do not forget to stick the camera bracket down to the new front display glass before reassembly.","MacBook_Pro_15""_Unibody_2.53_GHz_Mid_2009_LCD_Replacement",165,camera,False
+"iMac_Intel_27""_Retina_5K_Display_2020_Fan_Replacement_0","# iMac Intel 27"" Retina 5K Display 2020 Fan Replacement
+Follow this guide to replace the fan on a 2020 iMac 27"" Retina 5K.
+
+'''Some photos in this guide are from a different model and may contain slight visual discrepancies, but they won't affect the guide procedure.'''
+
+Removing the display on the 2020 iMac Intel 27"" Retina 5K Display requires cutting adhesive with a specialized iMac opening tool. After you've completed your repair, you'll need to follow our [guide|143627|display adhesive guide] to scrape off the old adhesive and replace it with new double-sided adhesive strips.
+
+'''Before beginning any work on your iMac:''' Unplug the computer and press and hold the power button for ten seconds to discharge the power supply's capacitors.
+
+'''Be very careful''' not to touch the capacitor leads or any exposed solder joints on the back of the power supply.
+
+
+###Tools Required:
+
+ - iMac Intel 27"" Cardboard Service Wedge
+
+ - iMac Opening Wheel
+
+ - Plastic Cards
+
+ - Spudger
+
+ - TR10 Torx Security Screwdriver
+
+
+###Parts Required:
+
+ - iMac Intel 27"" (2012-2019) Adhesive Strips","iMac_Intel_27""_Retina_5K_Display_2020_Fan_Replacement",273,camera,True
+Recognizing_&_Disconnecting_Cable_Connectors_15,"## Display Cable Connectors
+Display (sometimes called eDP cables in laptops) and camera cable connectors often have a small metal buckle running around the socket, locking them in place. The connectors are typically wide and may have tape attached to the buckle.
+Disconnecting these cables is a two-step process. First, gently push the tip of a spudger under the metal buckle to unclip it, then swing it over the socket.
+Next, hold the buckle and cable ''together'' and gently pull the connector straight out of its socket.
+To reconnect:
+Grip the cable and buckle together and insert the connector fully into its socket.
+Aligning the connector can be tricky. Reposition it as necessary and don't try to force it into the socket, or you may damage both the connector and its socket.
+Flip the buckle over the socket and use a spudger to press the buckle down until it clicks into place.",Recognizing_&_Disconnecting_Cable_Connectors,197,camera,True
+Repair_a_Magic_Mouse_After_a_Battery_Leak_3,"## Gently Separate the Top and Bottom Halves
+You have removed the aluminum shell that was glued onto the bottom of Apple's Magic Mouse.
+What you have left with are the upper and lower halves of the mouse.  They are held together by four tiny black plastic posts on the bottom half, that are inserted into plastic loops on the top half.  ***WARNING***:  Proceed with caution.  If you break any of these black plastic posts or loops, it might be game over.
+The two halves are connected by a wide ribbon cable that is somewhat fragile.  ***WARNING:*** If you tear this cable it is game over for this mouse.
+Proceeding with caution, take a small pry tool and pry one of the plastic loops off of its black plastic post.  Pry the loop in the outboard direction while applying gentle pressure separating the upper and lower halves of the mouse.  The loop should pop off the black plastic post.
+Continue to release each of the remaining three black plastic posts.  Remember that on the Apple logo end of the mouse there is a fragile ribbon cable that you dare not tear.
+Once you release the black plastic posts, the only thing holding the mouse together is a very fragile ribbon cable [see second photo].  ***WARNING:*** You don't want to tear the cable or pull it out of its socket (because it is tricky to put it back into the socket).  Proceed with care!",Repair_a_Magic_Mouse_After_a_Battery_Leak,295,camera,True
+"iMac_27""_2017_Adhesive_Strips_Replacement_7","## Step 15
+Peel away the white backing behind the strip to expose the remaining adhesive.
+
+
+## Step 16
+Run your finger from left to right along the length of the adhesive strip to ensure it is straight and unwrinkled, pressing down as you go to adhere the strip to the iMac.
+
+
+## Step 17
+Repeat the previous steps for the bottom left adhesive strip (strip 26), aligning and placing it along the bottom left edge of the iMac.
+The strip should be positioned such that the L-bend sits next to the left vertical adhesive.''' The L-bend should not overlap the left vertical adhesive. '''
+Once you've applied all the adhesive strips, the iMac should look as shown in the second photo.
+
+
+## Replace the display
+Gently set the display in place over the iMac and align it carefully.
+
+
+## Step 19
+Use painter's tape or masking tape to temporarily secure the bottom edge of the display to the iMac's enclosure.
+The tape preserves the display's alignment, and allows you to safely swing the top edge of the display open to access the display cables.","iMac_27""_2017_Adhesive_Strips_Replacement",240,camera,True
+"iMac_Intel_27""_EMC_2639_Adhesive_Strips_Replacement_7","## Step 15
+Peel away the white backing behind the strip to expose the remaining adhesive.
+
+
+## Step 16
+Run your finger from left to right along the length of the adhesive strip to ensure it is straight and unwrinkled, pressing down as you go to adhere the strip to the iMac.
+
+
+## Step 17
+Repeat the previous steps for the bottom left adhesive strip (strip 26), aligning and placing it along the bottom left edge of the iMac.
+The strip should be positioned such that the L-bend sits next to the left vertical adhesive.''' The L-bend should not overlap the left vertical adhesive. '''
+Once you've applied all the adhesive strips, the iMac should look as shown in the second photo.
+
+
+## Replace the display
+Gently set the display in place over the iMac and align it carefully.
+
+
+## Step 19
+Use painter's tape or masking tape to temporarily secure the bottom edge of the display to the iMac's enclosure.
+The tape preserves the display's alignment, and allows you to safely swing the top edge of the display open to access the display cables.","iMac_Intel_27""_EMC_2639_Adhesive_Strips_Replacement",240,camera,True
+How_to_Fix_Apple_Mighty_Mouse_Power_Button_0,"# How to Fix Apple Mighty Mouse Power Button
+
+
+
+###Tools Required:
+
+ - Spudger
+
+ - Metal Spudger
+
+
+###Parts Required:
+
+ - None
+
+
+## Finding the switch
+Firstly flip your mouse upside down and find the power switch. It is located just above the Apple logo and looks like a sliding door.
+
+
+## Switching off the mouse
+Slide the power switch to the off position or until it fully covers the optical sensor.
+
+
+## Opening the battery door
+Locate the clip holding the battery cover on the mouse and use a sputter or your nail to push it aside to allow the door to spring up.
+This can take a few attempts especially if your mouse is well used and trying different approaches may get it to open up. For mine I had to slightly push the door down to open it.
+Once the door pops up remove it but keep it close.
+
+
+## How the switch works
+The Mighty Mouse's on off switch works by the plastic slider on the door pushing down a bent piece of metal to then press a button on the main chassis of the mouse. (photo 1)
+Over time the metal (photo 2) can bend to far down and not press the chassis button (photo 3) .",How_to_Fix_Apple_Mighty_Mouse_Power_Button,246,camera,True
+"MacBook_Pro_15""_Touch_Bar_2019_Battery_Replacement_15","## Step 3
+To control the flow of adhesive remover, raise the back edge (hinge side) of your MacBook Pro a few inches using a book or foam block.
+
+
+## Step 4
+Now that your MacBook Pro is fully prepped, it's time to prep yourself.
+iFixit adhesive remover contains acetone, a mild skin and eye irritant.
+Wear eye protection when handling and applying the adhesive remover. (Eye protection is included in your kit.)
+'''Do not''' wear contact lenses without eye protection.
+Protective gloves are also included in your kit. If you are concerned about possible skin irritation, put your gloves on now.
+
+
+## Step 5
+Pull off the black rubber stopper from your bottle of adhesive remover.
+Twist to loosen or remove the bottle cap before you cut the applicator tip.
+This unseals the bottle and allows the pressure to equalize before you cut the applicator tip. '''If you skip this step, the adhesive remover may spray out unexpectedly when the tip is cut.'''
+Use scissors to cut off the sealed tip of the applicator.
+Cutting close to the narrow tip will give you better control so you can apply the adhesive remover in small amounts.
+Twist and close the bottle cap securely before you proceed further.","MacBook_Pro_15""_Touch_Bar_2019_Battery_Replacement",281,camera,False
+"MacBook_Pro_13""_Retina_Display_Early_2013_Trackpad_Replacement_6","## Step 3
+Now that your MacBook Pro is fully prepped, it's time to prep yourself.
+iFixit adhesive remover contains acetone, a mild skin and eye irritant.
+Wear eye protection when handling and applying the adhesive remover. (Eye protection is included in your kit.)
+'''Do not''' wear contact lenses without eye protection.
+Protective gloves are also included in your kit. If you are concerned about skin irritation, put your gloves on now.
+
+
+## Step 4
+Pull off the black rubber stopper from your bottle of adhesive remover.
+Twist to loosen or remove the bottle cap before you cut the applicator tip.
+This unseals the bottle and allows the pressure to equalize before you cut the applicator tip. '''If you skip this step, the adhesive remover may spray out unexpectedly when the tip is cut.'''
+Use scissors to cut off the sealed tip of the applicator.
+Cutting close to the narrow tip will give you better control so you can apply the adhesive remover in small amounts.
+Twist and close the bottle cap securely before you proceed further.","MacBook_Pro_13""_Retina_Display_Early_2013_Trackpad_Replacement",242,camera,False

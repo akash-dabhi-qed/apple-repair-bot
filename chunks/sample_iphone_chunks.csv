@@ -1,0 +1,1435 @@
+chunk_id,text,wiki_id,chunk_length,repair_type,contains_warning
+"iPhone_""L-Shaped""_Battery_Adhesive_Strips_Replacement_0","# iPhone ""L-Shaped"" Battery Adhesive Strips Replacement
+Use this guide to correctly apply replacement battery adhesive strips for ""***L-shaped***"" iPhone batteries, including the dual-cell batteries in the iPhone X and XS Max, and the single-cell battery in the iPhone XS. Use the list below to check if your phone is compatible.
+
+If your replacement battery doesn't come with adhesive strips pre-installed, or you're reusing your existing battery, these strips must be replaced. The strips are easily damaged if not applied correctly, so you may want to have a spare set of strips on hand when following this guide for the first time.
+
+These adhesive strips are different from those in prior-generation iPhones due to the presence of the wireless charging coil. The coil lies directly underneath the battery, which is secured with four adhesive strips that are contoured around the coil to avoid damaging it.
+
+Before you begin, you should have removed the battery by following a guide like the ones linked below:","iPhone_""L-Shaped""_Battery_Adhesive_Strips_Replacement",216,battery,False
+iPhone_Battery_Adhesive_Strips_Replacement_1,"Before you begin, you should have removed the battery by following a guide like the ones linked below:
+
+* [guide|101279|iPhone 8 Battery Replacement]
+* [guide|98260|iPhone 8 Plus Battery Replacement]
+* [guide|116553|iPhone XR Battery Replacement]
+* [guide|133814|iPhone SE 2020 Battery Replacement]
+* [guide|127450|iPhone 11 Battery Replacement]
+* [guide|140588|iPhone 12 Battery Replacement]
+* [guide|139693|iPhone 12 Mini Battery Replacement]
+* [guide|140611|iPhone 12 Pro Battery Replacement]
+* [guide|145896|iPhone 13 Battery Replacement]
+* [guide|145508|iPhone 13 Mini Battery Replacement]
+* [guide|152966|iPhone 14 Battery Replacement]
+* [guide|153339|iPhone 14 Plus Battery Replacement]
+If you need to replace the adhesive strips in a different model iPhone, use one of the following guides:
+
+* [guide|107792|iPhone 5s, 5c, and SE Battery Adhesives Strips Replacement]
+* [guide|56465|iPhone 6, 6 Plus, 6s, 6s Plus, 7, and 7 Plus Battery Adhesive Strips Replacement]
+* [guide|117505|iPhone ""L-Shaped"" Battery Adhesive Strips Replacement]",iPhone_Battery_Adhesive_Strips_Replacement,286,battery,False
+Recognizing_&_Disconnecting_Cable_Connectors_0,"# Recognizing & Disconnecting Cable Connectors
+Modern electronics contain a dizzying array of internal data and power cable connectors—and nothing brings a project crashing to a halt like accidentally breaking a connector.
+
+Use this guide to familiarize yourself with the most common types of connectors, and learn the tools and techniques you’ll need to disconnect (and reconnect) them safely.",Recognizing_&_Disconnecting_Cable_Connectors,81,battery,True
+iPhone_SE_Battery_Replacement_1,"- Clampy - Anti-Clamp
+
+ - Anti-Static Project Tray
+
+ - iOpener
+
+ - P2 Pentalobe Screwdriver iPhone
+
+ - Phillips #000 Screwdriver
+
+ - Plastic Cards
+
+ - iFixit Opening Tool
+
+ - Suction Handle
+
+ - Spudger
+
+ - Tweezers
+
+ - Scissors
+
+ - Isopropyl Alcohol
+
+
+###Parts Required:
+
+ - iPhone SE (1st Gen) Battery
+
+ - iPhone 5s/5c/SE (1st Gen) Battery Adhesive Strips",iPhone_SE_Battery_Replacement,98,battery,False
+iPhone_XR_Earpiece_and_Front_Sensor_Assembly_Replacement_11,"## Unscrew the display connector cover
+Remove the two 1.2 mm Y000 screws securing the display connector bracket.
+Remove the bracket.
+
+
+## Disconnect the digitizer
+Use the tip of a spudger to pry up and disconnect the digitizer cable.
+To re-attach [https://www.ifixit.com/Guide/Recognizing+%26+Disconnecting+Cable+Connectors/25629#s70308|press connectors|new_window=true] like this one, carefully align and press down on one side until it clicks into place, then repeat on the other side. Do not press down on the middle. If the connector is misaligned, the pins can bend, causing permanent damage.
+If any part of your screen doesn't respond to touch after your repair, disconnect the battery and then re-seat this connector, making sure it clicks fully into place and that there's no dust or other obstruction in the socket.
+
+
+## Disconnect the display
+Use the tip of a spudger to disconnect the display cable connector.",iPhone_XR_Earpiece_and_Front_Sensor_Assembly_Replacement,236,battery,True
+iPhone_SE_2020_Battery_Replacement_0,"# iPhone SE 2020 Battery Replacement
+Use this guide to revive your iPhone SE 2020’s battery life and performance with a new battery. If your battery is swollen, [[What to do with a swollen battery|take appropriate precautions|new_window=true]].
+
+This guide instructs you to completely detach the display assembly; this is intended to prevent accidental damage to the display cables. If you feel comfortable removing the battery without putting undue strain on the display cables, you can skip the steps for detaching the display. Additionally, while it’s possible to remove the adhesive strips securing the battery as soon as you open the phone, this guide recommends first removing the Taptic Engine. Doing so reduces the risk of breaking the lower adhesive strips accidentally, either by snagging them on the Taptic Engine, or by pulling the strips at too sharp of an angle.
+
+For optimal performance, after completing this guide, [[Battery Calibration|calibrate]] your newly installed battery: Charge it to 100% and keep charging it for at least two more hours. Then use your iPhone until it shuts off due to low battery. Finally, charge it uninterrupted to 100%.
+
+
+###Tools Required:
+
+ - P2 Pentalobe Screwdriver iPhone
+
+ - Suction Handle",iPhone_SE_2020_Battery_Replacement,272,battery,True
+iPhone_XS_Earpiece_Speaker_and_Front_Sensor_Assembly_Replacement_11,"## Step 4
+Use a spudger or a fingernail to pry up and disconnect the front panel sensor assembly connector.
+
+
+## Step 5
+Use a spudger or a fingernail to disconnect the OLED panel cable connector.
+To re-attach [https://www.ifixit.com/Guide/Recognizing+%26+Disconnecting+Cable+Connectors/25629#s70308|press connectors|new_window=true] like this one, carefully align and press down on one side until it clicks into place, then repeat on the other side. Do not press down on the middle. If the connector is misaligned, the pins can bend, causing permanent damage.
+
+
+## Step 6
+Use a spudger or fingernail to pry the digitizer cable connector up from its socket.
+This connector's recessed location makes it tricky to reconnect. Take your time and align it carefully, then gently press it into place with your fingertip—first one side, then the other. You should feel it click into place.
+If any part of your screen doesn't respond to touch after your repair, disconnect the battery and then re-seat this connector, making sure it clicks fully into place and that there's no dust or other obstruction in the socket.",iPhone_XS_Earpiece_Speaker_and_Front_Sensor_Assembly_Replacement,278,battery,True
+iPhone_14_Pro_Rear-Facing_Camera_Assembly_Replacement_2,"## Remove the pentalobe screws
+Power off your iPhone before beginning disassembly.
+Remove the two 6.8 mm-long pentalobe P2 screws at the bottom edge of the iPhone.
+
+
+## Mark your opening picks
+If inserted too far, an opening pick can damage your device. Follow this step to mark your pick and prevent damage.
+Measure 3 mm from the tip and mark the opening pick with a permanent marker.
+You can also mark the other corners of the pick with different measurements.
+Alternatively, [link|https://guide-images.cdn.ifixit.com/igi/pQGATIGUbViSB4gB.full|tape a coin to a pick|new_window=true] 3 mm from the tip.
+
+
+## Tape over any cracks
+If your iPhone has a cracked screen, keep further breakage contained and prevent bodily harm during your repair by taping over the glass.
+Lay overlapping strips of clear packing tape over the iPhone's screen until the whole face is covered.
+Wear safety glasses to protect your eyes from any glass shaken free during the repair.
+If you can't get the suction cup to stick in the next few steps, fold a strong piece of tape (such as duct tape) into a handle and lift the screen with that instead.
+If all else fails, you can superglue the suction cup to the screen.",iPhone_14_Pro_Rear-Facing_Camera_Assembly_Replacement,291,battery,True
+iPhone_16_Pro_Max_Battery_Replacement_1,"- Standoff Screwdriver for iPhones
+
+ - iFixit Opening Picks (Set of 6)
+
+ - Suction Handle
+
+ - Tweezers
+
+ - Spudger
+
+ - Hair Dryer
+
+ - Isopropyl Alcohol (90% or Greater)
+
+ - Coffee Filters or a lint-free cloth
+
+ - Microfiber Cleaning Cloths
+
+ - Masking Tape
+
+ - Heavy Books
+
+ - Coin
+
+ - Packing Tape
+
+ - Heat Gun
+
+ - iOpener
+
+ - ESD Safe Blunt Nose Tweezers
+
+
+###Parts Required:
+
+ - iPhone 16 Pro Max Battery
+
+ - iPhone 16 Pro Max Battery Adhesive
+
+ - Tesa 61395 Tape
+
+ - Stretch Release Battery Adhesive",iPhone_16_Pro_Max_Battery_Replacement,128,battery,False
+iPhone_15_Pro_Max_Chip_ID_2,"## Main PCB Side 2 - Connectivity
+Likely Apple 339M00298 UWB Module
+
+
+## Main PCB Side 2 - Sensors
+Bosch Sensortec 6-axis MEMS accelerometer & gyroscope
+
+
+## Radio Board Side 1
+STMicroelectronics [link|https://www.st.com/en/secure-mcus/st33-arm-core.html|ST33J|new_window=true] secure microcontroller
+Qualcomm PMX65 power management
+Qualcomm QET7100 wideband envelope tracker
+Likely Qualcomm clock generator
+
+
+## Radio Board Side 1 - Connectivity
+Qualcomm [link|https://www.qualcomm.com/products/technology/modems/snapdragon-x70-modem-rf-system|SDX70M|new_window=true] Snapdragon X70 modem
+Qualcomm SDR735 RF transceiver
+Qualcomm SMR546 RF transceiver
+Possibly Apple 339S01232 WiFi & Bluetooth module
+Broadcom AFEM-8234 front-end module
+Skyworks SKY58440-11 front-end module
+Qorvo QM76305 front-end module",iPhone_15_Pro_Max_Chip_ID,273,battery,False
+iPhone_1st_Generation_Battery_Replacement_0,"# iPhone 1st Generation Battery Replacement
+Battery not lasting long? Swap it out (requires soldering).
+
+
+###Tools Required:
+
+ - Probe and Pick Set
+
+ - Desoldering Braid
+
+ - SIM Card Eject Tool
+
+ - Metal Spudger
+
+ - Phillips #00 Screwdriver
+
+ - iFixit Opening Tool
+
+ - Lead-Free Solder
+
+ - Soldering Iron
+
+ - Spudger
+
+
+###Parts Required:
+
+ - iPhone 2G Replacement Battery
+
+
+## Step 1
+Insert a SIM card eject tool or paper clip into the hole next to the headphone jack.
+Press down on the paper clip until the SIM card tray pops out.
+
+
+## Step 2
+Grasp the SIM card tray and slide it out of the iPhone.
+
+
+## Step 1
+This image shows the two tabs and two catches located on the underside of the antenna cover. The two tabs at the top of the image must be pushed towards the black cover to release them.
+
+
+## Step 2
+Be sure to slide the metal spudger between the dock connector and the antenna cover, and not into the dock connector itself.
+Insert a metal spudger into the slot between the dock connector and the antenna cover. Gently pry up near the two tabs to create a small gap between the antenna cover and the silver front bezel.",iPhone_1st_Generation_Battery_Replacement,259,battery,False
+iPhone_16_Pro_Max_Earpiece_Speaker_Replacement_1,"## Tape over any cracks
+If your screen or back glass is badly cracked, lay overlapping strips of packing tape over the glass to protect yourself and make disassembly easier.
+Make sure there's a smooth area near the bottom edge that's big enough for a suction cup to stick to.
+
+
+## Remove the pentalobe screws
+Use a P2 pentalobe driver to remove the two 7.4 mm-long screws on either side of the charge port.
+
+
+## Mark your opening picks
+If inserted too far, an opening pick can damage your device. Follow this step to mark your pick and prevent damage.
+Measure 3 mm from the tip and mark the opening pick with a permanent marker.
+You can also mark the other corners of the pick with different measurements.
+Alternatively, [link|https://guide-images.cdn.ifixit.com/igi/pQGATIGUbViSB4gB.full|tape a coin to a pick|new_window=true] 3 mm from the tip.",iPhone_16_Pro_Max_Earpiece_Speaker_Replacement,218,port,False
+How_to_replace_the_battery_in_your_iPhone_5s_2,"## Removing the Pentalobe screws
+Before you proceed, discharge your iPhone battery below 25%. A charged lithium-ion battery can catch fire and/or explode if accidentally punctured.
+Power off your iPhone before beginning disassembly.
+Remove the two 3.9 mm Pentalobe screws from either side of Lightning connector.
+
+
+## Taping the display glass
+If your display glass is cracked, keep further breakage contained and prevent bodily harm during your repair by taping the glass.
+Lay overlapping strips of clear packing tape over the iPhone's display until the whole face is covered.
+This will keep glass shards contained and provide structural integrity when prying and lifting the display.
+Wear safety glasses to protect your eyes from any glass shaken free during the repair.",How_to_replace_the_battery_in_your_iPhone_5s,159,port,True
+iPhone_13_Battery_Replacement_5,"## Step 4
+Support your iPhone on something sturdy such as a hardcover book so it rests hands-free and parallel to the ground; this makes it easier to work with in the following steps.
+Use a hair dryer to heat along the bottom edge of the iPhone. The screen should feel slightly too hot to touch.
+For complete instructions on how to use a hair dryer, [link|https://www.ifixit.com/Guide/How+to+Use+a+Hair+Dryer+to+Soften+Adhesive/157348|new_window=true|check out this guide].
+Wait one minute to give the adhesive a chance to release and present an opening gap.
+Insert an opening pick under the screen's plastic bezel when the Anti-Clamp creates a large enough gap.
+If the Anti-Clamp doesn't create a sufficient gap, apply more heat to the area and rotate the handle a quarter turn.
+Don't crank more than a quarter turn at a time, and wait one minute between turns. Let the Anti-Clamp and time do the work for you.
+***Skip the next three steps.***",iPhone_13_Battery_Replacement,248,port,True
+iPhone_5s_Logic_Board_Replacement_6,"## Step 10
+During reassembly, you will need to reinstall the Touch ID cable bracket. The top of the bracket needs to slide between the battery and Touch ID cable connector, in front of the metal tab. The bottom must latch down over the connector.
+Slide the top of the bracket over the Touch ID cable connector from left to right.
+Alternatively, lay the bracket directly over the connector. The edge with the ""leg"" will prop the bracket up at a slight angle, and the opposite edge must be between the cable connector and the metal tab near the battery. With the edge of a spudger flat against the bracket, apply gentle downward pressure to snap in the back and front clasps.
+
+
+## Step 11
+During reassembly, use the flat end of a spudger to snap the front portion of the Touch ID cable bracket down over the cable connector.
+If the bracket does not snap down flush, you may need to remove the bracket and slide it over the cable connector again for a better fit.
+
+
+## Disconnecting the home button cable connector
+Use the tip of a spudger to pry the home button cable connector up out of its socket.
+Be sure you're separating the cable connector from its socket, and not prying the entire socket up. The socket is on its own glued-down cable that can be pried up if you aren't careful.",iPhone_5s_Logic_Board_Replacement,288,port,True
+iPhone_15_Plus_Back_Glass_Replacement_1,"## Tape over any cracks
+If your screen or back glass is badly cracked, lay overlapping strips of packing tape over the glass to protect yourself and make disassembly easier.
+Make sure there's a smooth area near the bottom edge that's big enough for a suction cup to stick to.
+
+
+## Mark your opening picks
+If inserted too far, an opening pick can damage your device. Follow this step to mark your pick and prevent damage.
+Measure 3 mm from the tip and mark the opening pick with a permanent marker.
+You can also mark the other corners of the pick with different measurements.
+Alternatively, [link|https://guide-images.cdn.ifixit.com/igi/pQGATIGUbViSB4gB.full|tape a coin to a pick|new_window=true] 3 mm from the tip.
+
+
+## Remove the pentalobe screws
+Use a P2 pentalobe driver to remove the two 7.7 mm-long screws on either side of the charging port.",iPhone_15_Plus_Back_Glass_Replacement,218,port,False
+iPhone_5s_Screen_Replacement_6,"## Step 10
+During reassembly, you will need to reinstall the Touch ID cable bracket. The top of the bracket needs to slide between the battery and Touch ID cable connector, in front of the metal tab. The bottom must latch down over the connector.
+Slide the top of the bracket over the Touch ID cable connector from left to right.
+Alternatively, lay the bracket directly over the connector. The edge with the ""leg"" will prop the bracket up at a slight angle, and the opposite edge must be between the cable connector and the metal tab near the battery. With the edge of a spudger flat against the bracket, apply gentle downward pressure to snap in the back and front clasps.
+
+
+## Step 11
+During reassembly, use the flat end of a spudger to snap the front portion of the Touch ID cable bracket down over the cable connector.
+If the bracket does not snap down flush, you may need to remove the bracket and slide it over the cable connector again for a better fit.
+
+
+## Disconnecting the home button cable connector
+Use the tip of a spudger to pry the home button cable connector up out of its socket.
+Be sure you're separating the cable connector from its socket, and not prying the entire socket up. The socket is on its own glued-down cable that can be pried up if you aren't careful.",iPhone_5s_Screen_Replacement,288,port,True
+iPhone_15_Pro_Screen_Replacement_1,"## Prepare your iPhone for disassembly
+Let your phone's battery drain below 25% before starting this repair—a charged lithium‑ion battery may catch fire if damaged.
+Unplug all cables from your phone.
+Hold the power and either volume button and slide to power off your phone.
+
+
+## Tape over any cracks
+If your screen or back glass is cracked, lay overlapping strips of packing tape over the glass to protect yourself and make disassembly easier.
+Make sure there's a smooth area near the bottom edge that's big enough for a suction cup to stick to.
+
+
+## Mark your opening picks
+If inserted too far, an opening pick can damage your device. Follow this step to mark your pick and prevent damage.
+Measure 3 mm from the tip and mark the opening pick with a permanent marker.
+You can also mark the other corners of the pick with different measurements.
+Alternatively, [link|https://guide-images.cdn.ifixit.com/igi/pQGATIGUbViSB4gB.full|tape a coin to a pick|new_window=true] 3 mm from the tip.
+
+
+## Remove the pentalobe screws
+Use a P2 pentalobe screwdriver to remove the two 7 mm‑long screws on either side of the charging port.",iPhone_15_Pro_Screen_Replacement,279,port,True
+iPhone_16_Plus_Front_Camera_Assembly_Replacement_1,"## Prepare your phone for disassembly
+Allow your phone's battery to drain below 25%, as a charged lithium-ion battery is a potential safety hazard.
+Unplug any cables from your phone.
+Hold the power and either volume buttons and slide to power off your phone.
+
+
+## Tape over any cracks
+If your screen or back glass is badly cracked, lay overlapping strips of packing tape over the glass to protect yourself and make disassembly easier.
+Make sure there's a smooth area near the bottom edge that's big enough for a suction cup to stick to.
+
+
+## Mark your opening picks
+If inserted too far, an opening pick can damage your device. Follow this step to mark your pick and prevent damage.
+Measure 3 mm from the tip and mark the opening pick with a permanent marker.
+You can also mark the other corners of the pick with different measurements.
+Alternatively, [link|https://guide-images.cdn.ifixit.com/igi/pQGATIGUbViSB4gB.full|tape a coin to a pick|new_window=true] 3 mm from the tip.
+
+
+## Remove the pentalobe screws
+Use a P2 pentalobe driver to remove the two 7.7 mm-long screws on either side of the USB-C port.",iPhone_16_Plus_Front_Camera_Assembly_Replacement,280,port,True
+iPhone_5s_Lightning_Connector_Replacement_0,"# iPhone 5s Lightning Connector Replacement
+If you've tried [guide|164631|cleaning the lightning port|new_window=true] to no avail, use this guide to replace a nonfunctioning Lightning connector assembly, including headphone jack, cellular antenna, and microphone.
+
+***You can also use this guide for reference when replacing the following parts:***
+
+* Headphone Jack Interconnect Cable
+* Microphone Gasket
+The video below includes a few extra steps, including removal of the logic board. Follow the guide steps below it for the updated, shorter procedure.
+
+[video|https://www.youtube.com/watch?v=BsRD9cq2U8A]
+
+
+###Tools Required:
+
+ - Clampy - Anti-Clamp
+
+ - P2 Pentalobe Screwdriver iPhone
+
+ - iFixit Opening Tool
+
+ - Suction Handle
+
+ - Spudger
+
+ - Phillips #000 Screwdriver
+
+ - Tweezers
+
+ - B-7000 Adhesive
+
+
+###Parts Required:
+
+ - iPhone 5s Lightning Connector and Headphone Jack
+
+ - iPhone 5s Headphone Jack Interconnect Cable
+
+ - iPhone 5s Microphone Gasket",iPhone_5s_Lightning_Connector_Replacement,243,port,False
+iPhone_7_Plus_Logic_Board_Replacement_13,"## Step 12
+Use a thin pry tool or [product|IF145-020|tweezers] to carefully pry up and disconnect the two coaxial cable connectors from the logic board.
+During reassembly, these can be tricky to reconnect. One at a time, hold each connector in place over its socket and press down with the flat of your spudger. The connector should snap into place.
+The coaxial cable closest to the battery connector is responsible for the Wi-Fi Diversity Antenna. The other coaxial cable is for the secondary cell antenna. Make sure to reconnect them to the correct sockets.
+
+
+## Step 13
+Disconnect the two remaining ribbon cables from the logic board:
+Disconnect the upper cable connector by prying from the top
+Disconnect the Lightning port connector by prying along the outer edge",iPhone_7_Plus_Logic_Board_Replacement,183,port,True
+How_to_Clean_your_iPhone's_Lightning_Port_0,"# How to Clean your iPhone's Lightning Port
+Use this guide to clean your iPhone's (generation 14 and below) charging port, a.k.a. the ""Lightning port.""
+
+If your iPhone charges intermittently—or not at all—your charging port may be dirty, which prevents your charger from sitting correctly. Cleaning your charging port may fix this.
+
+This guide uses tools that you might have around the house, but we also sell a [product|IF145-523|Precision Cleaning Kit|new_window=true] that includes some small brushes and picks to make your cleaning life easier.
+
+
+###Tools Required:
+
+ - Flashlight
+
+ - Dust Blower
+
+ - Spudger
+
+ - Anti-Static Brush
+
+ - Toothpick
+
+ - Cotton Ball
+
+ - Isopropyl Alcohol (90% or Greater)
+
+ - Precision Cleaning Kit
+
+
+###Parts Required:
+
+ - None",How_to_Clean_your_iPhone's_Lightning_Port,181,port,False
+iPhone_6s_Plus_Screen_Replacement_3,"## Step 2
+Pull the blue handle forwards to lock the arms.
+Turn the handle clockwise 360 degrees or until the cups start to stretch.
+Make sure the suction cups [link|https://guide-images.cdn.ifixit.com/igi/BSluctHhVVqhGtfj.full|new_window=true|remain aligned with each other]. If they begin to slip out of alignment, loosen the suction cups slightly and realign the arms.
+Insert an opening pick under the screen when the Anti-Clamp creates a large enough gap.
+If the Anti-Clamp doesn't create a sufficient gap, rotate the handle a quarter turn.
+***Don't crank more than a quarter turn at a time***, and wait a few seconds between turns. Let the Anti-Clamp and time do the work for you.
+***Skip the next three steps.***
+
+
+## Step 1
+If you don't have an [product|IF145-513|Anti-Clamp], follow the next three steps to use a suction handle.
+Apply mild heat to the lower edge of the iPhone using an [guide|25705|iOpener] or hair dryer for about a minute.
+Heat softens the adhesive securing the display, making it easier to open.",iPhone_6s_Plus_Screen_Replacement,286,screen,False
+iPhone_13_Pro_Max_Taptic_Engine_Replacement_6,"## Heat the top edge
+Use a hair dryer to heat the top edge of the iPhone for 90 seconds or until the screen is slightly too hot to touch.
+
+
+## Separate the top adhesive
+Slide the opening pick around the top right corner of the iPhone to separate the top adhesive.
+Don't insert your pick more than 3 mm, as you may damage the top sensors.
+Leave the pick in the top left corner before continuing.
+
+
+## Heat the left edge
+Use a hair dryer to heat the left edge of the iPhone for 90 seconds or until the screen is slightly too hot to touch.
+
+
+## Screen information
+There are delicate cables along the left edge of your iPhone. ***Don't insert your pick here***, as you may damage the cables.
+
+
+## Separate the left adhesive
+Insert a second opening pick in the bottom left corner of the iPhone.
+Twist both picks simultaneously until the left edge clips release.
+Apply the twisting force gradually.
+If you're having trouble separating the adhesive, reheat the left edge.",iPhone_13_Pro_Max_Taptic_Engine_Replacement,217,screen,True
+iPhone_3G_Home_Button_Replacement_0,"# iPhone 3G Home Button Replacement
+I did not take any of these images. I took these images from various iFixIt Staff guides, as well as google images. Thanks to all of you for reading, hope this helps! Feel free to leave any comments, good or bad, to help me improve the guide for others.
+
+
+###Tools Required:
+
+ - Phillips #00 Screwdriver
+
+ - Suction Handle
+
+ - Spudger
+
+
+###Parts Required:
+
+ - None
+
+
+## Step 1
+If your display glass is cracked, keep further breakage contained and prevent bodily harm during your repair by taping the glass.
+Lay overlapping strips of clear packing tape over the iPhone's display until the whole face is covered.
+This will keep glass shards contained and provide structural integrity when prying and lifting the display.
+Wear safety glasses to protect your eyes from any glass shaken free during the repair.
+
+
+## Step 1
+Remove the 2 Phillips #00 screws at the bottom of the iPhone, located on both sides of the dock connector.",iPhone_3G_Home_Button_Replacement,208,screen,True
+iPhone_12_mini_Earpiece_Speaker_and_Front_Sensor_Assembly_Replacement_5,"## Heat the bottom edge of the phone
+Opening the iPhone's display will compromise its waterproof seals. Have replacement seals ready before you proceed past this step, or take care to avoid liquid exposure if you reassemble your iPhone without replacing the seals.
+Heating the bottom edge of the iPhone helps soften the adhesive securing the display, making it easier to open.
+Use a [link|https://www.ifixit.com/Guide/How+to+Use+a+Hair+Dryer+to+Soften+Adhesive/157348|new_window=true|hair dryer] or a [link|https://www.ifixit.com/Guide/How+to+Use+a+Heat+Gun+to+Soften+Adhesive/151116|new_window=true|heat gun] to heat the bottom edge of the iPhone for 90 seconds or until the screen is slightly too hot to touch.
+Never leave your hair dryer in one spot for an extended period of time.
+If you have trouble during the opening procedure, the adhesive most likely cooled down. Apply more heat to further soften the adhesive.",iPhone_12_mini_Earpiece_Speaker_and_Front_Sensor_Assembly_Replacement,249,screen,True
+iPhone_12_mini_Screen_Replacement_6,"## Heat the bottom edge of the phone
+Opening the iPhone's display will compromise its waterproof seals. Have replacement seals ready before you proceed past this step, or take care to avoid liquid exposure if you reassemble your iPhone without replacing the seals.
+Heating the bottom edge of the iPhone helps soften the adhesive securing the display, making it easier to open.
+Use a [link|https://www.ifixit.com/Guide/How+to+Use+a+Hair+Dryer+to+Soften+Adhesive/157348|new_window=true|hair dryer] or a [link|https://www.ifixit.com/Guide/How+to+Use+a+Heat+Gun+to+Soften+Adhesive/151116|new_window=true|heat gun] to heat the bottom edge of the iPhone for 90 seconds or until the screen is slightly too hot to touch.
+Never leave your hair dryer in one spot for an extended period of time.
+If you have trouble during the opening procedure, the adhesive most likely cooled down. Apply more heat to further soften the adhesive.",iPhone_12_mini_Screen_Replacement,249,screen,True
+iPhone_6_Power_Button_Replacement_2,"## Step 2
+Pull the blue handle forwards to lock the arms.
+Turn the handle clockwise 360 degrees or until the cups start to stretch.
+Make sure the suction cups [link|https://guide-images.cdn.ifixit.com/igi/BSluctHhVVqhGtfj.full|new_window=true|remain aligned with each other]. If they begin to slip out of alignment, loosen the suction cups slightly and realign the arms.
+Insert an opening pick under the screen when the Anti-Clamp creates a large enough gap.
+If the Anti-Clamp doesn't create a sufficient gap, rotate the handle a quarter turn.
+***Don't crank more than a quarter turn at a time***, and wait a few seconds between turns. Let the Anti-Clamp and time do the work for you.
+***Skip the next three steps.***",iPhone_6_Power_Button_Replacement,199,screen,False
+iPhone_8_Plus_Screen_Replacement_12,"## Step 5
+Use an opening pick to gently separate the adhesive holding the home/Touch ID sensor cable to the back side of the display panel.
+
+
+## Step 6
+Remove the home/Touch ID sensor assembly by lifting it through the front side of the display.
+To reinstall, first feed the cable through the hole in the front of the display as shown.
+Your replacement part may come with [https://d3nevzfk7ii3be.cloudfront.net/igi/ZxMbl42DwtiKttpO|extra Y000 screws|new_window=true] already installed near the Home Button. Remove the unnecessary screws so that you can reinstall the home button bracket.
+Compare your new replacement part to the original part—you may need to transfer remaining components or remove adhesive backings from the new part before installing.
+
+***To reassemble your device, follow the above steps in reverse order.***
+
+Take your e-waste to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].
+
+Repair didn’t go as planned? Check out our [link|https://www.ifixit.com/Answers/Device/iPhone%208%20Plus|Answers community] for troubleshooting help.",iPhone_8_Plus_Screen_Replacement,287,screen,False
+iPhone_16_Pro_Max_Logic_Board_Replacement_3,"## Back glass information
+As you slice the adhesive securing the back glass in the following steps, don't insert your pick deeper than 3 mm to avoid damaging the following areas:
+A delicate cable connecting the back glass to the iPhone, right next to the volume up button. ***Don't insert your pick here to avoid slicing the cable.***
+Multiple spring contacts around the perimeter of the iPhone.
+
+
+## Separate the bottom edge adhesive
+Slide the opening pick along the bottom edge to slice the adhesive.
+If the adhesive feels difficult to slice, reheat the edge for a minute and try again.
+Leave the opening pick in the bottom-left corner to prevent the adhesive from resealing.
+
+
+## Heat the left edge
+Use a hair dryer or heat gun to heat the left edge of the back glass until it's hot to the touch.
+
+
+## Separate the left adhesive
+Insert a second opening pick into the bottom-left corner, close to the existing pick.
+Don't insert your pick deeper than 3 mm to avoid damaging the spring contacts.
+Slide your pick along the left edge to separate the adhesive and release the metal clips.
+You'll hear and feel the metal clips release as you pass them.
+Leave this pick inserted in the top-left corner to prevent the adhesive from resealing.",iPhone_16_Pro_Max_Logic_Board_Replacement,277,screen,True
+iPhone_16_Plus_Rear_Cameras_Replacement_6,"## Heat the top edge
+Apply a [guide|25705|heated iOpener|new_window=true] to the top edge of the back glass, angled to include the volume buttons, for two minutes.
+When using a [guide|157348|hair dryer|new_window=true] or [guide|151116|heat gun|new_window=true], heat until it's hot to the touch.
+
+
+## Separate the top edge adhesive
+Don't insert your pick deeper than ***3 mm*** along the top edge to avoid damaging the [link|https://guide-images.cdn.ifixit.com/igi/xZIU2JMJvpJTnlRO.full|spring contacts|new_window=true].
+Slide your opening pick across the top edge and around the top right corner to the volume up button to separate the adhesive.
+You should hear and feel clicks as the top two clips release.",iPhone_16_Plus_Rear_Cameras_Replacement,214,screen,True
+iPhone_6_Plus_Audio_Control_and_Rocker_Switch_Cable_Replacement_2,"## Step 2
+Pull the blue handle forwards to lock the arms.
+Turn the handle clockwise 360 degrees or until the cups start to stretch.
+Make sure the suction cups [link|https://guide-images.cdn.ifixit.com/igi/BSluctHhVVqhGtfj.full|new_window=true|remain aligned with each other]. If they begin to slip out of alignment, loosen the suction cups slightly and realign the arms.
+Insert an opening pick or tool under the screen when the Anti-Clamp creates a large enough gap.
+If the Anti-Clamp doesn't create a sufficient gap, rotate the handle a quarter turn.
+***Don't crank more than a quarter turn at a time, and wait a few seconds between turns.*** Let the Anti-Clamp and time do the work for you.
+***Skip the next three steps.***",iPhone_6_Plus_Audio_Control_and_Rocker_Switch_Cable_Replacement,201,screen,False
+iPhone_3G_Front_Panel_Replacement_2,"## Step 3
+The display assembly is still connected to the iPhone by several cables, so don't try to remove it entirely just yet.
+Rotate the display assembly up until it is at an angle of approximately 45 degrees.
+
+
+## Step 4
+Continue to hold the display assembly with one hand, and use your other hand and a spudger to disconnect the black ribbon cable labeled ""1.""
+Ribbon cable ""1"" is connected with a plug style connector. The block at the end of the cable is the plug which is simply pushed into a socket on the circuit board. No other locking mechanism is used.
+
+
+## Step 5
+Rotate the display assembly up until it is roughly vertical. This will allow easier access for disconnecting the remaining cables.
+Use a spudger to disconnect the black ribbon cable labeled ""2.""",iPhone_3G_Front_Panel_Replacement,173,screen,True
+iPhone_SE_2020_Lightning_Connector_Assembly_Replacement_16,"## Step 4
+Grasping it by the edges, lift the logic board near the battery connector and remove it.
+Be careful not to snag the logic board on any cables.
+
+
+## Remove the speaker
+Remove the two screws securing the speaker to the rear case:
+One 1.5 mm Phillips screw
+One 2.1 mm Phillips screw
+
+
+## Step 6
+Remove the speaker.
+
+
+## Remove the Lightning connector assembly
+Remove the three screws securing the Lightning connector cable in place:
+One 1.3 mm Phillips screw
+Two 2.2 mm Phillips screws
+
+
+## Step 8
+Remove the two 1.4 mm Phillips screws securing the Lightning port to the bottom edge of the phone.
+
+
+## Step 9
+Use the point of a spudger to gently pry the logic-board-side microphone free from the adhesive securing it in place.
+Don't try to completely remove the microphone; just separate the adhesive as shown.
+
+
+## Step 10
+Use the point of a spudger to gently pry the battery-side microphone free from the adhesive securing it in place.
+Don't try to completely remove the microphone; just separate the adhesive as shown.",iPhone_SE_2020_Lightning_Connector_Assembly_Replacement,237,case,True
+iPhone_6s_Plus_iSight_Camera_Replacement_3,"## Step 2
+Opening the display on the 6s Plus separates a thin strip of adhesive around the perimeter of the display. If you prefer to replace the adhesive, have a set of new adhesive strips ready before you continue. It's possible to complete the repair without replacing the adhesive, and you probably won't notice any difference in functionality.
+Apply a suction cup to the lower left corner of the display assembly.
+If your display is badly cracked, [https://www.ifixit.com/Guide/Taping+Over+The+Display/103487|covering it with a layer of clear packing tape|new_window=true] may allow the suction cup to adhere. Alternatively, very strong tape may be used instead of the suction cup. If all else fails, you can superglue the suction cup to the broken screen.
+
+
+## Step 3
+Pull up on the suction cup with firm, constant pressure to create a slight gap between the front panel and rear case.
+Pulling too hard may damage the display assembly. Apply just enough pressure to create a small gap between the display assembly and the rear case.",iPhone_6s_Plus_iSight_Camera_Replacement,241,case,False
+iPhone_Battery_Adhesive_Strips_Replacement_6,"## Step 13
+Press the top and bottom areas of the battery firmly into place, allowing the adhesive strips to stick to the rear case.
+
+
+## Step 14
+Be sure to disconnect the battery again before reassembling your iPhone.
+Working on your phone with the battery connected can destroy sensitive components.
+To reassemble your iPhone, return to the guide you used to remove the battery and follow the remaining steps in reverse order.
+
+* [guide|101279|iPhone 8 Battery Replacement]
+* [guide|98260|iPhone 8 Plus Battery Replacement]
+* [guide|116553|iPhone XR Battery Replacement]
+* [guide|133814|iPhone SE 2020 Battery Replacement]
+* [guide|127450|iPhone 11 Battery Replacement]
+* [guide|140588|iPhone 12 Battery Replacement]
+* [guide|139693|iPhone 12 Mini Battery Replacement]
+* [guide|140611|iPhone 12 Pro Battery Replacement]
+* [guide|145896|iPhone 13 Battery Replacement]
+* [guide|145508|iPhone 13 Mini Battery Replacement]
+* [guide|152966|iPhone 14 Battery Replacement]
+* [guide|153339|iPhone 14 Plus Battery Replacement]
+Remember to take your old battery to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].",iPhone_Battery_Adhesive_Strips_Replacement,290,case,True
+iPhone_8_Screen_Replacement_5,"## Heat the display
+The next three steps show how to separate the screen using a suction cup.
+Heating the lower edge of the iPhone will help soften the adhesive securing the display, making it easier to open.
+Use a hairdryer or [https://www.ifixit.com/Guide/iOpener+Heating/25705|prepare an iOpener|new_window=true] and apply it to the lower edge of the phone for about 90 seconds in order to soften up the adhesive underneath.
+
+
+## Separate the display
+Apply a suction cup to the lower half of the front panel, just above the home button.
+Be sure the suction cup does not overlap with the home button, as this will prevent a seal from forming between the suction cup and front glass.
+
+
+## Step 6
+Pull up on the suction cup with firm, constant pressure to create a slight gap between the screen and the frame.
+Insert an opening pick into the gap.
+The watertight adhesive holding the screen in place is very strong; creating this initial gap takes a significant amount of force. If you're having a hard time opening a gap, apply more heat, and gently rock the screen up and down to weaken the adhesive until you create enough of a gap to insert your tool.",iPhone_8_Screen_Replacement,273,case,False
+iPhone_6s_Plus_Logic_Board_Replacement_13,"## Step 19
+Gently lay the logic board upside-down, with the top portion resting against the rear case of the iPhone.
+Use the flat end of the spudger to disconnect the Wi-Fi/Bluetooth antenna cable from its socket on the back of the logic board.
+
+
+## Step 20
+Remove the logic board.
+To reassemble your device, follow these instructions in reverse order.",iPhone_6s_Plus_Logic_Board_Replacement,84,case,True
+iPhone_16_Pro_Max_Battery_Replacement_17,"## Step 7
+Continue peeling away the liner from the adhesive, gently pressing the adhesive into place.
+If you've correctly aligned the adhesive, the edges will fall perfectly into place.
+If your adhesive is slightly misaligned, gently pull the long edges into alignment with the frame.
+If the adhesive begins to crease or wrinkle, remove it and start over with fresh adhesive.
+If you don't have another set of adhesive strips handy, it's okay to temporarily put your iPhone back together and use it normally without any adhesive. Just keep in mind that your iPhone's water resistance will be compromised until you replace the adhesive.
+
+
+## Step 8
+Use a spudger to press the adhesive around the entire perimeter of your iPhone.
+Work around the fragile grounding clips. If you bend one out of place, gently bend it back with your fingers or tweezers.
+Don't press too hard, or you'll stretch and deform the adhesive.",iPhone_16_Pro_Max_Battery_Replacement,211,case,False
+iPhone_5_Logic_Board_Replacement_4,"## Start lifting the front panel assembly
+Make sure the suction cup is firmly attached to the front panel assembly.
+While holding the iPhone down with one hand, pull up on the suction cup to slightly separate the front panel assembly from the rear case.
+Take your time and apply firm, constant force. The screen is a much tighter fit than most devices.
+With a plastic opening tool, begin to gently pry the rear case down, away from the screen, while you pull up with the suction cup.
+There are several clips attaching the front panel assembly to the rear case, so you may need to use a combination of the suction cup and plastic opening tool to free the front panel assembly.
+
+
+## Detaching the front panel side clips
+Continue to pry up around the sides of the front panel assembly, detaching the clips along the left and right side.",iPhone_5_Logic_Board_Replacement,178,case,False
+iPhone_12_mini_Bottom_Speaker_Replacement_6,"## Lift the screen slightly
+Pull up on the suction cup with firm, constant pressure to create a slight gap between the screen and the metal frame.
+A [guide|10588|plastic bezel|stepid=132754|new_window=true] is secured to the underside of the display, and needs to lift up with the display. Inserting a pick between the bezel and the display will damage the panel.
+Insert an opening pick into the gap under the screen and the plastic bezel, ***not the screen itself***.
+Make sure to insert the opening pick ***[https://guide-images.cdn.ifixit.com/igi/FL4pIZcVVsmS6Jnq.full|under the thick plastic bezel|new_window=true]*** to avoid damaging your screen. You should see a visual gap, and the pick shouldn't catch on anything. If you can't see the gap, you'll need to pull the screen up more.
+The watertight adhesive holding the screen in place is very strong; creating this initial gap takes a significant amount of force. If you're having a hard time opening a gap, apply more heat, and gently rock the screen up and down to weaken the adhesive until you create enough of a gap to insert your tool.",iPhone_12_mini_Bottom_Speaker_Replacement,289,case,False
+iPhone_6_LCD_Shield_Plate_Replacement_4,"## Step 3
+Pull the plastic nub to release the vacuum seal on the suction cup.
+Remove the suction cup from the display assembly.
+
+
+## Opening up the phone
+Open the iPhone by swinging the home button end of the front panel assembly away from the rear case, using the top of the phone as a hinge.
+Several clips along the top edge of the front panel form a partial hinge.
+During reassembly, align the clips just below the top edge of the rear case. Then, slide the front panel upward until its top edge is flush with that of the rear case.
+
+
+## Step 5
+Open the display to about a 90º angle, and lean it against something to keep it propped up while you're working on the phone.
+In a pinch, an unopened canned beverage works well for this.
+Add a rubber band to keep the display securely in place while you work. This prevents undue strain on the display cables.",iPhone_6_LCD_Shield_Plate_Replacement,197,case,False
+iPhone_6_Plus_Front_Facing_Camera_and_Sensor_Assembly_Replacement_6,"## Step 12
+Disconnect the home button cable connector.
+
+
+## Step 13
+Make sure the battery is disconnected before you disconnect or reconnect the cable in this step.
+Use a plastic opening tool to disconnect the display data cable connector.
+When reassembling your phone, the display data cable may pop off the connector. This can result in white lines or a blank screen when powering your phone back on. If that happens, simply reconnect the cable and power cycle your phone. The best way to power cycle your phone is to [guide|29424|disconnect and reconnect the battery connector.|stepid=69596]
+
+
+## Step 14
+Finally, disconnect the digitizer cable connector.
+When reconnecting the digitizer cable, '''do not press the center of the connector'''. Press one end of the connector, then press the opposite end. Pressing in the center of the connector can bend the component and cause digitizer damage.
+
+
+## Step 15
+Remove the front panel assembly from the rear case.
+
+
+## Step 1
+Remove the following Phillips screws securing the upper component bracket:
+One 1.5 mm screw
+Two 2.3 mm screws
+
+
+## Step 2
+Lift and remove the earpiece bracket from the display assembly.",iPhone_6_Plus_Front_Facing_Camera_and_Sensor_Assembly_Replacement,269,case,True
+iPhone_15_Plus_Earpiece_Speaker_Replacement_7,"## Remove the upper connector cover
+Use your tri-point Y000 driver to remove the two 1.3 mm‑long screws securing the upper connector cover.
+Remove the cover.
+
+
+## Disconnect the front camera assembly
+Use the tip of an opening pick to pry up and disconnect the antenna, front sensors, and front camera press connectors (three connectors in total).
+
+
+## Remove the front camera and sensors
+Use [product|IF145-020|tweezers] or your fingers to pull the front camera and sensors out of their recess in the frame and remove them.
+
+
+## Disconnect the earpiece speaker
+Use the tip of an opening pick to pry up and disconnect the earpiece speaker press connector.
+
+
+## Unfasten the earpiece speaker
+Use a Phillips #000 driver to remove the seven screws securing the earpiece speaker:
+Five 1.6 mm‑long screws
+Two 1.3 mm‑long screws
+
+
+## Remove the earpiece speaker
+Insert the flat end of a spudger between the top left edge of the earpiece speaker and pry up until you can grab it with your fingers.
+Remove the earpiece speaker.",iPhone_15_Plus_Earpiece_Speaker_Replacement,246,case,True
+iPhone_SE_2022_Home/Touch_ID_Sensor_Replacement_0,"# iPhone SE 2022 Home/Touch ID Sensor Replacement
+Use this guide to remove, transfer, or replace the home/touch ID sensor a.k.a the home button in an iPhone SE 2022.
+
+This guide was performed on the ***A2783*** (international) model.
+
+The iPhone SE 2022’s home “button” is actually a solid-state sensor, which also includes Touch ID (fingerprint recognition) capability.
+
+***Most replacement home buttons won’t work***, so check carefully before starting your repair. Your iPhone’s original home button is uniquely paired to the logic board at the factory—and without Apple’s proprietary calibration process, even a genuine replacement home button from another iPhone won’t work. To fix a broken home button, you should install a specially-made, universal-style home button. Note that these replacements only work as a button and you'll loose Touch ID functionality.
+
+If you are only replacing a broken screen, you can use this guide to carefully remove and transfer your working original home button to a new screen, preserving all functions, including Touch ID.",iPhone_SE_2022_Home/Touch_ID_Sensor_Replacement,238,logic_board,True
+iPhone_4S_Screen_Replacement_8,"## Step 5
+Use the edge of a plastic opening tool to disconnect the Wi-Fi antenna from the logic board.
+
+
+## Step 6
+If present, peel the piece of black tape covering the hidden screw near the power button.
+Remove the 2.6 mm Phillips screw securing the logic board near the power button.
+(Use caution when removing this screw and removing the power contact held by it; the contact tab will come loose with the screw)
+Notice the small rubber bumper under the screen & digitizer cables (which are detached at top above the Q-code).  This bumper can fall off of the logic board when removed or get stuck to the cables and fall off later.",iPhone_4S_Screen_Replacement,140,logic_board,True
+iPhone_14_Pro_Max_Battery_Replacement_11,"## Remove the battery connector cover
+Grasp the connector cover with a pair of [product|IF145-020|tweezers] and slide it downwards to clear the flex cables.
+Remove the connector cover.
+
+
+## Disconnect the battery
+Use the pointed end of a spudger to disconnect the battery cable by prying the connector straight up from its socket.
+Try not to damage the black silicone seal surrounding this and other board connections. These seals provide extra protection against water and dust intrusion.
+Bend the connector slightly away from the logic board to prevent it from accidentally making contact with the socket and providing power to the phone during your repair.
+
+
+## Disconnect the display cables
+Use the pointed end of a spudger to disconnect the first display cable by prying the connector straight up from its socket.
+To re-attach [https://www.ifixit.com/Guide/Recognizing+%26+Disconnecting+Cable+Connectors/25629#s70308|press connectors|new_window=true] like this one, carefully align and press down on one side until it clicks into place, then repeat on the other side. Do not press down on the middle. If the connector is misaligned, the pins can bend, causing permanent damage.",iPhone_14_Pro_Max_Battery_Replacement,273,logic_board,True
+iPhone_14_Battery_Replacement_9,"## Disconnect the battery
+Use the pointed end of a spudger to disconnect the battery cable by prying the connector straight up from its socket.
+Try not to damage the black silicone seal surrounding this and other board connections. These seals provide extra protection against water and dust intrusion.
+Bend the connector slightly away from the logic board to prevent it from accidentally making contact with the socket and providing power to the phone during your repair.
+
+
+## Unfasten the charging coil connector cover screw
+Use a Y000 screwdriver to remove the single 1.0 mm-long screw securing the charging coil connector cover.
+
+
+## Remove the charging coil connector bracket
+Use a pair of tweezers to remove the charging coil connector cover.
+
+
+## Disconnect the charging coil
+Use the pointed end of a spudger to disconnect the charging coil cable by prying the connector straight up from its socket.",iPhone_14_Battery_Replacement,188,logic_board,True
+iPhone_6s_Plus_Lightning_Connector_and_Headphone_Jack_Replacement_10,"## Step 6
+Carefully lift the antenna cable and de-route it from the edge of the phone. Use the point of a spudger to help lift the cable free it from the retaining clips.
+If the cable does not have enough room to lift up, loosen [https://d3nevzfk7ii3be.cloudfront.net/igi/3veVYIPkSTMUcSxx|this Phillips screw|new_window=true] securing the logic board so that the board can give more wiggle room.
+Be sure to re-tighten this screw during re-installation.
+If the cable snags near the SIM reader, it's likely caught on the SIM tray ejection mechanism. Use the point of a spudger to slide the plastic rod out of the way.
+During re-installation, be sure to route the antenna cable [https://d3nevzfk7ii3be.cloudfront.net/igi/3lvDvX6SFcvlAXuH|underneath the logic board corner|new_window=true].
+During reassembly, you can also re-insert the SIM card tray after re-routing the antenna cable.
+If you feel any resistance, '''stop''' and make sure that the tray isn't snagging the antenna cable.",iPhone_6s_Plus_Lightning_Connector_and_Headphone_Jack_Replacement,286,logic_board,True
+iPhone_XR_Earpiece_and_Front_Sensor_Assembly_Replacement_10,"## Unscrew the battery connector cover
+Remove three 1.2 mm Y000 screws securing the battery connector cover bracket.
+Remove the bracket.
+Throughout this repair, [https://www.ifixit.com/Store/Tools/Magnetic-Project-Mat/IF145-167-4|keep track of each screw|new_window=true] and make sure it goes back exactly where it came from to avoid damaging your iPhone.
+During reassembly, this is a good point to power on your iPhone and test all functions before you seal the display in place. Be sure to power your iPhone back down completely before you continue working.
+
+
+## Disconnect the battery
+Use the point of a spudger to pry the battery connector straight up out of its socket.
+Try not to damage the black silicone seal surrounding this and other board connections. These seals provide extra protection against water and dust intrusion.
+Bend the connector slightly away from the logic board to prevent it from accidentally making contact with the socket and providing power to the phone during your repair.
+
+
+## Unscrew the display connector cover
+Remove the two 1.2 mm Y000 screws securing the display connector bracket.
+Remove the bracket.",iPhone_XR_Earpiece_and_Front_Sensor_Assembly_Replacement,253,logic_board,True
+"iPhone_""L-Shaped""_Battery_Adhesive_Strips_Replacement_5","## Step 5
+Use your fingers or a cloth to press the strips firmly into place on the battery.
+Press in the center to adhere the black regulatory label to the battery as well.
+
+
+## Step 6
+Roll your fingertip along the edges of the battery to stick down the black pull tab at the end of each adhesive strip.
+Be sure to get all four tabs—three on the bottom edge, and one on the top.
+
+
+## Step 7
+Peel off and discard the pink liner, fully exposing the adhesive strips.
+
+
+## Step 8
+When installing the battery, be careful not to touch the Face ID camera and sensor hardware along the top edge of the iPhone (the ""notch"" area).
+Carefully position the battery and set it into the iPhone.
+Make sure the battery connector lines up with its socket on the logic board.
+It's okay to temporarily connect the battery to make sure it lines up correctly, but make certain it's disconnected before reassembling your iPhone.","iPhone_""L-Shaped""_Battery_Adhesive_Strips_Replacement",203,logic_board,True
+iPhone_6s_Battery_Replacement_13,"## Battery Removal
+Remove the battery.
+If your replacement battery came in a plastic sleeve, remove the sleeve before installation by pulling it away from the ribbon cable.
+If there's any alcohol solution remaining in the phone, carefully wipe it off or allow it to air dry before installing your new battery.
+Before you adhere the replacement battery, temporarily reconnect the battery connector to the logic board socket. This ensures that the battery is properly aligned in its recess.
+Adhere the battery, disconnect it, and continue reassembling your device.
+If your new battery doesn’t have adhesive preinstalled, refer to [https://www.ifixit.com/Guide/iPhone+Battery+Adhesive+Strips+Replacement/56465|this guide] to replace the adhesive strips.
+Perform a [https://www.ifixit.com/Guide/How+to+Force+Restart+an+iPhone+6s/62334|forced restart] after reassembly. This can prevent several issues and simplify troubleshooting.
+***To reassemble your device, follow the above steps in reverse order.***
+
+Take your e-waste to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].",iPhone_6s_Battery_Replacement,280,logic_board,True
+iPhone_15_Plus_Battery_Replacement_6,"## Unfasten the lower connector cover
+Throughout this repair, [product|IF145-491|keep track of each screw|new_window=true] and make sure it goes back exactly where it came from.
+Use a tri-point Y000 driver to remove the two 1.3 mm-long screws securing the lower connector cover.
+
+
+## Remove the lower connector cover
+Use [product|IF145-020|tweezers] to slide the cover toward the top of the phone to unlatch it from the logic board.
+Remove the cover.
+During reassembly, latch the top edge of the cover onto its slot on the logic board before securing it with its screw.",iPhone_15_Plus_Battery_Replacement,149,logic_board,False
+iPhone_4_Verizon_Power_Button_Cable_Replacement_1,"## Step 2
+Push the rear panel toward the top edge of the iPhone.
+The panel will move about 2 mm.
+
+
+## Step 3
+Pinch the rear panel with your fingers, and lift it away from the iPhone. Alternatively, use a [product|IF145-019|Small Suction Cup] .
+Be careful not to damage the plastic clips attached to the rear panel.
+
+
+## Step 1
+Remove the single 1.5 mm Phillips screw securing the battery connector to the logic board (if present).
+
+
+## Step 2
+Use the edge of a plastic opening tool to gently pry the battery connector up from its socket on the logic board.
+Be very careful to only pry up on the battery connector and not the socket on the logic board. If you pry up on the logic board socket, you may break it entirely.
+Remove the metal clip covering the antenna connector.",iPhone_4_Verizon_Power_Button_Cable_Replacement,178,logic_board,True
+iPhone_5s_Logic_Board_Replacement_11,"## Step 4
+Use the flat end of a spudger to disconnect the rear-facing camera cable from its socket on the logic board.
+
+
+## Step 5
+Remove any tape covering the camera flash bracket.
+
+
+## Step 6
+Remove the following screws from the logic board:
+One 2.4 mm Phillips #000 screw
+This screw also holds a small metal contact beneath the logic board. It's held in place underneath a plastic bracket, but if you see it slipping out, refer to [guide|20246|this step|stepid=72613|new_window=true] to remove it.
+Two 2.3 mm Phillips #000 screws
+Three 2.8 mm standoff screws
+One 2.9 mm non-magnetic standoff screw
+Standoff screws are best removed using a [product|IF145-388-4|standoff screwdriver|new_window=true] or bit.
+In a pinch, a small flathead screwdriver will do the job—but use extra caution to ensure it doesn't slip and damage surrounding components.
+
+
+## Step 7
+Use a plastic opening tool to lift the logic board up enough to grab with your fingers.",iPhone_5s_Logic_Board_Replacement,249,logic_board,True
+iPhone_X_Battery_Replacement_4,"## Anti-Clamp instructions
+The next three steps demonstrate the [product|IF145-513|Anti-Clamp], a tool we designed to make the opening procedure easier. ***If you aren't using the Anti-Clamp, skip down three steps for an alternate method.***
+For complete instructions on how to use the Anti-Clamp, [guide|152309|check out this guide|new_window=true].
+Pull the blue handle backwards to unlock the Anti-Clamp's arms.
+Slide the arms over either the left or right edge of your iPhone.
+Position the suction cups near the bottom edge of the iPhone—one on the front, and one on the back.
+Squeeze the cups together to apply suction to the desired area.
+If you find that the surface of your iPhone is too slippery for the Anti-Clamp to hold onto, you can [guide|159595|use tape|new_window=true] to create a grippier surface.
+
+
+## Step 3
+Pull the blue handle forward to lock the arms.
+Turn the handle clockwise 360 degrees or until the cups start to stretch.
+Make sure the suction cups remain aligned with each other. If they begin to slip out of alignment, loosen the suction cups slightly and realign the arms.",iPhone_X_Battery_Replacement,277,unknown,False
+iPhone_14_Pro_Battery_Replacement_14,"## Disconnect the Taptic Engine
+Use a spudger to disconnect the Taptic Engine by prying the connector straight up from its socket.
+
+
+## Unfasten the Taptic Engine screws
+Use a Phillips screwdriver to remove the two screws securing the Taptic Engine:
+One 1.8 mm-long screw
+One 2.1 mm-long screw
+Use a standoff screwdriver to remove the 2.9 mm-long standoff screw securing the Taptic Engine.
+Standoff screws are best removed using a dedicated [https://www.ifixit.com/Store/Tools/Standoff-Screwdriver-for-iPhones/IF145-388?o=4|standoff driver|new_window=true] or driver bit. In a pinch, a small flathead screwdriver will do the job—but use extra caution to ensure it doesn't slip and damage surrounding components.
+
+
+## Remove the Taptic Engine
+Use a pair of [product|IF145-020|tweezers] or your fingers to remove the Taptic Engine.",iPhone_14_Pro_Battery_Replacement,236,unknown,True
+iPhone_4_Verizon_Battery_Replacement_5,"'''To reassemble your device, follow the above steps in reverse order.'''
+
+Take your e-waste to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].
+
+Repair didn’t go as planned? Check out our [https://www.ifixit.com/Answers/Device/iPhone%204%20Verizon|Answers community] for troubleshooting help.",iPhone_4_Verizon_Battery_Replacement,103,unknown,False
+iPhone_XS_Battery_Replacement_22,"***To reassemble your device, follow the above steps in reverse order.***
+
+Take your e-waste to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].
+
+Repair didn’t go as planned? Check out our [link|https://www.ifixit.com/Answers/Device/iPhone%20XS|Answers community] for troubleshooting help.",iPhone_XS_Battery_Replacement,102,unknown,False
+iPhone_6s_Screen_Replacement_2,"## Anti-Clamp instructions
+The next two steps demonstrate the [product|IF145-513|Anti-Clamp], a tool we designed to make the opening procedure easier. ***If you aren't using the Anti-Clamp, skip down three steps for an alternate method.***
+For complete instructions on how to use the Anti-Clamp, [guide|152309|check out this guide|new_window=true].
+Pull the blue handle backwards to unlock the Anti-Clamp's arms.
+Slide the arms over either the left or right edge of your iPhone.
+Position the suction cups near the bottom edge of the iPhone just above the home button—one on the front, and one on the back.
+Squeeze the cups together to apply suction to the desired area.
+If you find that the surface of your iPhone is too slippery for the Anti-Clamp to hold onto, you can [guide|159595|use tape|new_window=true] to create a grippier surface.",iPhone_6s_Screen_Replacement,221,unknown,False
+iPhone_6_Plus_Battery_Replacement_15,"***To reassemble your device, follow the above steps in reverse order.***
+
+Take your e-waste to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].
+
+Repair didn’t go as planned? Check out our [link|https://www.ifixit.com/Answers/Device/iPhone%206%20Plus|Answers community] for troubleshooting help.",iPhone_6_Plus_Battery_Replacement,104,unknown,False
+iPhone_15_Pro_Max_Screen_Replacement_8,"Take your e-waste to an [[E-Waste|R2 or e-Stewards certified recycler|new_window=true]].
+
+Repair didn’t go as planned? Try some [[Troubleshooting Problems After a Repair|basic troubleshooting]], or ask our [link|https://www.ifixit.com/Answers/Device/iPhone%2015%20Pro%20Max|Answers community] for help.",iPhone_15_Pro_Max_Screen_Replacement,101,unknown,False
+iPhone_6s_Logic_Board_Replacement_2,"## Anti-Clamp instructions
+The next two steps demonstrate the [product|IF145-513|Anti-Clamp], a tool we designed to make the opening procedure easier. ***If you aren't using the Anti-Clamp, skip down three steps for an alternate method.***
+For complete instructions on how to use the Anti-Clamp, [guide|152309|check out this guide|new_window=true].
+Pull the blue handle backwards to unlock the Anti-Clamp's arms.
+Slide the arms over either the left or right edge of your iPhone.
+Position the suction cups near the bottom edge of the iPhone just above the home button—one on the front, and one on the back.
+Squeeze the cups together to apply suction to the desired area.
+If you find that the surface of your iPhone is too slippery for the Anti-Clamp to hold onto, you can [guide|159595|use tape|new_window=true] to create a grippier surface.",iPhone_6s_Logic_Board_Replacement,221,unknown,False
+iPhone_XR_Screen_Replacement_7,"If the Anti-Clamp doesn't create a sufficient gap, apply more heat to the area and rotate the handle a quarter turn.
+Don't crank more than a quarter turn at a time, and wait one minute between turns. Let the Anti-Clamp and time do the work for you.
+***Skip the next three steps.***",iPhone_XR_Screen_Replacement,76,unknown,False
+iPhone_SE_2022_Screen_Replacement_5,"If the Anti-Clamp doesn't create a sufficient gap, apply more heat to the area and rotate the handle a quarter turn.
+Don't crank more than a quarter turn at a time, and wait one minute between turns. Let the Anti-Clamp and time do the work for you.
+***Skip the next two steps.***",iPhone_SE_2022_Screen_Replacement,76,unknown,False
+Screwdriver_Best_Practices_2,"## Size Selection
+A correctly sized driver should “fill up” the screw head, utilizing both the full depth and width of the socket.
+Beginners commonly make the mistake of using a driver that’s too small. An undersized driver slips easily, damaging the screw head and making it difficult to turn afterward—even with a correctly-sized driver. This is known as a ''stripped screw''.
+An oversized driver fits into the screw only shallowly, if at all.
+When you find a driver that fits about right, compare the next size up as well as the next size down before you proceed.
+In general, use the largest driver size that fits snugly into the screw.
+
+
+## Proper Use
+Keep your drivers in good working condition by using them only as designed.
+Avoid using screwdrivers as improvised pry tools or chisels.
+Prying with a screwdriver can bend or break the tip, making it useless for turning screws.
+Chiseling with a driver can deform the tip. A damaged driver like this one no longer fits snugly in the screw head, resulting in slippage (and stripped screws).
+To avoid stripping screws, only use drivers that are in good condition.",Screwdriver_Best_Practices,254,unknown,False
+iPhone_X_Face_ID_Replacement_15,"## Step 7
+Working left to right, slide an opening pick beneath the flex cable and underneath the proximity sensor + flood illuminator module.
+Gently wiggle and lift to separate the module from its notch in the front panel.
+It's helpful to lift and hold the speaker out of the way for access. Just be careful not to pull on the thin flex cable while you work.
+
+
+## Step 8
+Use [product|IF145-020|tweezers] to wiggle the ambient light sensor and lift it from its notch in the display.
+The sensor remains attached to the rest of the sensor assembly via a very thin flex cable. Be careful not to strain or damage the cable.",iPhone_X_Face_ID_Replacement,144,speaker,True
+iPhone_X_Face_ID_Replacement_16,"## Step 9
+If you successfully removed the entire ambient light sensor, as shown in the first photo, continue to the next step below.
+If the white diffuser strip detached and remains embedded in the display, as shown in the second photo, you will need to carefully lever it out along the top edge using a thin blade or pry tool. Re-applying heat first may make this task a bit easier.
+During reassembly, install the diffuser into the display first, making sure it faces the right direction (the front-facing side is shown in the first image, and the rear-facing side is shown in the third).
+Then, set the ambient light sensor on top of the diffuser. You will need to hold the sensor in position while installing the screws securing the earpiece/sensor assembly. Once the screws are tightened, the sensor will stay in place and work normally.
+
+
+## Step 10
+Remove the earpiece speaker and front sensor assembly.
+During reassembly, check the position of the black plastic module containing these components:
+Proximity sensor
+Flood illuminator
+The module must be positioned so that these components are not obstructed by any adhesive.",iPhone_X_Face_ID_Replacement,243,speaker,True
+iPhone_12_mini_Screen_Replacement_14,"## Step 2
+Slide the flat end of a spudger underneath the top right corner of the earpiece speaker  and fold it to the back.
+
+
+## Heat up the top edge of the display
+Use a hairdryer or heat gun or [https://www.ifixit.com/Guide/iOpener+Heating/25705|prepare an iOpener|new_window=true] and apply it to the top front of the display for 1-2 minutes, in order to soften the adhesive securing the sensors.
+
+
+## Pry up the proximity sensor
+Use the pointed end of a spudger to carefully pry the proximity sensor out of its recess.
+
+
+## Step 5
+Slide a spudger underneath the wide sensor assembly flex cable to separate it from the screen.
+Avoid tensioning any of the sensor flex cables during this procedure.
+
+
+## Pry up the flood illuminator
+Use a spudger or a pair of [product|IF145-020|tweezers] to pry the flood illuminator out of its recess.",iPhone_12_mini_Screen_Replacement,223,speaker,True
+iPhone_XR_Screen_Replacement_15,"## Disconnect the front sensors
+Use the tip of a spudger to pry the front sensor assembly connector up from its socket.
+
+
+## Remove the display assembly
+Remove the display assembly.
+During reassembly, pause here if you wish to [https://www.ifixit.com/Guide/iPhone+Display+Adhesive+Replacement/93983|replace the waterproof adhesive around the edges of the display|new_window=true].
+
+
+## Unscrew the earpiece speaker
+Remove the four screws securing the speaker/sensor assembly to the back of the display:
+Two 1.6 mm Phillips screws
+One 2.3 mm Phillips screw
+One 1.2 mm Y000 screw
+
+
+## Flip the speaker over
+Using [product|IF145-020|tweezers], gently flip the speaker assembly over—down and away from the top edge of the display.
+The speaker remains attached via a very thin flex cable. Be careful not to strain or damage the cable.",iPhone_XR_Screen_Replacement,214,speaker,True
+iPhone_15_Pro_Battery_Replacement_8,"## Unfasten the loudspeaker
+Use a Phillips #000 screwdriver to remove the four screws securing the loudspeaker:
+One 2.7 mm‑long screw
+Three 2 mm‑long screws
+
+
+## Remove the loudspeaker
+A [link|https://guide-images.cdn.ifixit.com/igi/sO2VxxpgVgvKLuDR.full|plastic buffer|new_window=true] is adhered to the top edges of the loudspeaker and Taptic Engine.
+Lift the bottom edge of the loudspeaker until you can grab it with your fingers.
+Peel the loudspeaker from the plastic buffer on its top edge and remove it.
+
+
+## Disconnect the Taptic Engine
+Use the point of a spudger to pry up and disconnect the Taptic Engine press connector.
+
+
+## Unfasten the Taptic Engine
+Use a Phillips #000 screwdriver to remove the two 2 mm‑long screws securing the Taptic Engine.
+
+
+## Remove the Taptic Engine
+Remove the Taptic Engine.",iPhone_15_Pro_Battery_Replacement,235,speaker,True
+iPhone_14_Pro_Max_Battery_Replacement_13,"## Loosen the loudspeaker
+Use the flat end of a spudger to pry up and loosen the loudspeaker from the bottom right corner of the phone.
+
+
+## Remove the loudspeaker
+Use a pair of [product|IF145-020|tweezers] to grab the loudspeaker.
+Tilt the loudspeaker to separate it from the adhesive-backed strip that leads to the Taptic Engine.
+Remove the loudspeaker.
+When reinstalling the loudspeaker, place it in its recess battery-side first to align it with the adhesive-backed strip.
+
+
+## Disconnect the Taptic Engine
+Use a spudger to disconnect the Taptic Engine by prying the connector straight up from its socket.",iPhone_14_Pro_Max_Battery_Replacement,166,speaker,True
+iPhone_X_Power_and_Audio_Exterior_Buttons_Replacement_15,"Remove the larger, clear liner from the gasket and use tweezers to carefully put the gasket into place on the bottom of the speaker.
+To avoid touching the exposed adhesive, only grip the gasket by the [link|https://guide-images.cdn.ifixit.com/igi/Qd3CQEk51r4WRpJO.full|outer edges of the liner|new_window=true].
+Use your fingers or a spudger to firmly press the gasket into place to secure it with the adhesive.
+Remove the remaining liner and put the speaker into place, making sure the [link|https://guide-images.cdn.ifixit.com/igi/THSXRMOgw6BNQtfd.full|speaker connector|new_window=true] doesn't get stuck underneath.",iPhone_X_Power_and_Audio_Exterior_Buttons_Replacement,193,speaker,True
+iPhone_4_Verizon_Home_Button_Replacement_8,"## Step 4
+Remove the small pieces of black tape covering the display mounting tabs.
+
+
+## Step 5
+Remove the 1.6 mm Phillips screw securing the display assembly near the power button.
+
+
+## Step 6
+Remove the 1.6 mm Phillips screw near the headphone jack.
+
+
+## Step 7
+Remove the 1.6 mm Phillips screw near the lower microphone.
+
+
+## Step 8
+Remove the 1.6 mm Phillips screw near the dock connector cable.
+
+
+## Step 9
+Loosen the three large-headed Phillips screws along the volume button side of the iPhone about one half turn.
+It is not necessary to completely remove these screws. When reinstalling the display assembly, be sure the washers are closest to the screw head (as seen in the second picture).
+
+
+## Step 10
+Loosen the three large-headed Phillips screws along the other side of the iPhone about one half turn.",iPhone_4_Verizon_Home_Button_Replacement,184,speaker,False
+iPhone_14_Pro_Max_Front-Facing_Camera_Assembly_Replacement_13,"## Remove the earpiece speaker
+Use a pair of [product|IF145-020|tweezers] or your fingers to remove the earpiece speaker.
+
+
+## Disconnect the camera and sensor cable
+Use a spudger to disconnect the camera and the sensor cables by prying the connectors straight up from their sockets.",iPhone_14_Pro_Max_Front-Facing_Camera_Assembly_Replacement,74,speaker,True
+iPhone_16_Pro_Max_Battery_Replacement_9,"## Step 2
+Insert the point of a spudger underneath the loudspeaker's bottom-right screw hole.
+Pry up and remove the loudspeaker.
+
+
+## Battery adhesive information
+Your iPhone's battery is secured with three [link|https://www.ifixit.com/News/45779/ask-ifixit-what-is-stretch-release-adhesive-and-why-do-we-love-it|stretch release adhesive strips|new_window=true]. The next four steps show how to remove them and free your battery.
+Be careful not to dent or puncture the battery. Avoid using sharp tools near it.
+
+
+## Remove the battery
+Use the tip of an opening pick to separate a black pull tab from the bottom of the battery.
+Use tweezers to help peel the tab away from the battery.
+Don't try to pull the tab out from under the battery just yet.",iPhone_16_Pro_Max_Battery_Replacement,204,speaker,True
+iPhone_SE_2022_Front_Camera_And_Sensor_Cable_Replacement_10,"## Unfasten the front sensor assembly bracket screws
+Use a Phillips screwdriver to remove the three 1.2 mm-long screws securing the front sensor assembly bracket.
+
+
+## Remove the front sensor assembly bracket
+Use a pair of [product|IF145-020|tweezers] to carefully remove the front sensor assembly bracket.
+
+
+## Disconnect the front sensor assembly cable
+Use the pointed end of a spudger to disconnect the front sensor assembly by prying the connector straight up from its socket.
+
+
+## Remove the display assembly
+Remove the display assembly.
+
+
+## Unfasten the earpiece speaker bracket screws
+Unfasten the three screws securing the earpiece speaker bracket:
+Two 2.6 mm-long Phillips screws
+One 1.6 mm-long Phillips screw
+
+
+## Remove the earpiece speaker bracket
+Use a pair of [product|IF145-020|tweezers] to carefully remove the earpiece speaker bracket.
+
+
+## Free the earpiece speaker
+Use a pair of tweezers to lift the front facing camera out of its socket and swing it to the left to get free access to the earpiece speaker.
+Avoid straining the front camera cable during this procedure.",iPhone_SE_2022_Front_Camera_And_Sensor_Cable_Replacement,253,speaker,True
+iPhone_14_Pro_Max_Rear-Facing_Camera_Assembly_Replacement_1,"- P2 Pentalobe Screwdriver iPhone
+
+ - iFixit Opening Picks (Set of 6)
+
+ - Suction Handle
+
+ - Tri-point Y000 Screwdriver
+
+ - Spudger
+
+ - Tweezers
+
+ - Packing Tape
+
+ - Safety Glasses
+
+ - Heat Gun
+
+ - Phillips #000 Screwdriver
+
+
+###Parts Required:
+
+ - iPhone 14 Pro Max Rear Camera Assembly
+
+ - iPhone 14 Pro Max Display Assembly Adhesive
+
+ - Tesa 61395 Tape",iPhone_14_Pro_Max_Rear-Facing_Camera_Assembly_Replacement,91,camera,True
+iPhone_6s_Rear_Case_Replacement_12,"## Step 2
+Use [product|IF145-020|tweezers] to peel up the tips of the battery adhesive strips at the lower edge of the battery.
+
+
+## Step 3
+Try not to wrinkle  the strips during this procedure—they will become very difficult to deal with and will not straighten out again.
+Pull one of the adhesive strips straight out, towards the bottom of the iPhone.
+For best results, pull the strip at a 60º angle or less.
+The strip will stretch to many times its original length. Continue to pull steadily, re-grabbing the strip closer to the iPhone if necessary.
+Continue pulling until the strip is fully removed.
+If the battery adhesive tabs break off at any point during the removal process, use your fingers or blunt tweezers to retrieve the remaining length of adhesive, and continue pulling.
+If one of the adhesive strips breaks under the battery during this procedure, and cannot be retrieved, remove the remaining strip, and then skip to [https://www.ifixit.com/Guide/iPhone+6s+Volume+Control-Power+Button+and+Flash+Flex+Cable+Replacement/62577#s131730|Step 48].",iPhone_6s_Rear_Case_Replacement,258,camera,False
+iPhone_6_Home_Button_Cable_Replacement_8,"## Step 6
+Remove the following Phillips #00 screws securing the LCD shield plate to the front panel:
+One 1.7 mm screw
+Six 1.6 mm screws (three on each side)
+
+
+## Step 7
+Lift the front-facing camera end of the LCD shield plate up slightly.
+'''Do not attempt to remove the shield plate entirely''', it is still attached to the front panel via home button cable.
+
+
+## Step 8
+Slide the point of a spudger behind the shield plate to gently lift the home button cable up off of the front panel.
+If the cable doesn't peel away easily, use a little heat from an iOpener or hair dryer to soften the adhesive underneath.
+Remove the LCD shield plate.
+During reassembly, make sure to seat the home button connector on the shield behind the small indentation in the plastic.
+
+
+## Step 9
+Peel the black backing tape away from the home button cable.
+You may need [product|IF145-020|tweezers] to start peeling, however the tape is brittle and it may be hard to complete the job with tweezers alone.
+
+
+## Step 10
+Carefully peel the home button cable up off of the adhesive holding it to the LCD shield plate.
+To reassemble your device, follow these instructions in reverse order.",iPhone_6_Home_Button_Cable_Replacement,279,camera,True
+iPhone_15_Plus_Front_Camera_Assembly_Replacement_1,"###Tools Required:
+
+ - P2 Pentalobe Screwdriver iPhone
+
+ - Hair Dryer
+
+ - Heat Gun
+
+ - iFixit Opening Picks (Set of 6)
+
+ - Suction Handle
+
+ - Tri-point Y000 Screwdriver
+
+ - Tweezers
+
+ - Spudger
+
+ - Isopropyl Alcohol
+
+ - Microfiber Cleaning Cloths
+
+
+###Parts Required:
+
+ - iPhone 15 Plus Front Camera",iPhone_15_Plus_Front_Camera_Assembly_Replacement,83,camera,False
+iPhone_SE_2022_Rear_Camera_Replacement_0,"# iPhone SE 2022 Rear Camera Replacement
+Use this guide to replace the rear camera in an iPhone SE 2022.
+
+This guide was performed on the ***A2783*** (international) model.
+
+If you do not replace the adhesive seals when reassembling, your device will function normally, but will most likely lose its water protection.
+
+You’ll need replacement adhesive to reattach components when reassembling the device.
+
+
+###Tools Required:
+
+ - P2 Pentalobe Screwdriver iPhone
+
+ - iOpener
+
+ - Suction Handle
+
+ - iFixit Opening Picks (Set of 6)
+
+ - Heat Gun
+
+ - Microfiber Cleaning Cloths
+
+ - Isopropyl Alcohol (90% or Greater)
+
+ - Phillips #000 Screwdriver
+
+ - Spudger
+
+ - Tweezers
+
+
+###Parts Required:
+
+ - Tesa 61395 Tape
+
+ - iFixit Adhesive Remover
+
+
+## Remove the pentalobe screws
+Power off your phone before beginning disassembly.
+Remove the two 3.4 mm P2 pentalobe screws on the bottom edge of the iPhone.",iPhone_SE_2022_Rear_Camera_Replacement,230,camera,True
+iPhone_SE_2022_Front_Camera_And_Sensor_Cable_Replacement_12,"## Pry up the ambient light sensor
+Use the pointed of a spudger to carefully pry the ambient light sensor out of its recess on the front panel.
+
+
+## Separate the front camera and sensor assembly flex cable
+Slide an opening pick underneath the front camera and sensor cable assembly to separate it from the front panel.
+If you're struggling the separate the cable from the front panel, [https://www.ifixit.com/Guide/iOpener+Heating/25705|reapply a heated iOpener|new_window=true]  to the top edge of the screen to further loosen the adhesive. Apply the iOpener for at least one minute.",iPhone_SE_2022_Front_Camera_And_Sensor_Cable_Replacement,144,camera,True
+iPhone_XS_Max_Back_Glass_Replacement_0,"# iPhone XS Max Back Glass Replacement
+'''This guide is meant for repair professionals.'''
+
+Back Glass Separating is the first step of Back Glass Refurbishing. We’ll take iPhone XS Max as an example to show you how to efficiently refurbish the broken back glass without disassembling the phone with the help of the Laser Machine.
+
+
+###Tools Required:
+
+ - None
+
+
+###Parts Required:
+
+ - iPhone XS Max Aftermarket Blank Rear Glass Panel with Lens Cover
+
+
+## Back Glass Separating Without Phone Disassembling
+Here we have an iPhone XS Max with broken back glass. Run function test first. All going well. Test wireless charging - nothing goes wrong.
+
+
+## Step 2
+Next, let’s scan the back glass with the Laser Machine.
+Turn the phone off and place it upside down under the focus positioning probe. Press the ‘auto focus’ button on the panel.
+With the focus length indicator on, place the phone upside down on the operating panel.
+
+
+## Step 3
+Run the matching program. Choose corresponding model and drawing. Get all parameters set.
+Click ‘Red Light’ to turn on laser aiming function. Click ‘Mark’ to scan the back glass with the laser light.
+Note: there will be smog when the laser light is scanning. So we need to switch on the Air Purifier.",iPhone_XS_Max_Back_Glass_Replacement,282,camera,False
+iPhone_11_Pro_Max_Back_Glass_Replacement_0,"# iPhone 11 Pro Max Back Glass Replacement
+It’s well known that there are many videos and articles about dismantling the iPhone 11 Pro Max by teardown masters. From those teardown videos and articles, we know that the glass back of the iPhone 11 Pro Max is the toughest glass that Apple uses. If the back glass of the phone is broken, we have to remove all the components to fix it. It is very troublesome and difficult for some repairers to refurbish the phone, especially because of the triple lens camera system, which makes it much more difficult to repair the glass.
+
+So, is there a useful and practical method to overcome this repair problem that ''doesn’t'' damage the OLED display?
+
+There are many methods you may have attempted, including hot separation, frozen separation and more, but with little success.
+
+Recently, FORWARD LAB has tried to use a blue light laser separation machine to repair the iPhone 11 Pro Max back glass, let’s look at how.
+
+
+###Tools Required:
+
+ - Blue Light Laser Separation Machine
+
+ - Dust-free Cleaning Cloth
+
+ - Manual Glue Gun
+
+
+###Parts Required:
+
+ - iPhone 11 Pro Back Glass Replacement
+
+
+## Positioning and Adjust the Distance
+First, place the iPhone 11 Pro Max back glass into the centered positioning mold.
+Then, use a focal length rod to adjust the distance between the laser head and the back glass.",iPhone_11_Pro_Max_Back_Glass_Replacement,285,camera,True
+iPhone_16_Screen_Replacement_15,"## Step 25
+Place two layers of coins or similarly thick objects on the tape along the edges of the back glass.
+Evenly distribute the coins and make sure they are at least as thick as the camera bump.
+
+
+## Step 26
+Stack multiple books or other heavy objects on your iPhone.
+The coins may leave an impression on the bottom object, so don't use anything valuable.
+Leave the objects in place for at least thirty minutes. The lighter the objects, the longer they should be left. Ideally, leave them stacked overnight.",iPhone_16_Screen_Replacement,108,camera,False
+iPhone_6s_Upper_Component_Cable_Replacement_12,"## Step 2
+Use [product|IF145-020|tweezers] to peel up the tips of the battery adhesive strips at the lower edge of the battery.
+
+
+## Step 3
+Try not to wrinkle  the strips during this procedure—they will become very difficult to deal with and will not straighten out again.
+Pull one of the adhesive strips straight out, towards the bottom of the iPhone.
+For best results, pull the strip at a 60º angle or less.
+The strip will stretch to many times its original length. Continue to pull steadily, re-grabbing the strip closer to the iPhone if necessary.
+Continue pulling until the strip is fully removed.
+If the battery adhesive tabs break off at any point during the removal process, use your fingers or blunt tweezers to retrieve the remaining length of adhesive, and continue pulling.
+If one of the adhesive strips breaks under the battery during this procedure, and cannot be retrieved, remove the remaining strip, and then skip to [https://www.ifixit.com/Guide/iPhone+6s+Volume+Control-Power+Button+and+Flash+Flex+Cable+Replacement/62577#s131730|Step 48].",iPhone_6s_Upper_Component_Cable_Replacement,258,camera,False
+iPhone_14_Pro_Max_Rear-Facing_Camera_Assembly_Replacement_11,"## Step 19
+Use the pointed end of a spudger to disconnect the second display cable by prying the connector straight up from its socket.
+
+
+## Remove the screen
+Remove the screen.
+Apply new adhesive where it's necessary after cleaning the relevant areas with isopropyl alcohol (>90%).
+During reassembly, pause here if you wish to [https://www.ifixit.com/Guide/iPhone+Display+Adhesive+Replacement/93983|replace the screen adhesives|new_window=true].
+
+
+## Unfasten the camera cover screws
+Use a Y000 screwdriver to remove the five screws securing the rear-facing camera assembly cover:
+Four 1.5 mm-long Y000 screws
+One 1.2 mm-long Y000 screw
+Use a Phillips screwdriver to remove one 1.7 mm-long screw.",iPhone_14_Pro_Max_Rear-Facing_Camera_Assembly_Replacement,197,camera,True
+Recognizing_&_Disconnecting_Cable_Connectors_13,"## Coaxial Connectors
+Coaxial connectors like these—also called antenna, U.FL, or IPEX connectors—have a metal head that snaps over a circular socket on the board, like a metal snap button on a shirt. These connectors come in various sizes and are often used to connect Wi-Fi or cellular antenna cables.
+To disconnect the cable, slide a thin, ESD-safe pry tool or [product|IF145-020-5|angled tweezers|new_window=true] under the metal neck of the connector (as close to the head as possible) and ***lift straight up*** from the board.
+If you work with these connectors often, you may want to buy a specialized disconnect tool ([product|IF145-558|small size|new_window=true], [product|IF145-557|large size|new_window=true]). These tools speed up the disconnect and reconnect procedures while minimizing the risk of damage.
+When working with these connectors, it's key to always lift the head straight up. If pried on at an odd angle, you risk breaking the socket off of the board underneath.",Recognizing_&_Disconnecting_Cable_Connectors,269,keyboard,True
+Recognizing_&_Disconnecting_Cable_Connectors_14,"When working with these connectors, it's key to always lift the head straight up. If pried on at an odd angle, you risk breaking the socket off of the board underneath.
+Reconnecting these can be tricky.  Use tweezers to hold the connector in place over its socket and gently press down with your finger or a spudger—the connector should ""snap"" into place. If you're having trouble, reposition the head and try again.
+Don't try to force the connector into place or you may permanently damage it.",Recognizing_&_Disconnecting_Cable_Connectors,116,keyboard,False
+Recognizing_&_Disconnecting_Cable_Connectors_14,"When working with these connectors, it's key to always lift the head straight up. If pried on at an odd angle, you risk breaking the socket off of the board underneath.
+Reconnecting these can be tricky.  Use tweezers to hold the connector in place over its socket and gently press down with your finger or a spudger—the connector should ""snap"" into place. If you're having trouble, reposition the head and try again.
+Don't try to force the connector into place or you may permanently damage it.",Recognizing_&_Disconnecting_Cable_Connectors,116,keyboard,False
+How_to_fix_an_iPhone_4S_that_won't_turn_on_or_charge_1,"## Hold home button while plugging in the charger
+Allow the iPhone to charge for a while
+Then hold down on the home button while plugging in the 30-Pin connector.
+
+
+## Restore the iPhone
+If the previous step worked but you still can't see anything on the iPhone's screen, you may want to restore the iPhone.
+THIS WILL ERASE ALL THE DATA ON THE iPHONE!
+Connect the iPhone to a Windows or Mac computer and open iTunes, click the iPhone icon in the toolbar at the top left.
+Click the ""Restore iPhone"" button at the top right to restore the iPhone.
+
+
+## Instructions for macOS 10.15 and newer
+Hold the control key while clicking on the Finder icon and select ""New Finder Window""
+In the Sidebar, look for the iPhone under ""Locations"", if you see the iPhone, select it.
+You may be prompted to trust the iPhone to the computer.
+If you don't see the iPhone then go to the next step.
+If you fixed it then CONGRATS! If you didn't fix it then, You may want to consider replacing the screen on the iPhone.",How_to_fix_an_iPhone_4S_that_won't_turn_on_or_charge,234,keyboard,False
+Recognizing_&_Disconnecting_Cable_Connectors_13,"## Coaxial Connectors
+Coaxial connectors like these—also called antenna, U.FL, or IPEX connectors—have a metal head that snaps over a circular socket on the board, like a metal snap button on a shirt. These connectors come in various sizes and are often used to connect Wi-Fi or cellular antenna cables.
+To disconnect the cable, slide a thin, ESD-safe pry tool or [product|IF145-020-5|angled tweezers|new_window=true] under the metal neck of the connector (as close to the head as possible) and ***lift straight up*** from the board.
+If you work with these connectors often, you may want to buy a specialized disconnect tool ([product|IF145-558|small size|new_window=true], [product|IF145-557|large size|new_window=true]). These tools speed up the disconnect and reconnect procedures while minimizing the risk of damage.
+When working with these connectors, it's key to always lift the head straight up. If pried on at an odd angle, you risk breaking the socket off of the board underneath.",Recognizing_&_Disconnecting_Cable_Connectors,269,keyboard,True
