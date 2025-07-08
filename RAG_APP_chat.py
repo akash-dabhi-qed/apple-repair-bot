@@ -780,7 +780,7 @@ def main():
 
         # Main chat input
         query = st.chat_input(
-            "Describe your repair issue: e.g., My MacBook Pro won't turn on, iPhone battery drains quickly, screen is cracked...",
+            "Describe your repair issue:",
             key=f"chat_input_main_{st.session_state.chat_input_key}", # Unique key for each turn
         )
         if query:
