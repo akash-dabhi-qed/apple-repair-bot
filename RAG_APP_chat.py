@@ -15,6 +15,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import time
 
+MAX_HISTORY_LENGTH = 10
+
 # Page configuration - must be first Streamlit command
 st.set_page_config(
     page_title="🔧 AI Repair Assistant",
@@ -363,25 +365,38 @@ Please provide your repair guidance:"""
 
     return prompt
 
-def get_llm_response(prompt: str, client, model_name: str = "llama-3.1-8b-instant") -> str:
-    """Get response from Groq API"""
-    
+def get_llm_response(
+    chat_history: List[Dict],  # This will contain the conversation history (user/assistant turns)
+    client: Groq,
+    model_name: str, # Add model_name as a parameter so it can be passed from rag_pipeline
+    device_type: str = "Apple device" # This param is for the system message within the LLM prompt
+) -> str:
+    """Get response from Groq API using chat history for context."""
     try:
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": "You are an expert Apple repair technician with years of experience fixing Mac and iPhone devices. You provide clear, safe, and accurate repair guidance."},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=1500,
-            temperature=0.3
-        )
+        # The system message should always be the first message for the LLM to understand its role.
+        system_message = {
+            "role": "system",
+            "content": f"You are an expert Apple repair technician with years of experience fixing Mac and iPhone devices. You provide clear, safe, and accurate repair guidance. Always prioritize user safety and instruct users to seek professional help for complex or dangerous repairs. Focus solely on {device_type} repair guidance. Decline to answer unrelated questions."
+        }
         
-        return response.choices[0].message.content
-    
-    except Exception as e:
-        return f"Error getting LLM response: {str(e)}"
+        # Combine system message with the provided chat history.
+        # The 'chat_history' should already include the RAG prompt as the last user message from rag_pipeline.
+        messages_for_llm = [system_message] + chat_history
 
+        chat_completion = client.chat.completions.create(
+            messages=messages_for_llm,
+            model=model_name, # Use the passed model_name
+            temperature=st.session_state.get('temperature', 0.3), # Use session state for configurable parameters
+            max_tokens=st.session_state.get('max_tokens', 1500),
+            top_p=st.session_state.get('top_p', 1.0), # Assuming you have top_p in session state or add a default
+            stream=False, # For now, keep as False. Streaming can be added later.
+            stop=None,
+        )
+        return chat_completion.choices[0].message.content
+    except Exception as e:
+        st.error(f"Error getting LLM response: {e}")
+        return "An error occurred while generating the response."
+    
 def detect_device_type(query: str) -> str:
     """Auto-detect device type from query"""
     query_lower = query.lower()
@@ -423,125 +438,203 @@ def render_result_card(result: Dict, index: int):
     </div>
     """, unsafe_allow_html=True)
 
-def process_user_query(query_text, device_type_setting, auto_detect_setting, model_embedding,
-                       mac_collection_db, iphone_collection_db, groq_client_setup_func,
-                       n_results_setting, min_relevance_setting, model_name_setting, show_debug_setting):
+def process_user_query(
+    query_text: str,
+    device_type_setting: str,
+    auto_detect_setting: bool,
+    model_embedding,
+    mac_collection_db,
+    iphone_collection_db,
+    groq_client_obj: Groq, # Renamed for clarity: this is the already initialized client
+    n_results_setting: int,
+    min_relevance_setting: float,
+    model_name_setting: str,
+    show_debug_setting: bool
+):
     """
     Processes a user query by running the RAG pipeline and updates the chat history.
     """
-    if query_text:
-        # Add user's message to chat history
-        st.session_state.messages.append({"role": "user", "content": query_text})
+    if not query_text:
+        return
 
-        if not st.session_state.get('groq_api_key'):
-            st.session_state.messages.append({"role": "assistant", "content": "❌ Please enter your Groq API key in the sidebar"})
-            return
+    # 1. Handle Groq API key and client initialization check
+    if not st.session_state.get('groq_api_key'):
+        st.session_state.messages.append({"role": "assistant", "content": "❌ Please enter your Groq API key in the sidebar."})
+        return
 
-        groq_client = groq_client_setup_func()
-        if not groq_client:
-            st.session_state.messages.append({"role": "assistant", "content": "❌ Failed to setup Groq client"})
-            return
+    if not groq_client_obj: # Use the already passed and checked client object
+        st.session_state.messages.append({"role": "assistant", "content": "❌ Failed to setup Groq client. Please check your API key."})
+        return
 
-        final_device_type = device_type_setting
-        if auto_detect_setting:
-            # Assuming detect_device_type is defined elsewhere and accessible
-            detected_type = detect_device_type(query_text)
-            if detected_type != "both":
-                final_device_type = detected_type.title()
-                st.session_state.messages.append({"role": "assistant", "content": f"ℹ️ Auto-detected device type: **{final_device_type}**"})
+    # 2. Append user's raw message to the chat history immediately
+    st.session_state.messages.append({"role": "user", "content": query_text})
 
-        with st.spinner(f"🔍 Searching repair documentation and generating guidance..."):
-            # Assuming rag_pipeline is defined elsewhere and accessible
-            result = rag_pipeline(
-                query=query_text,
-                device_type=final_device_type,
-                model=model_embedding,
-                mac_collection=mac_collection_db,
-                iphone_collection=iphone_collection_db,
-                groq_client=groq_client,
-                n_results=n_results_setting,
-                min_relevance=min_relevance_setting,
-                model_name=model_name_setting,
-                show_debug=show_debug_setting
-            )
+    # 3. Manage context window for the conversation history
+    # Keep only the last MAX_HISTORY_LENGTH messages (user/assistant turns)
+    if len(st.session_state.messages) > MAX_HISTORY_LENGTH:
+        # Slice to keep the most recent MAX_HISTORY_LENGTH messages
+        st.session_state.messages = st.session_state.messages[-MAX_HISTORY_LENGTH:]
 
-        # Save to history (existing code)
-        st.session_state.search_history.insert(0, {
-            'query': query_text,
-            'device_type': final_device_type,
-            'results_count': result['num_docs_used'],
-            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'model_used': model_name_setting
-        })
-        st.session_state.search_history = st.session_state.search_history[:10]
+    # 4. Determine final device type for RAG
+    final_device_type = device_type_setting
+    if auto_detect_setting:
+        detected_type = detect_device_type(query_text)
+        if detected_type != "both":
+            final_device_type = detected_type.title()
+            # Optionally inform user about auto-detection within the chat
+            # st.session_state.messages.append({"role": "assistant", "content": f"ℹ️ Auto-detected device type: **{final_device_type}**"})
 
-        # Display AI response in chat
-        if result['response'] and not result.get('error'):
-            assistant_response = result['response']
-            if result['retrieved_docs']:
-                assistant_response += "\n\n**📚 Source Documents Used:**\n"
-                for i, doc in enumerate(result['retrieved_docs']):
-                    # Limiting content preview to 150 chars for brevity in chat
-                    assistant_response += f"- Doc {i+1} ({doc['device_type']} - {doc['similarity_score']:.1%}): {doc['content'][:150]}...\n"
+    # 5. Run the RAG pipeline
+    with st.spinner(f"🔍 Searching repair documentation and generating guidance..."):
+        result = rag_pipeline(
+            query=query_text,
+            device_type=final_device_type,
+            model=model_embedding,
+            mac_collection=mac_collection_db,
+            iphone_collection=iphone_collection_db,
+            groq_client=groq_client_obj, # Pass the initialized Groq client object
+            chat_history=st.session_state.messages, # Pass the managed chat history
+            n_results=n_results_setting,
+            min_relevance=min_relevance_setting,
+            model_name=model_name_setting,
+            show_debug=show_debug_setting
+        )
 
-            st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+    # 6. Save to analytics history (separate from chat display history)
+    st.session_state.search_history.insert(0, {
+        'query': query_text,
+        'device_type': final_device_type,
+        'results_count': result['num_docs_used'],
+        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'model_used': model_name_setting
+    })
+    st.session_state.search_history = st.session_state.search_history[:10] # Keep recent searches
 
-            if show_debug_setting:
-                debug_info_content = {
-                    'query': result['query'],
-                    'device_type': result['device_type'],
-                    'num_docs_retrieved': result['num_docs_used'],
-                    'model_used': model_name_setting,
-                    'prompt_length': len(result['prompt']),
-                    'min_relevance_threshold': min_relevance_setting
-                }
-                st.session_state.messages.append({"role": "assistant", "content": f"```json\n{json.dumps(debug_info_content, indent=2)}\n```"})
-        else:
-            no_docs_message = (
-                "No relevant documentation found. Try:\n"
-                "• Using different keywords\n"
-                f"• Lowering the minimum relevance threshold (currently {min_relevance_setting:.1%})\n"
-                "• Including specific device models\n\n"
-                "**Try these test queries:**\n"
-                "`• battery replacement`\n`• screen repair`\n`• water damage`\n`• charging port`"
-            )
-            st.session_state.messages.append({"role": "assistant", "content": no_docs_message})
+    # 7. Append AI response to chat messages and add debug info if enabled
+    if result['response'] and not result.get('error'):
+        assistant_response = result['response']
+        if result['retrieved_docs']:
+            assistant_response += "\n\n**📚 Source Documents Used:**\n"
+            for i, doc in enumerate(result['retrieved_docs']):
+                assistant_response += f"- Doc {i+1} ({doc['device_type']} - {doc['similarity_score']:.1%}): {doc['content'][:150]}...\n"
 
-def rag_pipeline(query: str, device_type: str, model, mac_collection, iphone_collection, groq_client, n_results: int = 5, min_relevance: float = 0.3, model_name: str = "llama-3.1-8b-instant", show_debug: bool = False) -> Dict:
+        st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
+        if show_debug_setting:
+            debug_info_content = {
+                'query': result['query'],
+                'device_type': result['device_type'],
+                'num_docs_retrieved': result['num_docs_used'],
+                'model_used': model_name_setting,
+                'prompt_length': len(result['prompt']), # This 'prompt' is the RAG prompt
+                'min_relevance_threshold': min_relevance_setting
+            }
+            st.session_state.messages.append({"role": "assistant", "content": f"```json\n{json.dumps(debug_info_content, indent=2)}\n```"})
+    else:
+        # Fallback message if no relevant docs or error from RAG pipeline
+        no_docs_message = (
+            "No relevant documentation found. Try:\n"
+            "• Using different keywords\n"
+            f"• Lowering the minimum relevance threshold (currently {min_relevance_setting:.1%})\n"
+            "• Including specific device models\n\n"
+            "**Try these test queries:**\n"
+            "`• battery replacement`\n`• screen repair`\n`• water damage`\n`• charging port`"
+        )
+        st.session_state.messages.append({"role": "assistant", "content": no_docs_message})
+
+def rag_pipeline(
+    query: str,
+    device_type: str,
+    model,
+    mac_collection,
+    iphone_collection,
+    groq_client,
+    chat_history: List[Dict], # NEW PARAMETER: pass the current chat history to RAG pipeline
+    n_results: int = 5,
+    min_relevance: float = 0.3,
+    model_name: str = "llama-3.1-8b-instant",
+    show_debug: bool = False
+) -> Dict:
     """Complete RAG Pipeline"""
     
     # Step 1: Retrieve relevant documents
     relevant_docs = retrieve_relevant_docs(query, device_type, model, mac_collection, iphone_collection, n_results, min_relevance, show_debug)
     
     if not relevant_docs:
+        # If no documents, craft a response without calling LLM
         return {
             'query': query,
             'device_type': device_type,
             'retrieved_docs': [],
-            'prompt': '',
+            'prompt': '', # No RAG prompt generated if no docs
             'response': f"No relevant documentation found for your {device_type} repair query. Please try different keywords or lower the relevance threshold.",
             'num_docs_used': 0,
             'error': 'No relevant documents found'
         }
     
-    # Step 2: Create prompt with context
-    prompt = create_repair_prompt(query, relevant_docs, device_type)
+    # Step 2: Create RAG-enhanced prompt with context from retrieved documents for the *current* turn
+    rag_prompt_content = create_repair_prompt(query, relevant_docs, device_type)
+
+    # For multi-turn, the 'chat_history' passed to get_llm_response should include
+    # the existing conversation PLUS the current RAG-enhanced user query.
+    # We create a new list for the LLM call: existing history + new RAG user message.
+    # Note: the `chat_history` argument here is the `st.session_state.messages` from `process_user_query`.
+    # It already contains the user's *raw* input for the current turn.
+    # We will replace that raw input with the RAG-enhanced prompt for the LLM.
     
-    # Step 3: Get LLM response
-    llm_response = get_llm_response(prompt, groq_client, model_name)
+    # Create a temporary history list for the LLM call.
+    # The last message in chat_history is the user's raw query, replace it with RAG-enhanced query.
+    temp_chat_history_for_llm = list(chat_history[:-1]) + [{"role": "user", "content": rag_prompt_content}]
+
+
+    # Step 3: Get LLM response using the full chat history
+    llm_response = get_llm_response(
+        chat_history=temp_chat_history_for_llm, # Pass the history including RAG-enhanced prompt
+        client=groq_client,
+        device_type=device_type, # Pass device_type for system message generation in get_llm_response
+        model_name=model_name # Pass the model name
+    )
     
     # Return complete pipeline result
     return {
         'query': query,
         'device_type': device_type,
         'retrieved_docs': relevant_docs,
-        'prompt': prompt,
+        'prompt': rag_prompt_content, # This is the specific RAG prompt content fed to LLM for this turn
         'response': llm_response,
         'num_docs_used': len(relevant_docs),
         'error': None
     }
 
 def main():
+    # Initialize session state variables if they don't exist
+    if 'messages' not in st.session_state:
+        st.session_state.messages = []
+    if 'search_history' not in st.session_state:
+        st.session_state.search_history = []
+    if 'groq_api_key' not in st.session_state:
+        st.session_state.groq_api_key = ''
+    if 'device_type' not in st.session_state:
+        st.session_state.device_type = 'Both'
+    if 'auto_detect_device' not in st.session_state:
+        st.session_state.auto_detect_device = False
+    if 'n_results' not in st.session_state:
+        st.session_state.n_results = 5
+    if 'min_relevance' not in st.session_state:
+        st.session_state.min_relevance = 0.3
+    if 'model_name' not in st.session_state:
+        st.session_state.model_name = 'llama-3.1-8b-instant'
+    if 'temperature' not in st.session_state: # Make sure this is initialized too
+        st.session_state.temperature = 0.3
+    if 'max_tokens' not in st.session_state: # Make sure this is initialized too
+        st.session_state.max_tokens = 1500
+    if 'top_p' not in st.session_state: # Make sure this is initialized too
+        st.session_state.top_p = 1.0
+    if 'show_debug_info' not in st.session_state:
+        st.session_state.show_debug_info = False
+    # Add this line to initialize chat_input_key:
+    if 'chat_input_key' not in st.session_state:
+        st.session_state.chat_input_key = 0
     # Initialize session state
     if 'search_history' not in st.session_state:
         st.session_state.search_history = []
@@ -568,15 +661,24 @@ def main():
     # Get statistics
     stats = get_collection_stats()
     
-    # Display stats or error
+    # --- Ensure Groq client is initialized HERE, ONCE ---
+    groq_client = setup_groq_client()
+
+    # Check if client initialized successfully
+    if groq_client is None:
+        st.warning("Groq client could not be initialized. Please ensure your Groq API key is provided and valid in the 'Settings' tab.")
+        # Do NOT st.stop() here, allow the app to display settings for API key input.
+    # --- End of Groq client initialization ---
+
+    # Display stats or error (existing code)
     if stats.get("error") or error:
         st.error(f"Database connection error: {stats.get('error', error)}")
         st.info("Please ensure your ChromaDB collections are properly set up.")
         
-        # Show debug information
         with st.expander("🔧 Debug Information", expanded=True):
             debug_info = debug_collections()
             st.json(debug_info)
+        # Do not return here to allow the rest of the UI to load
         
         return
     
@@ -650,6 +752,12 @@ def main():
         auto_detect = st.checkbox("Auto-detect device type", value=False)
         show_debug = st.checkbox("Show debug info", value=False)
         
+        st.sidebar.subheader("Conversation Options")
+        if st.sidebar.button("Clear Chat History", key="clear_chat_button"):
+            st.session_state.messages = []  # Clear the history
+            st.info("Chat history cleared.")
+            st.rerun()  # Rerun the app to update the UI and clear displayed messages
+
         # Search history in sidebar
         if st.session_state.search_history:
             st.subheader("📋 Recent Searches")
@@ -665,170 +773,90 @@ def main():
     with tab1:
         st.subheader("💬 Ask Your Repair Question")
       
+        # Display chat history from session state
         for message in st.session_state.messages:
           with st.chat_message(message["role"]):
               st.markdown(message["content"])
 
-        # Query input, initialized with session_state.current_query
+        # Main chat input
         query = st.chat_input(
             "Describe your repair issue: e.g., My MacBook Pro won't turn on, iPhone battery drains quickly, screen is cracked...",
-            key="chat_input_main",
+            key=f"chat_input_main_{st.session_state.chat_input_key}", # Unique key for each turn
         )
         if query:
+          # --- CALL process_user_query HERE ---
           process_user_query(
-              query, device_type, auto_detect, model, mac_collection, iphone_collection,
-              setup_groq_client, n_results, min_relevance, model_name, show_debug
+              query_text=query,
+              device_type_setting=device_type, # From sidebar
+              auto_detect_setting=auto_detect, # From sidebar
+              model_embedding=model,
+              mac_collection_db=mac_collection,
+              iphone_collection_db=iphone_collection,
+              groq_client_obj=groq_client, # *** IMPORTANT: Pass the initialized groq_client here ***
+              n_results_setting=n_results, # From sidebar
+              min_relevance_setting=min_relevance, # From sidebar
+              model_name_setting=model_name, # From sidebar
+              show_debug_setting=show_debug # From sidebar
           )
-          st.rerun() # Rerun to update the chat display with new messages
+          st.session_state.chat_input_key += 1 # Increment for next input
+          st.rerun() # Rerun to update the chat display with new messages and clear input
 
-        
-        # Quick examples
+        # Quick examples (UPDATE THESE CALLS AS WELL)
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("**Mac Examples:**")
-            # Update session state when button is clicked
             if st.button("🔋 Battery replacement steps", key="mac_battery_btn"):
-                #st.session_state.current_query = "MacBook Pro battery replacement"
                 process_user_query(
                     "MacBook Pro battery replacement", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, setup_groq_client, n_results,
+                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
                     min_relevance, model_name, show_debug
                 )
-                st.rerun() # Rerun the app to update the text_area
+                st.session_state.chat_input_key += 1 # Increment for next input
+                st.rerun()
             if st.button("🖥️ Screen flickering problems", key="mac_screen_btn"):
-                #st.session_state.current_query = "Mac screen flickering fix"
                 process_user_query(
                     "Mac screen flickering fix", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, setup_groq_client, n_results,
+                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
                     min_relevance, model_name, show_debug
                 )
-                st.rerun() # Rerun the app to update the text_area
+                st.session_state.chat_input_key += 1 # Increment for next input
+                st.rerun()
             if st.button("⌨️ Keyboard not responding", key="mac_keyboard_btn"):
-                #st.session_state.current_query = "MacBook keyboard not working"
                 process_user_query(
                     "MacBook keyboard not working", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, setup_groq_client, n_results,
+                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
                     min_relevance, model_name, show_debug
                 )
-                st.rerun() # Rerun the app to update the text_area
+                st.session_state.chat_input_key += 1 # Increment for next input
+                st.rerun()
         
         with col2:
             st.markdown("**iPhone Examples:**")
-            # Update session state when button is clicked
             if st.button("📱 Cracked screen repair", key="iphone_screen_btn"):
-                #st.session_state.current_query = "iPhone screen replacement"
                 process_user_query(
                     "iPhone screen replacement", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, setup_groq_client, n_results,
+                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
                     min_relevance, model_name, show_debug
                 )
-                st.rerun() # Rerun the app to update the text_area
+                st.session_state.chat_input_key += 1 # Increment for next input
+                st.rerun()
             if st.button("🔋 Battery draining fast", key="iphone_battery_btn"):
-                #st.session_state.current_query = "iPhone battery drain issues"
                 process_user_query(
                     "iPhone battery drain issues", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, setup_groq_client, n_results,
+                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
                     min_relevance, model_name, show_debug
                 )
-                st.rerun() # Rerun the app to update the text_area
+                st.session_state.chat_input_key += 1 # Increment for next input
+                st.rerun()
             if st.button("📷 Camera not working", key="iphone_camera_btn"):
-                #st.session_state.current_query = "iPhone camera problems"
                 process_user_query(
                     "iPhone camera problems", device_type, auto_detect, model,
-                    mac_collection, iphone_collection, setup_groq_client, n_results,
+                    mac_collection, iphone_collection, groq_client, n_results, # *** Pass groq_client here ***
                     min_relevance, model_name, show_debug
                 )
-                st.rerun() # Rerun the app to update the text_area
-        
-        # Search button
-        search_button = st.button("🔍 Get AI Repair Guidance", type="primary", use_container_width=True)
-        
-        # Process query
-        if query or st.session_state.get('triggered_query'): # Check for both direct input and triggered
-            current_query_to_process = query if query else st.session_state.pop('triggered_query', None)
+                st.session_state.chat_input_key += 1 # Increment for next input
+                st.rerun()
 
-            if current_query_to_process:
-                # Add user query to chat history if it just came from chat_input
-                if not st.session_state.messages or st.session_state.messages[-1]["content"] != current_query_to_process:
-                    st.session_state.messages.append({"role": "user", "content": current_query_to_process})
-
-                if not st.session_state.get('groq_api_key'):
-                    with st.chat_message("assistant"):
-                        st.error("❌ Please enter your Groq API key in the sidebar")
-                    return
-
-                groq_client = setup_groq_client()
-                if not groq_client:
-                    with st.chat_message("assistant"):
-                        st.error("❌ Failed to setup Groq client")
-                    return
-
-                final_device_type = device_type # From sidebar
-                if auto_detect: # From sidebar
-                    detected_type = detect_device_type(current_query_to_process)
-                    if detected_type != "both":
-                        final_device_type = detected_type.title()
-                        with st.chat_message("assistant"):
-                            st.info(f"Auto-detected device type: {final_device_type}")
-
-                with st.spinner(f"🔍 Searching repair documentation and generating guidance..."):
-                    result = rag_pipeline(
-                        query=current_query_to_process,
-                        device_type=final_device_type,
-                        model=model,
-                        mac_collection=mac_collection,
-                        iphone_collection=iphone_collection,
-                        groq_client=groq_client,
-                        n_results=n_results, # From sidebar
-                        min_relevance=min_relevance, # From sidebar
-                        model_name=model_name, # From sidebar
-                        show_debug=show_debug # From sidebar
-                    )
-
-                # Save to history (existing code)
-                st.session_state.search_history.insert(0, {
-                    'query': current_query_to_process,
-                    'device_type': final_device_type,
-                    'results_count': result['num_docs_used'],
-                    'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                    'model_used': model_name
-                })
-                st.session_state.search_history = st.session_state.search_history[:10]
-
-                # Display AI response in chat
-                if result['response'] and not result.get('error'):
-                    assistant_response = result['response']
-                    if result['retrieved_docs']:
-                        assistant_response += "\n\n**📚 Source Documents Used:**\n"
-                        # Instead of rendering full cards in the chat, maybe just link or summarize
-                        for i, doc in enumerate(result['retrieved_docs']):
-                            assistant_response += f"- Doc {i+1} ({doc['device_type']} - {doc['similarity_score']:.1%}): {doc['content'][:150]}...\n"
-
-                    with st.chat_message("assistant"):
-                        st.markdown(assistant_response)
-
-                    # For debug info and detailed source docs, you might still want an expander *outside* the chat message,
-                    # or integrate it more cleanly within the assistant's message.
-                    if show_debug:
-                        with st.expander("🔧 Technical Details (Debug Info)"):
-                            st.json({
-                                'query': result['query'],
-                                'device_type': result['device_type'],
-                                'num_docs_retrieved': result['num_docs_used'],
-                                'model_used': model_name,
-                                'prompt_length': len(result['prompt']),
-                                'min_relevance_threshold': min_relevance
-                            })
-                else:
-                    with st.chat_message("assistant"):
-                        st.warning("No relevant documentation found. Try:")
-                        st.write("• Using different keywords")
-                        st.write(f"• Lowering the minimum relevance threshold (currently {min_relevance:.1%})")
-                        st.write("• Including specific device models")
-                        st.info("**Try these test queries:**")
-                        st.markdown("`• battery replacement`\n`• screen repair`\n`• water damage`\n`• charging port`")
-
-    
     with tab2:
         st.subheader("📊 Database Analytics")
         
