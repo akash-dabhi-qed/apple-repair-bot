@@ -443,18 +443,109 @@ def get_llm_response(
             focus_device_phrase = "Apple device repair guidance."
 
         system_message = {
-            "role": "system",
-             "content": (
-                f"You are an expert {specific_device_phrase} You provide clear, safe, and accurate repair guidance. "
-                "Always prioritize user safety and instruct users to seek professional help for complex or dangerous repairs. "
-                f"Focus solely on {focus_device_phrase} Decline to answer unrelated questions."
-                "**IMPORTANT:** If the user's query is inappropriate, off-topic, or asks for assistance outside of Apple device repair (e.g., medical advice, personal opinions, dangerous activities, illegal acts, or anything unrelated to hardware/software repair), you MUST politely decline the request and state that you can only assist with Apple device repair. Do NOT provide any information or engage with inappropriate content."
-            )
-        }
+        "role": "system",
+        "content": (
+            f"You are an expert {specific_device_phrase} You provide clear, safe, and accurate repair guidance. "
+            "Always prioritize user safety and instruct users to seek professional help for complex or dangerous repairs. "
+            f"Focus primarily on {focus_device_phrase}, but you can also provide general advice, safety tips, and assess repair difficulty based on common knowledge or inferred complexity from the provided documentation, tailored to various skill levels. "
+            "\n\n**IMPORTANT:** If the user's query is inappropriate, off-topic, or asks for assistance outside of Apple device repair..., you MUST politely decline the request and state that you can only assist with Apple device repair."
+        )
+    }
+
+        # Define your few-shot examples here based on the provided outputs
+        few_shot_examples = [
+            # Example 1: MacBook Pro Fan Replacement
+            {
+                "role": "user",
+                "content": create_repair_prompt(
+                    query="My MacBook Pro fans are making a lot of noise and I think they need replacement. Can you guide me?",
+                    relevant_docs=[
+                        {"content": "MacBook Pro 16\" 2023 Fans Replacement: Details on replacing fans for this model, including screws and steps.", "similarity_score": 0.9, "device_type": "Mac", "doc_id": "mac_fan_001", "rank": 1, "distance": 0.1},
+                        {"content": "MacBook Pro 16\" Late 2023 Fans Replacement: Specifics for the late 2023 model's fan replacement.", "similarity_score": 0.88, "device_type": "Mac", "doc_id": "mac_fan_002", "rank": 2, "distance": 0.12},
+                        {"content": "Mac Pro Late 2013 Fan Replacement: Information regarding fan replacement for Mac Pro.", "similarity_score": 0.7, "device_type": "Mac", "doc_id": "mac_fan_003", "rank": 3, "distance": 0.3},
+                    ],
+                    device_type="Mac"
+                )
+            },
+            {
+                "role": "assistant",
+                "content": """```json
+{
+    "title": "Repair Solution for Both - MacBook Pro Fan Replacement Guide",
+    "summary": "This guide will walk you through the process of replacing the fans in your MacBook Pro. Please note that the exact steps may vary depending on the model of your MacBook Pro.",
+    "safety_precautions": "Disconnect power before starting. If your battery is swollen, take appropriate precautions to avoid injury.",
+    "required_tools_parts": "iFixit Precision Bit Driver, P5 Pentalobe Bit, 5IP Torx Plus Bit, 3IP Torx Plus Bit, T6 Torx Bit, 4 mm Hex Nut Driver Bit, Suction Handle, iFixit Opening Picks (Set of 6), ESD Safe Blunt Nose Tweezers, Spudger, MacBook Pro 16\\" (A2485, A2780, A2991) Left Fan, MacBook Pro 16\\" (A2485, A2991) Right Fan",
+    "step_by_step_instructions": [
+        "Step 1: Remove the following screws: Three 14.4 mm Phillips #00 screws, Three 3.5 mm Phillips #00 screws, Four 3.5 mm shouldered Phillips #00 screws.",
+        "Step 2: Use your fingers to pry the lower case away from the body of the MacBook near the vent. Remove the lower case.",
+        "Step 3: Disconnect the battery connector from the logic board.",
+        "Step 4: Remove the fan from the MacBook Pro.",
+        "Step 5: Clean the area where the new fan will be installed.",
+        "Step 6: Apply replacement fan adhesive to the new fan.",
+        "Step 7: Install the new fan and reconnect the fan connector to the logic board.",
+        "Step 8: Reassemble the MacBook Pro in the reverse order of the steps above."
+    ],
+    "additional_tips": "Make sure to handle the fan with care to avoid damage. If you encounter any issues during the repair, consider seeking professional help.",
+    "professional_help_situations": "If you are not comfortable with this repair or if you encounter any issues during the process, consider seeking professional help from an authorized Apple service provider.",
+    "notes": "Please note that the exact steps may vary depending on the model of your MacBook Pro. It's also important to ensure that you have the correct replacement fan and adhesive for your specific model.",
+    "source_documents_used": [
+        "Doc 1 (Mac - 55.9%): **MacBook Pro 16\\" 2023 Fans Replacement**",
+        "Doc 2 (Mac - 54.3%): **MacBook Pro 16\\" Late 2023 Fans Replacement**",
+        "Doc 3 (Mac - 54.0%): **Mac Pro Late 2013 Fan Replacement**",
+        "Doc 4 (Mac - 51.5%): **Macbook Pro 14\\" Late 2023 (M3 Pro and M3 Max) Fans Replacement**",
+        "Doc 5 (Mac - 51.4%): **MacBook Pro 16\\" 2021 Fan Assembly Replacement**"
+    ]
+}
+```"""
+            },
+            # Example 2: iPhone 13 Speaker Replacement
+            {
+                "role": "user",
+                "content": create_repair_prompt(
+                    query="My iPhone 13 speaker is not working. How can I replace it?",
+                    relevant_docs=[
+                        {"content": "iPhone 13 Pro Max Loudspeaker Replacement: Guide for replacing loudspeaker on iPhone 13 Pro Max.", "similarity_score": 0.95, "device_type": "iPhone", "doc_id": "iphone_speaker_001", "rank": 1, "distance": 0.05},
+                        {"content": "iPhone 13 mini Bottom Speaker Replacement: Instructions for replacing the bottom speaker on iPhone 13 mini.", "similarity_score": 0.92, "device_type": "iPhone", "doc_id": "iphone_speaker_002", "rank": 2, "distance": 0.08},
+                        {"content": "iPhone 12 Pro Max Loudspeaker Replacement: Relevant steps for iPhone 12 Pro Max loudspeaker.", "similarity_score": 0.8, "device_type": "iPhone", "doc_id": "iphone_speaker_003", "rank": 3, "distance": 0.2},
+                    ],
+                    device_type="iPhone"
+                )
+            },
+            {
+                "role": "assistant",
+                "content": """```json
+{
+    "title": "Repair Solution for Both - iPhone 13 Speaker Replacement",
+    "summary": "This guide will walk you through the process of replacing the speaker in your iPhone 13.",
+    "safety_precautions": "Disconnect power before starting. Before you begin, discharge your iPhone battery below 25%. A charged lithium-ion battery can catch fire and/or explode if accidentally punctured.",
+    "required_tools_parts": "P2 Pentalobe Screwdriver iPhone, Clampy - Anti-Clamp, Hair Dryer, Heat Gun, iFixit Opening Picks (Set of 6), Suction Handle, Tri-point Y000 Screwdriver, Spudger, Tweezers, iPhone 13 Loudspeaker",
+    "step_by_step_instructions": [
+        "Step 1: Remove the two 6.8 mm-long pentalobe P2 screws at the bottom edge of the iPhone.",
+        "Step 2: Use a pair of tweezers to remove the speaker.",
+        "Step 3: Compare your new replacement part to the original part—you may need to transfer remaining components or remove adhesive backings from the new part before installing.",
+        "Step 4: Apply new adhesive where necessary after cleaning the relevant areas with isopropyl alcohol (>90%)."
+    ],
+    "additional_tips": "Take your e-waste to an R2 or e-Stewards certified recycler. Repair didn’t go as planned? Try some basic troubleshooting, or ask our iPhone 13 mini Answers community for help.",
+    "professional_help_situations": "If you encounter any issues during the process, consider seeking professional help from an authorized Apple service provider.",
+    "notes": "Please note that the exact steps may vary depending on the model of your iPhone 13. It's also important to ensure that you have the correct replacement speaker and adhesive for your specific model.",
+    "source_documents_used": [
+        "Doc 1 (iPhone - 61.9%): **iPhone 13 Pro Max Loudspeaker Replacement**",
+        "Doc 2 (iPhone - 55.1%): **iPhone 13 mini Bottom Speaker Replacement**",
+        "Doc 3 (iPhone - 52.4%): **iPhone 12 Pro Max Loudspeaker Replacement**",
+        "Doc 4 (iPhone - 49.5%): **Unscrew the speaker**",
+        "Doc 5 (iPhone - 49.3%): **Step 2**"
+    ]
+}
+```"""
+            }
+        ]
         
-        # Combine system message with the provided chat history.
+        # Combine system message, few-shot examples, and the current chat history for the LLM.
         # The 'chat_history' should already include the RAG prompt as the last user message from rag_pipeline.
-        messages_for_llm = [system_message] + chat_history
+        # Ensure the actual RAG prompt is always the last 'user' message to the LLM.
+        messages_for_llm = [system_message] + \
+                           few_shot_examples + \
+                           list(chat_history)
 
         stream = client.chat.completions.create(
             messages=messages_for_llm,
@@ -464,9 +555,9 @@ def get_llm_response(
             top_p=st.session_state.get('top_p', 1.0),
             stream=True,
             stop=None,
-            timeout=st.session_state.get('llm_timeout', 60.0), # Default to 60 seconds
+            timeout=st.session_state.get('llm_timeout', 60.0),
         )
-        return stream # Return the iterator
+        return stream
     
     except APITimeoutError:
         # Handle LLM Timeout
@@ -481,10 +572,9 @@ def get_llm_response(
             error_detail = e.response.json().get('detail', 'Unknown API error') if e.response else 'No detailed response'
             st.error(f"⚠️ Groq API error ({e.status_code}): {error_detail}")
         return (chunk for chunk in []) # Return empty generator
-    # --- END NEW ---
+    
     except Exception as e:
-        # Catch any other unexpected errors
-        st.error(f"An unexpected error occurred while getting the LLM response: {e}")
+        st.error(f"An error occurred: {e}")
         return (chunk for chunk in [])
     
 def detect_device_type(query: str) -> str:
@@ -574,7 +664,6 @@ def process_user_query(
         if detected_type != "both":
             final_device_type = detected_type.title()
 
-    # --- MODIFICATION START: Streaming Display ---
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response_content = ""
@@ -584,7 +673,7 @@ def process_user_query(
 
         with st.spinner(f"🔍 Searching repair documentation and generating guidance..."):
             # Step 1: Retrieve relevant documents (this part is not streamed)
-            relevant_docs = retrieve_relevant_docs(
+            relevant_docs = retrieve_relevant_docs( 
                 query_text, final_device_type, model_embedding,
                 mac_collection_db, iphone_collection_db,
                 n_results_setting, min_relevance_setting, show_debug_setting
@@ -731,7 +820,6 @@ def process_user_query(
                 debug_info_content['parsing_error'] = parsing_error_message
             st.session_state.messages.append({"role": "assistant", "content": f"```json\n{json.dumps(debug_info_content, indent=2)}\n```"})
 
-    # --- END MODIFICATION ---
 
 def rag_pipeline(
     query: str,
