@@ -407,7 +407,7 @@ def create_repair_prompt(query: str, relevant_docs: List[Dict], device_type: str
     RESPONSE JSON FORMAT:
     ```json
     {{
-        "title": "Repair Solution for {device_type} - [Summary of issue]",
+        "title": "Repair Solution for: [Summary of issue]",
         "summary": "[Brief summary of the issue and solution]",
         "safety_precautions": "[Important safety warnings, e.g., 'Disconnect power before starting.']",
         "required_tools_parts": "[List tools and parts needed, e.g., 'Phillips head screwdriver, new battery.']",
@@ -471,7 +471,7 @@ def get_llm_response(
                 "role": "assistant",
                 "content": """```json
 {
-    "title": "Repair Solution for Both - MacBook Pro Fan Replacement Guide",
+    "title": "Repair Solution for: MacBook Pro Fan Replacement Guide",
     "summary": "This guide will walk you through the process of replacing the fans in your MacBook Pro. Please note that the exact steps may vary depending on the model of your MacBook Pro.",
     "safety_precautions": "Disconnect power before starting. If your battery is swollen, take appropriate precautions to avoid injury.",
     "required_tools_parts": "iFixit Precision Bit Driver, P5 Pentalobe Bit, 5IP Torx Plus Bit, 3IP Torx Plus Bit, T6 Torx Bit, 4 mm Hex Nut Driver Bit, Suction Handle, iFixit Opening Picks (Set of 6), ESD Safe Blunt Nose Tweezers, Spudger, MacBook Pro 16\\" (A2485, A2780, A2991) Left Fan, MacBook Pro 16\\" (A2485, A2991) Right Fan",
@@ -515,7 +515,7 @@ def get_llm_response(
                 "role": "assistant",
                 "content": """```json
 {
-    "title": "Repair Solution for Both - iPhone 13 Speaker Replacement",
+    "title": "Repair Solution for: iPhone 13 Speaker Replacement",
     "summary": "This guide will walk you through the process of replacing the speaker in your iPhone 13.",
     "safety_precautions": "Disconnect power before starting. Before you begin, discharge your iPhone battery below 25%. A charged lithium-ion battery can catch fire and/or explode if accidentally punctured.",
     "required_tools_parts": "P2 Pentalobe Screwdriver iPhone, Clampy - Anti-Clamp, Hair Dryer, Heat Gun, iFixit Opening Picks (Set of 6), Suction Handle, Tri-point Y000 Screwdriver, Spudger, Tweezers, iPhone 13 Loudspeaker",
